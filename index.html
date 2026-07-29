@@ -3663,9 +3663,10 @@
     flex: 0 0 auto;
     border-radius: 18px;
   }
-    /* FIX SAFARI IPHONE */
+    /* FIX SAFARI IPHONE & OVERRIDE KODE LAMA */
     #project .slider-container {
       width: 100% !important;
+      height: 220px !important; /* Mencegah Safari ngitung tinggi 0px */
       aspect-ratio: 16 / 10 !important;
       overflow: hidden !important;
       border-radius: 14px !important;
@@ -3677,10 +3678,13 @@
       height: 100% !important;
     }
 
+    /* Target spesifik agar menimpa #project .slider-track img bawaan */
+    #project .slider-container .slider-track img,
     #project .slider-track img {
       display: block !important;
       width: 100% !important;
       height: 100% !important;
+      max-height: 220px !important;
       min-width: 100% !important;
       object-fit: cover !important;
       object-position: top !important;
