@@ -1102,4 +1102,40 @@ hr {
     justify-content: center;
   }
 }
+/* ===================================================
+   FIX TAMPILAN GAMBAR PROJECT DI IPHONE / IOS SAFARI
+   =================================================== */
+
+/* 1. Atur jarak antar kartu project */
+.projects-container {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 32px !important; /* Memberi jarak 32px antar kartu project */
+  width: 100%;
+}
+
+/* 2. Fix bug gambar slide di iPhone biar gak rapat & gepeng */
+.slider-container {
+  width: 100% !important;
+  overflow: hidden !important;
+}
+
+.slider-track {
+  display: flex !important;
+}
+
+.slider-track img {
+  min-width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  flex-shrink: 0 !important; /* Mencegah gambar menyusut/mampet di iOS */
+}
+
+/* 3. Atur jarak bawah kartu project sebagai proteksi tambahan */
+.project-card {
+  margin-bottom: 24px !important;
+  width: 100%;
+}
 
