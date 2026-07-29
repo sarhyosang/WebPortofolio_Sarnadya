@@ -3663,6 +3663,28 @@
     flex: 0 0 auto;
     border-radius: 18px;
   }
+    /* FIX SAFARI IPHONE */
+    #project .slider-container {
+      width: 100% !important;
+      aspect-ratio: 16 / 10 !important;
+      overflow: hidden !important;
+      border-radius: 14px !important;
+    }
+
+    #project .slider-track {
+      display: flex !important;
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    #project .slider-track img {
+      display: block !important;
+      width: 100% !important;
+      height: 100% !important;
+      min-width: 100% !important;
+      object-fit: cover !important;
+      object-position: top !important;
+    }
 
   #project .slider-track,
   #project .slider-track img { height: 100%; }
