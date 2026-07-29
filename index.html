@@ -3663,11 +3663,10 @@
     flex: 0 0 auto;
     border-radius: 18px;
   }
-    /* FIX SAFARI IPHONE & OVERRIDE KODE LAMA */
+    /* FIX EXTREME SAFARI FLEXBOX BUG */
     #project .slider-container {
       width: 100% !important;
-      height: 220px !important; /* Mencegah Safari ngitung tinggi 0px */
-      aspect-ratio: 16 / 10 !important;
+      height: 220px !important;
       overflow: hidden !important;
       border-radius: 14px !important;
     }
@@ -3678,18 +3677,18 @@
       height: 100% !important;
     }
 
-    /* Target spesifik agar menimpa #project .slider-track img bawaan */
+    /* Kunci flex-shrink dan panggil height eksplisit */
     #project .slider-container .slider-track img,
     #project .slider-track img {
       display: block !important;
       width: 100% !important;
-      height: 100% !important;
-      max-height: 220px !important;
-      min-width: 100% !important;
+      height: 220px !important; /* Paksa angka px spesifik, bukan 100% */
+      min-height: 220px !important;
+      flex-shrink: 0 !important; /* KUNCI UTAMA: Cegah Safari nge-gepengin gambar! */
       object-fit: cover !important;
       object-position: top !important;
     }
-
+    
   #project .slider-track,
   #project .slider-track img { height: 100%; }
 
