@@ -1,0 +1,4823 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sarah Nadia</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Google Fonts: Inter, Orbitron, & Delius -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Orbitron:wght@500&family=Delius&display=swap" rel="stylesheet">
+
+<style>
+    /* Mengaplikasikan font Delius hanya pada deskripsi umum, card, dan isi cerita */
+    .info-p p, .about-text p, .service-card p, .project-card p, .info-pro p, 
+    #galeri .group p, .home-section .info-home .info-p p {
+        font-family: 'Delius', cursive;
+    }
+    
+    /* Font khusus judul utama dan teks heading/heading section */
+    h1, h2, h3, h4, .home h1, .skill h1, .project h1, .section-title, .about h3 {
+        font-family: 'Inter', sans-serif;
+    }
+
+    /* Styling khusus untuk ID Card Draggable & Tali Kalung Lanyard Bermotif Teks */
+    .lanyard-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: grab;
+        user-select: none;
+        touch-action: none;
+        filter: drop-shadow(0 10px 15px rgba(0,0,0,0.3));
+    }
+    .lanyard-container:active {
+        cursor: grabbing;
+    }
+
+    /* SVG Tali Kalung Melengkung */
+    .lanyard-strap-svg {
+        width: 260px;
+        height: 70px;
+        overflow: visible;
+        margin-bottom: -5px;
+        z-index: 5;
+    }
+
+    .id-card-wrapper {
+        transform-origin: top center;
+        transition: box-shadow 0.2s ease;
+    }
+</style>
+</head>
+
+<body>
+<div id="intro">
+    <div class="main">
+        <div class="content">
+
+            <!-- KANAN (Orbit / Bulatan) -->
+            <div class="orbit-box" style="position: relative;">
+                <div style="position: absolute; top: -35px; left: 50%; transform: translateX(-50%); font-family: 'Orbitron', sans-serif; font-size: 11px; letter-spacing: 3px; color: #b8b8b8; white-space: nowrap; text-align: center; width: 100%;">WAIT FOR INTRO</div>
+                <div class="orbit">
+                    <i class="fa-solid fa-layer-group i1"></i>
+                    <i class="fa-solid fa-bolt i2"></i>
+                    <i class="fa-solid fa-code i3"></i>
+                    <i class="fa-solid fa-wifi i4"></i>
+                </div>
+
+                <div class="core">
+                    <span> SARAH NADIA </span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="real-site" style="display: none;">
+
+    <!-- Background gradasi bergerak + tombol tema -->
+    <div id="portfolioMotionBg" aria-hidden="true">
+        <span class="pm-orb pm-orb-one"></span>
+        <span class="pm-orb pm-orb-two"></span>
+        <span class="pm-orb pm-orb-three"></span>
+        <span class="pm-light-ring"></span>
+        <span class="pm-grid"></span>
+    </div>
+
+    <button
+        id="portfolioThemeToggle"
+        type="button"
+        aria-label="Aktifkan mode terang"
+        aria-pressed="true"
+        title="Aktifkan mode terang"
+    >
+        <i class="fa-solid fa-sun pm-sun" aria-hidden="true"></i>
+        <i class="fa-solid fa-moon pm-moon" aria-hidden="true"></i>
+    </button>
+
+    <header>
+        <button id="mobileNavToggle" class="mobile-nav-toggle" type="button"
+            aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="portfolioNavigation">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+        <div class="div-list" id="portfolioNavigation">
+            <ul class="ul-list">
+                <li class="active">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                    <i class="fa-regular fa-address-card"></i>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <a href="#skill">Skill</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-images"></i>
+                    <a href="#galeri">Experience</a>
+                </li>
+                <li>
+                    <i class="fa-regular fa-folder-open"></i>
+                    <a href="#project">Projects</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-award"></i>
+                    <a href="#certificate">Certificates</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-code"></i>
+                    <a href="#service">services</a>
+                </li>
+                <li>
+                    <i class="fa-regular fa-envelope"></i>
+                    <a href="#sarah-footer">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- home -->
+    <section class="home" id="home">
+        <p class="home-p">
+            <span class="home-s">. </span>Available for freelance work
+        </p>
+        <div class="home-container">
+        <div class="home-section">
+            <div class="info-home">
+                <h1>Hi, I'm&nbsp;<span class="typing">Sarah Nadia</span>
+                <h3> Computer Science <br> Informatics x Multimedia </h3>
+                <div class="info-p">
+                   <p>Nickname Sarah </p>
+                   <p>Passionate about graphic design, video editing, UI/UX, web development, & data management.</p>
+                   <p>by combining creativity with modern web technologies.</p>
+                </div>
+                <div class="info-p2">
+                    <p><i class="fa-solid fa-location-dot"></i> Based in Indonesia</p>
+                    <p><i class="fa-solid fa-briefcase"></i> Available Now</p>
+                </div>
+                <div class="btnn">
+    <!-- Tombol Hire Me menuju WhatsApp -->
+                <a href="https://wa.me/6285362226893?text=Halo%20Sarah." target="_blank" class="btn-home1">
+                <i class="fa-solid fa-arrow-right"></i> Contact Me
+                </a>
+    
+    <!-- Tombol Download CV menuju Google Drive -->
+                <a href="https://drive.google.com/file/d/10UrZx8hWuNxb6NA9tPNI8qVFyHdbydfF/view?usp=sharing" target="_blank" class="btn-home2">
+                <i class="fa-solid fa-download"></i> Download CV
+             </a>
+            </div>
+                <div class="hhr">
+                    <hr>
+                </div>
+                <div class="follow">
+                    <p class="followw">Follow me:</p>
+                    <ul>
+                        <li><a href="https://github.com/sarhyosang" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                        <li><a href="https://discord.com/users/sarhyosang" target="_blank"><i class="fa-brands fa-discord"></i></a></li>
+                        <li><a href="https://id.linkedin.com/in/sarahnadia-sarnadya/in" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                        <li><a href="https://www.instagram.com/sarnadya_/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://www.tiktok.com/@sarnadya_" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+         </div>
+         <!-- INTERACTIVE DRAGGABLE ID CARD DENGAN TALI KALUNG BERTEKS -->
+         <div class="flex justify-center items-center py-6">
+    <div id="draggableCard" class="lanyard-container">
+
+        <!-- Bintang Pengganti Tali Kalung -->
+        <svg class="lanyard-strap-svg" viewBox="0 0 260 70">
+            <polygon
+                points="130,8 135,20 148,20 138,28 142,40 130,33 118,40 122,28 112,20 125,20"
+                fill="#FFD700"
+                stroke="#ffffff"
+                stroke-width="1.5" />
+        </svg>
+
+        <!-- ID Card tetap di bawah (tidak diubah) -->
+
+                 <!-- Klip Besi / Pengait ID Card -->
+                 <div class="w-8 h-4 bg-gradient-to-r from-gray-400 via-gray-200 to-gray-500 rounded-t-sm shadow-md z-10 -mt-1"></div>
+                 
+                 <!-- Kartu ID Card -->
+                 <div id="idCardBody" class="id-card-wrapper bg-slate-900/90 border-2 border-purple-500/40 rounded-3xl p-4 shadow-[0_20px_50px_rgba(168,85,247,0.25)] backdrop-blur-md w-[320px] flex flex-col items-center relative">
+                     <div class="absolute top-3 right-4 flex items-center gap-1 text-[10px] text-purple-300 bg-purple-950/60 px-2 py-0.5 rounded-full border border-purple-500/30">
+                         <i class="fa-solid fa-id-card"></i> ID CARD
+                     </div>
+                     <div class="w-full h-[360px] rounded-2xl overflow-hidden border border-purple-500/20 bg-slate-800 mt-2 mb-3 shadow-inner">
+                         <img src="images/img11.jpeg" alt="Sarah Nadia ID Card" class="object-cover w-full h-full pointer-events-none">
+                     </div>
+                     <div class="text-center w-full pb-1">
+                         <h4 class="text-white font-bold text-base tracking-wide bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">SARAH NADIA, S.Kom</h4>
+                         <p class="text-gray-400 text-xs mt-0.5"> Informatics x Multimedia </p>
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+        </div>
+    </section>
+    <!-- fine home  -->
+<style>
+  /* =========================================================
+     ABOUT CONSTELLATION — SEMUA CLASS DIAWALI "sac-"
+     agar tidak bentrok dengan style lama.
+  ========================================================= */
+  #about.sac-about {
+    --sac-x: 50%;
+    --sac-y: 45%;
+    position: relative;
+    z-index: 2;
+    min-height: 100vh;
+    padding: 118px 5.5% 92px;
+    overflow: hidden;
+    background: transparent !important;
+    font-family: "Inter", sans-serif;
+  }
+
+  #about.sac-about * {
+    box-sizing: border-box;
+  }
+
+  #about .sac-shell {
+    position: relative;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 46px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 40px;
+    background:
+      linear-gradient(
+        132deg,
+        rgba(8, 15, 38, 0.80),
+        rgba(33, 20, 74, 0.70),
+        rgba(43, 13, 77, 0.56)
+      );
+    -webkit-backdrop-filter: blur(26px);
+    backdrop-filter: blur(26px);
+    box-shadow:
+      0 35px 100px rgba(2, 6, 23, 0.38),
+      inset 0 1px 0 rgba(255, 255, 255, 0.09);
+    isolation: isolate;
+  }
+
+  /* Spotlight mengikuti mouse */
+  #about .sac-shell::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      radial-gradient(
+        520px circle at var(--sac-x) var(--sac-y),
+        rgba(96, 165, 250, 0.16),
+        rgba(192, 132, 252, 0.13) 34%,
+        rgba(244, 114, 182, 0.07) 52%,
+        transparent 72%
+      );
+  }
+
+  /* Grid bergerak halus */
+  #about .sac-shell::after {
+    content: "";
+    position: absolute;
+    inset: -50%;
+    z-index: -2;
+    pointer-events: none;
+    opacity: 0.12;
+    background:
+      linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px);
+    background-size: 54px 54px;
+    transform: perspective(700px) rotateX(62deg) translateY(28%);
+    animation: sacGridDrift 24s linear infinite;
+  }
+
+  @keyframes sacGridDrift {
+    from { background-position: 0 0, 0 0; }
+    to { background-position: 0 108px, 108px 0; }
+  }
+
+  #about .sac-aurora {
+    position: absolute;
+    inset: -35%;
+    z-index: -3;
+    pointer-events: none;
+    opacity: 0.46;
+    filter: blur(95px);
+    background:
+      conic-gradient(
+        from 0deg,
+        rgba(37, 99, 235, 0.34),
+        rgba(124, 58, 237, 0.42),
+        rgba(236, 72, 153, 0.30),
+        rgba(14, 165, 233, 0.28),
+        rgba(37, 99, 235, 0.34)
+      );
+    animation: sacAuroraSpin 24s linear infinite;
+  }
+
+  @keyframes sacAuroraSpin {
+    to { transform: rotate(360deg) scale(1.12); }
+  }
+
+  #about .sac-topbar {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 28px;
+    margin-bottom: 34px;
+  }
+
+  #about .sac-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    color: #c4b5fd;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  #about .sac-eyebrow::before {
+    content: "";
+    width: 34px;
+    height: 2px;
+    border-radius: 99px;
+    background: linear-gradient(90deg, #60a5fa, #c084fc, #f472b6);
+  }
+
+  #about .sac-title {
+    max-width: 760px;
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(40px, 5.3vw, 76px);
+    font-weight: 800;
+    line-height: 0.98;
+    letter-spacing: -2.7px;
+  }
+
+  #about .sac-title span {
+    background: linear-gradient(90deg, #60a5fa, #c084fc, #f472b6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+
+  #about .sac-top-note {
+    max-width: 330px;
+    margin: 9px 0 0;
+    color: #cbd5e1;
+    font-family: "Delius", cursive;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  #about .sac-layout {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns:
+      minmax(250px, 0.72fr)
+      minmax(430px, 1.12fr)
+      minmax(300px, 0.84fr);
+    gap: 30px;
+    align-items: stretch;
+  }
+
+  /* =========================================================
+     KOLOM KIRI — QUICK SIGNALS
+  ========================================================= */
+  #about .sac-left {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  #about .sac-signal {
+    position: relative;
+    min-height: 120px;
+    padding: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 23px;
+    background: rgba(255,255,255,0.045);
+    transition:
+      transform 0.35s ease,
+      border-color 0.35s ease,
+      background 0.35s ease;
+  }
+
+  #about .sac-signal::before {
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    right: -30px;
+    top: -30px;
+    border-radius: 50%;
+    background: var(--signal-glow, rgba(124,58,237,0.30));
+    filter: blur(25px);
+    opacity: 0.8;
+  }
+
+  #about .sac-signal:hover {
+    transform: translateY(-6px);
+    border-color: rgba(192,132,252,0.30);
+    background: rgba(255,255,255,0.075);
+  }
+
+  #about .sac-signal-icon {
+    position: relative;
+    z-index: 2;
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 14px;
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 13px;
+    color: #ffffff;
+    background: linear-gradient(
+      135deg,
+      rgba(59,130,246,0.32),
+      rgba(168,85,247,0.34),
+      rgba(236,72,153,0.24)
+    );
+  }
+
+  #about .sac-signal-label {
+    position: relative;
+    z-index: 2;
+    display: block;
+    margin-bottom: 5px;
+    color: #94a3b8;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+  }
+
+  #about .sac-signal-value {
+    position: relative;
+    z-index: 2;
+    color: #f8fafc;
+    font-size: 16px;
+    font-weight: 750;
+    line-height: 1.35;
+  }
+
+  #about .sac-availability {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: auto;
+    padding: 15px 18px;
+    border: 1px solid rgba(34,197,94,0.18);
+    border-radius: 19px;
+    color: #d1fae5;
+    background: rgba(34,197,94,0.07);
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  #about .sac-availability::before {
+    content: "";
+    width: 9px;
+    height: 9px;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    background: #22c55e;
+    box-shadow: 0 0 14px #22c55e;
+    animation: sacPulse 1.8s ease-in-out infinite;
+  }
+
+  @keyframes sacPulse {
+    0%, 100% { opacity: 0.45; transform: scale(0.85); }
+    50% { opacity: 1; transform: scale(1.18); }
+  }
+
+  /* =========================================================
+     KOLOM TENGAH — CONSTELLATION ORBIT
+  ========================================================= */
+  #about .sac-center {
+    position: relative;
+    min-height: 560px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 30px;
+    background:
+      radial-gradient(circle at 50% 50%, rgba(124,58,237,0.13), transparent 36%),
+      rgba(2, 6, 23, 0.22);
+  }
+
+  #about .sac-center::before {
+    content: "";
+    position: absolute;
+    inset: 16px;
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 24px;
+    pointer-events: none;
+  }
+
+  #about .sac-coordinate {
+    position: absolute;
+    top: 18px;
+    left: 20px;
+    z-index: 10;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #94a3b8;
+    font-family: "Orbitron", sans-serif;
+    font-size: 9px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+  }
+
+  #about .sac-coordinate::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #60a5fa;
+    box-shadow: 0 0 11px #60a5fa;
+  }
+
+  #about .sac-orbit-stage {
+    position: absolute;
+    inset: 58px 18px 24px;
+    display: grid;
+    place-items: center;
+  }
+
+  #about .sac-orbit {
+    position: relative;
+    width: min(430px, 88%);
+    aspect-ratio: 1;
+    border: 1px solid rgba(192,132,252,0.18);
+    border-radius: 50%;
+    animation: sacOrbitBreath 7s ease-in-out infinite;
+  }
+
+  #about .sac-orbit::before,
+  #about .sac-orbit::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  #about .sac-orbit::before {
+    inset: 11%;
+    border: 1px dashed rgba(96,165,250,0.18);
+    animation: sacOrbitSpin 24s linear infinite;
+  }
+
+  #about .sac-orbit::after {
+    inset: 24%;
+    border: 1px solid rgba(244,114,182,0.15);
+    animation: sacOrbitSpin 18s linear infinite reverse;
+  }
+
+  @keyframes sacOrbitBreath {
+    0%, 100% {
+      box-shadow:
+        0 0 35px rgba(124,58,237,0.10),
+        inset 0 0 35px rgba(59,130,246,0.05);
+    }
+    50% {
+      box-shadow:
+        0 0 65px rgba(124,58,237,0.20),
+        inset 0 0 55px rgba(59,130,246,0.10);
+    }
+  }
+
+  @keyframes sacOrbitSpin {
+    to { transform: rotate(360deg); }
+  }
+
+  #about .sac-photo {
+    position: absolute;
+    inset: 50%;
+    z-index: 5;
+    width: 174px;
+    height: 174px;
+    padding: 5px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(135deg, #60a5fa, #a855f7, #ec4899);
+    box-shadow:
+      0 0 36px rgba(168,85,247,0.38),
+      0 0 95px rgba(59,130,246,0.18);
+  }
+
+  #about .sac-photo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border: 4px solid rgba(15,23,42,0.90);
+    border-radius: 50%;
+  }
+
+  #about .sac-photo-core {
+    position: absolute;
+    inset: 50%;
+    z-index: 4;
+    width: 224px;
+    height: 224px;
+    border: 1px solid rgba(192,132,252,0.22);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: sacCoreSpin 15s linear infinite;
+  }
+
+  #about .sac-photo-core::before,
+  #about .sac-photo-core::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: currentColor;
+    box-shadow: 0 0 18px currentColor;
+  }
+
+  #about .sac-photo-core::before {
+    width: 13px;
+    height: 13px;
+    top: -7px;
+    left: 50%;
+    color: #60a5fa;
+  }
+
+  #about .sac-photo-core::after {
+    width: 11px;
+    height: 11px;
+    right: 18px;
+    bottom: 22px;
+    color: #f472b6;
+  }
+
+  @keyframes sacCoreSpin {
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+
+  #about .sac-node {
+    --node-angle: 0deg;
+    position: absolute;
+    z-index: 8;
+    width: 92px;
+    min-height: 58px;
+    display: grid;
+    place-items: center;
+    gap: 3px;
+    padding: 9px 10px;
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 18px;
+    color: #cbd5e1;
+    cursor: pointer;
+    background: rgba(15,23,42,0.70);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 12px 28px rgba(2,6,23,0.22);
+    font: inherit;
+    transform:
+      rotate(var(--node-angle))
+      translateX(calc(min(430px, 88%) / 2))
+      rotate(calc(var(--node-angle) * -1));
+    transform-origin: center;
+    transition:
+      color 0.3s ease,
+      border-color 0.3s ease,
+      background 0.3s ease,
+      box-shadow 0.3s ease,
+      scale 0.3s ease;
+  }
+
+  /* Posisi node menggunakan rotate dari pusat orbit */
+  #about .sac-node-wrap {
+    position: absolute;
+    inset: 50%;
+    z-index: 8;
+    width: 0;
+    height: 0;
+  }
+
+  #about .sac-node i {
+    color: #c084fc;
+    font-size: 16px;
+  }
+
+  #about .sac-node span {
+    font-size: 11px;
+    font-weight: 750;
+    letter-spacing: 0.5px;
+  }
+
+  #about .sac-node:hover {
+    color: #ffffff;
+    border-color: rgba(192,132,252,0.36);
+    background: rgba(51,65,85,0.82);
+    box-shadow: 0 14px 34px rgba(124,58,237,0.26);
+    scale: 1.05;
+  }
+
+  #about .sac-node[aria-pressed="true"] {
+    color: #ffffff;
+    border-color: rgba(244,114,182,0.36);
+    background:
+      linear-gradient(
+        135deg,
+        rgba(37,99,235,0.72),
+        rgba(124,58,237,0.78),
+        rgba(236,72,153,0.68)
+      );
+    box-shadow:
+      0 0 0 5px rgba(168,85,247,0.08),
+      0 16px 38px rgba(124,58,237,0.34);
+  }
+
+  #about .sac-node[data-angle="0"]   { --node-angle: -90deg; }
+  #about .sac-node[data-angle="1"]   { --node-angle: -18deg; }
+  #about .sac-node[data-angle="2"]   { --node-angle: 54deg; }
+  #about .sac-node[data-angle="3"]   { --node-angle: 126deg; }
+  #about .sac-node[data-angle="4"]   { --node-angle: 198deg; }
+
+  #about .sac-scan {
+    position: absolute;
+    z-index: 3;
+    inset: 16%;
+    overflow: hidden;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  #about .sac-scan::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 24%;
+    left: 0;
+    top: -30%;
+    background:
+      linear-gradient(
+        to bottom,
+        transparent,
+        rgba(96,165,250,0.10),
+        rgba(192,132,252,0.22),
+        transparent
+      );
+    filter: blur(4px);
+    animation: sacScanMove 4.8s ease-in-out infinite;
+  }
+
+  @keyframes sacScanMove {
+    0%, 15% { top: -30%; }
+    75%, 100% { top: 110%; }
+  }
+
+  /* =========================================================
+     KOLOM KANAN — DYNAMIC PANEL
+  ========================================================= */
+  #about .sac-right {
+    position: relative;
+    min-height: 560px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 30px;
+    background: rgba(2, 6, 23, 0.24);
+  }
+
+  #about .sac-right::before {
+    content: "";
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    right: -95px;
+    top: -90px;
+    border-radius: 50%;
+    background: rgba(236,72,153,0.20);
+    filter: blur(55px);
+  }
+
+  #about .sac-panel {
+    position: absolute;
+    inset: 0;
+    padding: 28px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(14px) scale(0.985);
+    transition:
+      opacity 0.42s ease,
+      visibility 0.42s ease,
+      transform 0.42s ease;
+  }
+
+  #about .sac-panel.is-active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+  }
+
+  #about .sac-panel-index {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 26px;
+    color: #a5b4fc;
+    font-family: "Orbitron", sans-serif;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  #about .sac-panel-index::before {
+    content: "";
+    width: 25px;
+    height: 1px;
+    background: linear-gradient(90deg, #60a5fa, #c084fc);
+  }
+
+  #about .sac-panel-icon {
+    width: 62px;
+    height: 62px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 22px;
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 20px;
+    color: #ffffff;
+    background:
+      linear-gradient(
+        135deg,
+        rgba(59,130,246,0.36),
+        rgba(168,85,247,0.42),
+        rgba(236,72,153,0.28)
+      );
+    box-shadow: 0 14px 35px rgba(124,58,237,0.18);
+    font-size: 24px;
+  }
+
+  #about .sac-panel-title {
+    margin: 0 0 12px;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.14;
+  }
+
+  #about .sac-panel-copy {
+    margin: 0 0 22px;
+    color: #cbd5e1;
+    font-family: "Delius", cursive;
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  #about .sac-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+  }
+
+  #about .sac-tag {
+    padding: 8px 11px;
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 999px;
+    color: #e2e8f0;
+    background: rgba(255,255,255,0.055);
+    font-size: 12px;
+    font-weight: 650;
+  }
+
+  #about .sac-panel-footer {
+    position: absolute;
+    left: 28px;
+    right: 28px;
+    bottom: 28px;
+  }
+
+  #about .sac-progress-label {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 9px;
+    color: #94a3b8;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+  }
+
+  #about .sac-progress {
+    height: 6px;
+    overflow: hidden;
+    border-radius: 99px;
+    background: rgba(255,255,255,0.07);
+  }
+
+  #about .sac-progress span {
+    display: block;
+    height: 100%;
+    width: var(--progress, 75%);
+    border-radius: inherit;
+    background: linear-gradient(90deg, #60a5fa, #c084fc, #f472b6);
+    box-shadow: 0 0 16px rgba(192,132,252,0.60);
+    transform-origin: left;
+    animation: sacProgressIn 0.9s ease both;
+  }
+
+  @keyframes sacProgressIn {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+  }
+
+  #about .sac-auto-status {
+    position: absolute;
+    right: 18px;
+    bottom: 18px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 11px;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 999px;
+    color: #94a3b8;
+    background: rgba(15,23,42,0.58);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    font-size: 10px;
+    font-weight: 700;
+  }
+
+  #about .sac-auto-status::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #c084fc;
+    box-shadow: 0 0 10px #c084fc;
+  }
+
+  /* =========================================================
+     MODE TERANG
+  ========================================================= */
+  html[data-portfolio-theme="light"] #about .sac-shell {
+    border-color: rgba(255,255,255,0.76);
+    background:
+      linear-gradient(
+        132deg,
+        rgba(255,255,255,0.72),
+        rgba(238,242,255,0.66),
+        rgba(250,232,255,0.58)
+      );
+    box-shadow:
+      0 30px 80px rgba(91,33,182,0.14),
+      inset 0 1px 0 rgba(255,255,255,0.90);
+  }
+
+  html[data-portfolio-theme="light"] #about .sac-title,
+  html[data-portfolio-theme="light"] #about .sac-signal-value,
+  html[data-portfolio-theme="light"] #about .sac-panel-title {
+    color: #1e1b4b;
+  }
+
+  html[data-portfolio-theme="light"] #about .sac-top-note,
+  html[data-portfolio-theme="light"] #about .sac-panel-copy {
+    color: #475569;
+  }
+
+  html[data-portfolio-theme="light"] #about .sac-signal,
+  html[data-portfolio-theme="light"] #about .sac-center,
+  html[data-portfolio-theme="light"] #about .sac-right {
+    border-color: rgba(124,58,237,0.12);
+    background: rgba(255,255,255,0.46);
+  }
+
+  html[data-portfolio-theme="light"] #about .sac-node {
+    color: #475569;
+    border-color: rgba(124,58,237,0.14);
+    background: rgba(255,255,255,0.72);
+    box-shadow: 0 10px 26px rgba(91,33,182,0.12);
+  }
+
+  html[data-portfolio-theme="light"] #about .sac-node:hover,
+  html[data-portfolio-theme="light"] #about .sac-node[aria-pressed="true"] {
+    color: #ffffff;
+  }
+
+  html[data-portfolio-theme="light"] #about .sac-photo img {
+    border-color: rgba(255,255,255,0.94);
+  }
+
+  html[data-portfolio-theme="light"] #about .sac-tag {
+    color: #475569;
+    border-color: rgba(124,58,237,0.12);
+    background: rgba(255,255,255,0.54);
+  }
+
+  html[data-portfolio-theme="light"] #about .sac-auto-status {
+    color: #64748b;
+    border-color: rgba(124,58,237,0.12);
+    background: rgba(255,255,255,0.65);
+  }
+
+  /* =========================================================
+     RESPONSIVE
+  ========================================================= */
+  @media (max-width: 1160px) {
+    #about .sac-layout {
+      grid-template-columns: minmax(220px, 0.65fr) minmax(420px, 1.15fr);
+    }
+
+    #about .sac-right {
+      grid-column: 1 / -1;
+      min-height: 390px;
+    }
+
+    #about .sac-panel {
+      padding-right: 36%;
+    }
+
+    #about .sac-panel-footer {
+      right: 36%;
+    }
+  }
+
+  @media (max-width: 860px) {
+    #about.sac-about {
+      padding: 92px 18px 72px;
+    }
+
+    #about .sac-shell {
+      padding: 30px;
+      border-radius: 30px;
+    }
+
+    #about .sac-topbar {
+      flex-direction: column;
+    }
+
+    #about .sac-top-note {
+      max-width: 700px;
+    }
+
+    #about .sac-layout {
+      grid-template-columns: 1fr;
+    }
+
+    #about .sac-left {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #about .sac-availability {
+      grid-column: 1 / -1;
+    }
+
+    #about .sac-center {
+      min-height: 560px;
+    }
+
+    #about .sac-right {
+      min-height: 440px;
+    }
+
+    #about .sac-panel {
+      padding-right: 28px;
+    }
+
+    #about .sac-panel-footer {
+      right: 28px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    #about.sac-about {
+      padding-inline: 12px;
+    }
+
+    #about .sac-shell {
+      padding: 24px 16px;
+      border-radius: 24px;
+    }
+
+    #about .sac-title {
+      font-size: 42px;
+      letter-spacing: -1.5px;
+    }
+
+    #about .sac-left {
+      grid-template-columns: 1fr;
+    }
+
+    #about .sac-availability {
+      grid-column: auto;
+    }
+
+    #about .sac-center {
+      min-height: 480px;
+    }
+
+    #about .sac-orbit {
+      width: min(340px, 82%);
+    }
+
+    #about .sac-photo {
+      width: 142px;
+      height: 142px;
+    }
+
+    #about .sac-photo-core {
+      width: 186px;
+      height: 186px;
+    }
+
+    #about .sac-node {
+      width: 76px;
+      min-height: 50px;
+      padding: 7px;
+      transform:
+        rotate(var(--node-angle))
+        translateX(calc(min(340px, 82%) / 2))
+        rotate(calc(var(--node-angle) * -1));
+    }
+
+    #about .sac-node i {
+      font-size: 14px;
+    }
+
+    #about .sac-node span {
+      font-size: 9px;
+    }
+
+    #about .sac-right {
+      min-height: 500px;
+    }
+  }
+
+  @media (max-width: 420px) {
+    #about .sac-center {
+      min-height: 430px;
+    }
+
+    #about .sac-orbit {
+      width: min(290px, 84%);
+    }
+
+    #about .sac-node {
+      width: 68px;
+      transform:
+        rotate(var(--node-angle))
+        translateX(calc(min(290px, 84%) / 2))
+        rotate(calc(var(--node-angle) * -1));
+    }
+
+    #about .sac-photo {
+      width: 124px;
+      height: 124px;
+    }
+
+    #about .sac-photo-core {
+      width: 162px;
+      height: 162px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #about .sac-shell::after,
+    #about .sac-aurora,
+    #about .sac-orbit::before,
+    #about .sac-orbit::after,
+    #about .sac-photo-core,
+    #about .sac-scan::before,
+    #about .sac-availability::before {
+      animation-duration: 35s !important;
+    }
+  }
+</style>
+
+<section id="about" class="sac-about reveal">
+  <div class="sac-shell" id="sacSpotlight">
+    <div class="sac-aurora" aria-hidden="true"></div>
+
+    <!-- HEADER -->
+    <div class="sac-topbar">
+      <div>
+        <div class="sac-eyebrow">
+          Constellation Profile Console
+        </div>
+
+        <h2 class="sac-title">
+          About me,
+          <span>without the long story.</span>
+        </h2>
+      </div>
+
+      <p class="sac-top-note">
+        Klik salah satu titik orbit untuk melihat profil,
+        pengalaman, fokus, perangkat, dan arah pengembangan saya.
+      </p>
+    </div>
+
+    <div class="sac-layout">
+      <!-- =====================================================
+           KIRI — INFORMASI RINGKAS
+      ====================================================== -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<aside class="sac-left">
+  <div
+    class="sac-signal"
+    style="--signal-glow: rgba(59,130,246,0.34)"
+  >
+    <div class="sac-signal-icon">
+      <i class="fa-solid fa-graduation-cap"></i>
+    </div>
+
+    <div>
+      <span class="sac-signal-label">Education</span><br>
+      <span class="sac-signal-value">
+        Computer Science<br>
+        Informatics × Multimedia
+      </span>
+    </div>
+  </div>
+
+  <div
+    class="sac-signal"
+    style="--signal-glow: rgba(168,85,247,0.34)"
+  >
+    <div class="sac-signal-icon">
+      <i class="fa-solid fa-location-dot"></i>
+    </div>
+
+    <div>
+      <span class="sac-signal-label">Base</span><br>
+      <span class="sac-signal-value">
+        Bireuen, Aceh<br>
+        Indonesia
+      </span>
+    </div>
+  </div>
+
+  <div
+    class="sac-signal"
+    style="--signal-glow: rgba(236,72,153,0.30)"
+  >
+    <div class="sac-signal-icon">
+      <i class="fa-solid fa-wand-magic-sparkles"></i>
+    </div>
+
+    <div>
+      <span class="sac-signal-label">Primary Identity</span><br>
+      <span class="sac-signal-value">
+        Creative Developer<br>
+        Digital Multimedia
+      </span>
+    </div>
+  </div>
+</aside>
+
+      <!-- =====================================================
+           TENGAH — ORBIT INTERAKTIF
+      ====================================================== -->
+      <div class="sac-center">
+        <div class="sac-coordinate">
+          Interactive constellation / SN–2026
+        </div>
+
+        <div class="sac-orbit-stage">
+          <div class="sac-orbit">
+            <div class="sac-scan"></div>
+            <div class="sac-photo-core"></div>
+
+            <div class="sac-photo">
+              <img
+                src="images/img22.jpeg"
+                alt="Sarah Nadia"
+              >
+            </div>
+
+            <div class="sac-node-wrap">
+              <button
+                class="sac-node"
+                type="button"
+                data-angle="0"
+                data-sac-target="profile"
+                aria-pressed="true"
+                aria-label="Tampilkan profil Sarah"
+              >
+                <i class="fa-regular fa-user"></i>
+                <span>Profile</span>
+              </button>
+            </div>
+
+            <div class="sac-node-wrap">
+              <button
+                class="sac-node"
+                type="button"
+                data-angle="1"
+                data-sac-target="experience"
+                aria-pressed="false"
+                aria-label="Tampilkan pengalaman Sarah"
+              >
+                <i class="fa-solid fa-briefcase"></i>
+                <span>Experience</span>
+              </button>
+            </div>
+
+            <div class="sac-node-wrap">
+              <button
+                class="sac-node"
+                type="button"
+                data-angle="2"
+                data-sac-target="focus"
+                aria-pressed="false"
+                aria-label="Tampilkan fokus Sarah"
+              >
+                <i class="fa-solid fa-bullseye"></i>
+                <span>Focus</span>
+              </button>
+            </div>
+
+            <div class="sac-node-wrap">
+              <button
+                class="sac-node"
+                type="button"
+                data-angle="3"
+                data-sac-target="toolkit"
+                aria-pressed="false"
+                aria-label="Tampilkan perangkat kerja Sarah"
+              >
+                <i class="fa-solid fa-layer-group"></i>
+                <span>Toolkit</span>
+              </button>
+            </div>
+
+            <div class="sac-node-wrap">
+              <button
+                class="sac-node"
+                type="button"
+                data-angle="4"
+                data-sac-target="vision"
+                aria-pressed="false"
+                aria-label="Tampilkan visi Sarah"
+              >
+                <i class="fa-regular fa-gem"></i>
+                <span>Vision</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =====================================================
+           KANAN — PANEL DINAMIS
+      ====================================================== -->
+      <div class="sac-right" id="sacPanelHost">
+        <!-- PROFILE -->
+        <article
+          class="sac-panel is-active"
+          data-sac-panel="profile"
+        >
+          <div class="sac-panel-index">
+            Node 01 / Identity
+          </div>
+
+          <div class="sac-panel-icon">
+            <i class="fa-regular fa-user"></i>
+          </div>
+
+          <h3 class="sac-panel-title">
+            Sarah Nadia
+          </h3>
+
+          <p class="sac-panel-copy">
+            Lulusan Computer Science dari Universitas Almuslim
+            yang menggabungkan teknologi, desain, multimedia,
+            dan pengelolaan data dalam satu alur kerja kreatif.
+          </p>
+
+          <div class="sac-tags">
+            <span class="sac-tag">Web Development</span>
+            <span class="sac-tag">UI/UX</span>
+            <span class="sac-tag">Multimedia</span>
+            <span class="sac-tag">Data Management</span>
+          </div>
+
+          <div class="sac-panel-footer">
+            <div class="sac-progress-label">
+              <span>Creative Technology Alignment</span>
+              <span>92%</span>
+            </div>
+
+            <div class="sac-progress">
+              <span style="--progress: 92%"></span>
+            </div>
+          </div>
+        </article>
+
+        <!-- EXPERIENCE -->
+        <article
+          class="sac-panel"
+          data-sac-panel="experience"
+        >
+          <div class="sac-panel-index">
+            Node 02 / Experience
+          </div>
+
+          <div class="sac-panel-icon">
+            <i class="fa-solid fa-briefcase"></i>
+          </div>
+
+          <h3 class="sac-panel-title">
+            Professional signal
+          </h3>
+
+          <p class="sac-panel-copy">
+            Berpengalaman sebagai Social Media Specialist,
+            Multimedia Intern, serta aktif dalam organisasi,
+            public speaking, administrasi, dan produksi konten.
+          </p>
+
+          <div class="sac-tags">
+            <span class="sac-tag">PT Laris Listrik</span>
+            <span class="sac-tag">PT Aceh Asia Multimedia</span>
+            <span class="sac-tag">DPM UMUSLIM</span>
+            <span class="sac-tag">BEM FIKOM</span>
+          </div>
+
+          <div class="sac-panel-footer">
+            <div class="sac-progress-label">
+              <span>Professional Readiness</span>
+              <span>90%</span>
+            </div>
+
+            <div class="sac-progress">
+              <span style="--progress: 90%"></span>
+            </div>
+          </div>
+        </article>
+
+        <!-- FOCUS -->
+        <article
+          class="sac-panel"
+          data-sac-panel="focus"
+        >
+          <div class="sac-panel-index">
+            Node 03 / Current Focus
+          </div>
+
+          <div class="sac-panel-icon">
+            <i class="fa-solid fa-bullseye"></i>
+          </div>
+
+          <h3 class="sac-panel-title">
+            Current development map
+          </h3>
+
+          <p class="sac-panel-copy">
+            Fokus saat ini adalah membangun produk digital
+            yang lebih interaktif, mudah digunakan, kuat secara
+            visual, dan relevan dengan kebutuhan pengguna.
+          </p>
+
+          <div class="sac-tags">
+            <span class="sac-tag">Responsive Website</span>
+            <span class="sac-tag">Interactive UI</span>
+            <span class="sac-tag">Digital Storytelling</span>
+            <span class="sac-tag">Creative Data</span>
+          </div>
+
+          <div class="sac-panel-footer">
+            <div class="sac-progress-label">
+              <span>Growth Momentum</span>
+              <span>94%</span>
+            </div>
+
+            <div class="sac-progress">
+              <span style="--progress: 94%"></span>
+            </div>
+          </div>
+        </article>
+
+        <!-- TOOLKIT -->
+        <article
+          class="sac-panel"
+          data-sac-panel="toolkit"
+        >
+          <div class="sac-panel-index">
+            Node 04 / Toolkit
+          </div>
+
+          <div class="sac-panel-icon">
+            <i class="fa-solid fa-layer-group"></i>
+          </div>
+
+          <h3 class="sac-panel-title">
+            Adaptive creative toolkit
+          </h3>
+
+          <p class="sac-panel-copy">
+            Menggunakan kombinasi perangkat coding, desain,
+            video, animasi, game development, database,
+            serta aplikasi produktivitas.
+          </p>
+
+          <div class="sac-tags">
+            <span class="sac-tag">HTML / CSS / JS</span>
+            <span class="sac-tag">Python / MySQL</span>
+            <span class="sac-tag">Figma / Photoshop</span>
+            <span class="sac-tag">Premiere / After Effects</span>
+            <span class="sac-tag">Blender / Unity</span>
+          </div>
+
+          <div class="sac-panel-footer">
+            <div class="sac-progress-label">
+              <span>Toolkit Synchronization</span>
+              <span>90%</span>
+            </div>
+
+            <div class="sac-progress">
+              <span style="--progress: 90%"></span>
+            </div>
+          </div>
+        </article>
+
+        <!-- VISION -->
+        <article
+          class="sac-panel"
+          data-sac-panel="vision"
+        >
+          <div class="sac-panel-index">
+            Node 05 / Direction
+          </div>
+
+          <div class="sac-panel-icon">
+            <i class="fa-regular fa-gem"></i>
+          </div>
+
+          <h3 class="sac-panel-title">
+            Design with purpose
+          </h3>
+
+          <p class="sac-panel-copy">
+            Tujuan saya bukan hanya menghasilkan tampilan indah,
+            tetapi menciptakan pengalaman digital yang jelas,
+            fungsional, mudah dipahami, dan memberi dampak.
+          </p>
+
+          <div class="sac-tags">
+            <span class="sac-tag">Purposeful Design</span>
+            <span class="sac-tag">User Experience</span>
+            <span class="sac-tag">Continuous Learning</span>
+            <span class="sac-tag">Meaningful Impact</span>
+          </div>
+
+          <div class="sac-panel-footer">
+            <div class="sac-progress-label">
+              <span>Future Direction</span>
+              <span>96%</span>
+            </div>
+
+            <div class="sac-progress">
+              <span style="--progress: 96%"></span>
+            </div>
+          </div>
+        </article>
+
+        <div class="sac-auto-status">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  (() => {
+    const section = document.getElementById("about");
+    const shell = document.getElementById("sacSpotlight");
+
+    if (!section || !shell) return;
+
+    const nodes = Array.from(
+      section.querySelectorAll("[data-sac-target]")
+    );
+
+    const panels = Array.from(
+      section.querySelectorAll("[data-sac-panel]")
+    );
+
+    let activeIndex = 0;
+    let autoTimer = null;
+    const AUTO_DELAY = 5200;
+
+    function activatePanel(targetName, userAction = false) {
+      const nextIndex = nodes.findIndex(
+        (node) => node.dataset.sacTarget === targetName
+      );
+
+      if (nextIndex < 0) return;
+
+      activeIndex = nextIndex;
+
+      nodes.forEach((node, index) => {
+        const active = index === activeIndex;
+        node.setAttribute("aria-pressed", String(active));
+      });
+
+      panels.forEach((panel) => {
+        panel.classList.toggle(
+          "is-active",
+          panel.dataset.sacPanel === targetName
+        );
+      });
+
+      if (userAction) {
+        restartAutoOrbit();
+      }
+    }
+
+    function nextPanel() {
+      activeIndex = (activeIndex + 1) % nodes.length;
+      activatePanel(nodes[activeIndex].dataset.sacTarget);
+    }
+
+    function startAutoOrbit() {
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        return;
+      }
+
+      clearInterval(autoTimer);
+      autoTimer = setInterval(nextPanel, AUTO_DELAY);
+    }
+
+    function restartAutoOrbit() {
+      clearInterval(autoTimer);
+      startAutoOrbit();
+    }
+
+    nodes.forEach((node, index) => {
+      node.addEventListener("click", () => {
+        activatePanel(node.dataset.sacTarget, true);
+      });
+
+      node.addEventListener("keydown", (event) => {
+        if (!["ArrowLeft", "ArrowRight"].includes(event.key)) {
+          return;
+        }
+
+        event.preventDefault();
+
+        const direction = event.key === "ArrowRight" ? 1 : -1;
+        const nextIndex =
+          (index + direction + nodes.length) % nodes.length;
+
+        nodes[nextIndex].focus();
+        activatePanel(nodes[nextIndex].dataset.sacTarget, true);
+      });
+    });
+
+    /* Spotlight mengikuti kursor */
+    shell.addEventListener("pointermove", (event) => {
+      const rect = shell.getBoundingClientRect();
+
+      const x =
+        ((event.clientX - rect.left) / rect.width) * 100;
+
+      const y =
+        ((event.clientY - rect.top) / rect.height) * 100;
+
+      shell.style.setProperty("--sac-x", `${x}%`);
+      shell.style.setProperty("--sac-y", `${y}%`);
+    });
+
+    shell.addEventListener("pointerleave", () => {
+      shell.style.setProperty("--sac-x", "50%");
+      shell.style.setProperty("--sac-y", "45%");
+    });
+
+    /* Pause saat pointer berada di section */
+    section.addEventListener("mouseenter", () => {
+      clearInterval(autoTimer);
+    });
+
+    section.addEventListener("mouseleave", () => {
+      startAutoOrbit();
+    });
+
+    /* Pause saat tab browser tidak aktif */
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) {
+        clearInterval(autoTimer);
+      } else {
+        startAutoOrbit();
+      }
+    });
+
+    activatePanel("profile");
+    startAutoOrbit();
+  })();
+</script>
+
+    <!-- NEW SKILL SECTION -->
+    <section class="skill reveal py-16 px-6 md:px-16" id="skill">
+        <div class="text-center mb-12">
+                    <h1 class="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white transition-colors duration-300">Skill</h1>
+            <hr class="w-24 mx-auto my-4 border-purple-500">
+        </div>
+
+        <!-- Hard Skills & Soft Skills Badge Grid with PNG Icons -->
+        <div class="max-w-5xl mx-auto bg-slate-900/80 backdrop-blur-md p-8 rounded-3xl shadow-xl border border-purple-500/30 mb-16">
+            <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                <i class="fa-solid fa-laptop-code text-purple-400"></i> Hard Skills & Tools Stack
+            </h3>
+            
+            <!-- Container Icon Software -->
+            <div class="software-icons grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4">
+                <div class="icon-box p-4 bg-slate-800/80 rounded-2xl flex flex-col items-center justify-center hover:scale-105 transition shadow-sm border border-purple-500/20"><img src="icons/html.png" alt="HTML" class="w-10 h-10 object-contain mb-2"><span class="text-xs font-semibold text-white">HTML</span></div>
+                <div class="icon-box p-4 bg-slate-800/80 rounded-2xl flex flex-col items-center justify-center hover:scale-105 transition shadow-sm border border-purple-500/20"><img src="icons/css.png" alt="CSS" class="w-10 h-10 object-contain mb-2"><span class="text-xs font-semibold text-white">CSS</span></div>
+                <div class="icon-box p-4 bg-slate-800/80 rounded-2xl flex flex-col items-center justify-center hover:scale-105 transition shadow-sm border border-purple-500/20"><img src="icons/js.png" alt="JavaScript" class="w-10 h-10 object-contain mb-2"><span class="text-xs font-semibold text-white">JavaScript</span></div>
+                <div class="icon-box p-4 bg-slate-800/80 rounded-2xl flex flex-col items-center justify-center hover:scale-105 transition shadow-sm border border-purple-500/20"><img src="icons/figma.png" alt="Figma" class="w-10 h-10 object-contain mb-2"><span class="text-xs font-semibold text-white">Figma</span></div>
+                <div class="icon-box p-4 bg-slate-800/80 rounded-2xl flex flex-col items-center justify-center hover:scale-105 transition shadow-sm border border-purple-500/20"><img src="icons/ps.png" alt="Photoshop" class="w-10 h-10 object-contain mb-2"><span class="text-xs font-semibold text-white">Photoshop</span></div>
+                <div class="icon-box p-4 bg-slate-800/80 rounded-2xl flex flex-col items-center justify-center hover:scale-105 transition shadow-sm border border-purple-500/20"><img src="icons/ai.png" alt="Illustrator" class="w-10 h-10 object-contain mb-2"><span class="text-xs font-semibold text-white">Illustrator</span></div>
+                <div class="icon-box p-4 bg-slate-800/80 rounded-2xl flex flex-col items-center justify-center hover:scale-105 transition shadow-sm border border-purple-500/20"><img src="icons/pr.png" alt="Premiere" class="w-10 h-10 object-contain mb-2"><span class="text-xs font-semibold text-white">Premiere</span></div>
+                <div class="icon-box p-4 bg-slate-800/80 rounded-2xl flex flex-col items-center justify-center hover:scale-105 transition shadow-sm border border-purple-500/20"><img src="icons/ae.png" alt="After Effects" class="w-10 h-10 object-contain mb-2"><span class="text-xs font-semibold text-white">After Effects</span></div>
+                <div class="icon-box p-4 bg-slate-800/80 rounded-2xl flex flex-col items-center justify-center hover:scale-105 transition shadow-sm border border-purple-500/20"><img src="icons/canva.png" alt="Canva" class="w-10 h-10 object-contain mb-2"><span class="text-xs font-semibold text-white">Canva</span></div>
+                <div class="icon-box p-4 bg-slate-800/80 rounded-2xl flex flex-col items-center justify-center hover:scale-105 transition shadow-sm border border-purple-500/20"><img src="icons/capcut.png" alt="CapCut" class="w-10 h-10 object-contain mb-2"><span class="text-xs font-semibold text-white">CapCut</span></div>
+                <div class="icon-box p-4 bg-slate-800/80 rounded-2xl flex flex-col items-center justify-center hover:scale-105 transition shadow-sm border border-purple-500/20"><img src="icons/blender.png" alt="Blender" class="w-10 h-10 object-contain mb-2"><span class="text-xs font-semibold text-white">Blender</span></div>
+                <div class="icon-box p-4 bg-slate-800/80 rounded-2xl flex flex-col items-center justify-center hover:scale-105 transition shadow-sm border border-purple-500/20"><img src="icons/unity.png" alt="Unity" class="w-10 h-10 object-contain mb-2"><span class="text-xs font-semibold text-white">Unity</span></div>
+                <div class="icon-box p-4 bg-slate-800/80 rounded-2xl flex flex-col items-center justify-center hover:scale-105 transition shadow-sm border border-purple-500/20"><img src="icons/vsc.png" alt="VS Code" class="w-10 h-10 object-contain mb-2"><span class="text-xs font-semibold text-white">VS Code</span></div>
+                <div class="icon-box p-4 bg-slate-800/80 rounded-2xl flex flex-col items-center justify-center hover:scale-105 transition shadow-sm border border-purple-500/20"><img src="icons/cdr.png" alt="CorelDRAW" class="w-10 h-10 object-contain mb-2"><span class="text-xs font-semibold text-white">CorelDRAW</span></div>
+                <div class="icon-box p-4 bg-slate-800/80 rounded-2xl flex flex-col items-center justify-center hover:scale-105 transition shadow-sm border border-purple-500/20"><img src="icons/ibispain.png" alt="Ibis Paint" class="w-10 h-10 object-contain mb-2"><span class="text-xs font-semibold text-white">Ibis Paint</span></div>
+                <div class="icon-box p-4 bg-slate-800/80 rounded-2xl flex flex-col items-center justify-center hover:scale-105 transition shadow-sm border border-purple-500/20"><img src="icons/msql.png" alt="MySQL" class="w-10 h-10 object-contain mb-2"><span class="text-xs font-semibold text-white">MySQL</span></div>
+                <div class="icon-box p-4 bg-slate-800/80 rounded-2xl flex flex-col items-center justify-center hover:scale-105 transition shadow-sm border border-purple-500/20"><img src="icons/excel.png" alt="Excel" class="w-10 h-10 object-contain mb-2"><span class="text-xs font-semibold text-white">Excel</span></div>
+                <div class="icon-box p-4 bg-slate-800/80 rounded-2xl flex flex-col items-center justify-center hover:scale-105 transition shadow-sm border border-purple-500/20"><img src="icons/word.png" alt="Word" class="w-10 h-10 object-contain mb-2"><span class="text-xs font-semibold text-white">Word</span></div>
+                <div class="icon-box p-4 bg-slate-800/80 rounded-2xl flex flex-col items-center justify-center hover:scale-105 transition shadow-sm border border-purple-500/20"><img src="icons/ppt.png" alt="PowerPoint" class="w-10 h-10 object-contain mb-2"><span class="text-xs font-semibold text-white">PowerPoint</span></div>
+                <div class="icon-box p-4 bg-slate-800/80 rounded-2xl flex flex-col items-center justify-center hover:scale-105 transition shadow-sm border border-purple-500/20"><img src="icons/xapp.png" alt="XAMPP" class="w-10 h-10 object-contain mb-2"><span class="text-xs font-semibold text-white">XAMPP</span></div>
+            </div>
+        </div>
+<!-- Experience / Skill Cards Layout (Total 6 Cards tanpa gambar) -->
+        <div class="text-center mb-8">
+            <h2 class="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Professional Capabilities & Highlights</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
+            <!-- Card 1 -->
+            <div class="bg-slate-900/90 rounded-2xl p-6 shadow-xl border border-purple-500/30 flex flex-col justify-between hover:shadow-2xl hover:border-pink-500/50 transition">
+                <div>
+                    <span class="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Pengalaman Kerja </span>
+                    <h3 class="text-xl font-bold bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300 bg-clip-text text-transparent mt-4 mb-2">Social Media Specialist</h3>
+                    <p class="text-white text-sm">Berpengalaman Kerja di dua perusahaan menjabat sebagai SocMed Specialist atau Admin Media serta Multimedia Intern, yaitu di PT Laris Listrik Alina Rezeki Sukses Matang Geulumpang Dua dan PT Aceh Asia Multimedia Banda Aceh.  Peran tugas sebagai pengelola akun medsos, video editing, desain grafis publikasi, serta memproduksi konten kreatif untuk meningkatkan engagement</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-slate-900/90 rounded-2xl p-6 shadow-xl border border-purple-500/30 flex flex-col justify-between hover:shadow-2xl hover:border-pink-500/50 transition">
+                <div>
+                    <span class="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Game Dev</span>
+                    <h3 class="text-xl font-bold bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300 bg-clip-text text-transparent mt-4 mb-2">3D Game Developer</h3>
+                    <p class="text-white text-sm">Mengembangkan game, mulai dari merancang game edukasi 3D pembelajaran bahasa Jepang menggunakan Unity Engine dan bahasa pemrograman C# dengan metode MDLC , hingga mengembangkan game edukasi 2D interaktif menggunakan Unity dan Adobe Animate untuk menciptakan pengalaman belajar yang menarik dan inovatif</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-slate-900/90 rounded-2xl p-6 shadow-xl border border-purple-500/30 flex flex-col justify-between hover:shadow-2xl hover:border-pink-500/50 transition">
+                <div>
+                    <span class="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">UI / UX</span>
+                    <h3 class="text-xl font-bold bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300 bg-clip-text text-transparent mt-4 mb-2">UI/UX Designer</h3>
+                    <p class="text-white text-sm">Merancang antarmuka pengguna yang intuitif, menarik, dan berpusat pada pengguna menggunakan Figma. Proses perancangan mencakup pembuatan wireframe, perancangan alur kerja pengguna (user flow), penyusunan design system, hingga pengembangan prototipe interaktif berketepatan tinggi (high-fidelity prototype)</p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-slate-900/90 rounded-2xl p-6 shadow-xl border border-purple-500/30 flex flex-col justify-between hover:shadow-2xl hover:border-pink-500/50 transition">
+                <div>
+                    <span class="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Public Speaking</span>
+                    <h3 class="text-xl font-bold bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300 bg-clip-text text-transparent mt-4 mb-2">MC & Moderator</h3>
+                    <p class="text-white text-sm">Aktif memimpin acara formal fakultas, universitas, maupun acara luar kampus dengan kemampuan public speaking yang handal. Aktif mengemban peran penting sebagai MC dan moderator untuk memandu acara secara profesional dan punya kepercayaan diri tinggi dan sering tampil, mulai dari menyampaikan pesan dan kesan mahasiswa, membaca puisi, menari, hingga menyanyi.</p>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="bg-slate-900/90 rounded-2xl p-6 shadow-xl border border-purple-500/30 flex flex-col justify-between hover:shadow-2xl hover:border-pink-500/50 transition">
+                <div>
+                    <span class="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Leadership</span>
+                    <h3 class="text-xl font-bold bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300 bg-clip-text text-transparent mt-4 mb-2">Organizational Lead</h3>
+                    <p class="text-white text-sm">Pengalaman kepemimpinan di Dewan Perwakilan Mahasiswa (DPM) Umuslim dan BEM FIKOM. Selain itu, saya juga ikut sertadalam program Pengabdian kepada Masyarakat (PKM) berkolaborasi dengan dosen pada bidang matematika dan multimedia, di mana saya berkontribusi dalam merancang media edukasi berbasis logika serta memproduksi konten digital interaktif untuk masyarakat.</p>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="bg-slate-900/90 rounded-2xl p-6 shadow-xl border border-purple-500/30 flex flex-col justify-between hover:shadow-2xl hover:border-pink-500/50 transition">
+                <div>
+                    <span class="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Multimedia</span>
+                    <h3 class="text-xl font-bold bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300 bg-clip-text text-transparent mt-4 mb-2">Graphic Design & Animation</h3>
+                    <p class="text-white text-sm">Berpengalaman dalam animasi 2D dan 3D serta character modeling menggunakan Blender dan Adobe Animate, didukung keahlian ilustrasi digital via IbisPaint, Adobe Illustrator, dan Photoshop. Selain itu, aktif memproduksi konten visual dinamis melalui penyuntingan video profesional menggunakan Adobe Premiere Pro, After effect dan CapCut.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeri / Pengalaman Section -->
+    <section id="galeri" class="w-full py-16">
+      <div class="text-center mb-12">
+        <h4 class="font-delius text-xl md:text-2xl font-bold text-purple-400 mb-5"> Story </h4>
+        
+        <!-- Judul Utama kembali menggunakan font modern standar (Inter) -->
+        <h2 class="text-3xl md:text-5xl font-bold">
+          <span class="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Sarah Nadia</span>
+        </h2>
+      </div>
+
+      <div id="gallery" class="grid grid-cols-2 md:grid-cols-2 gap-4 px-6 md:px-16 auto-rows-[200px] md:auto-rows-[250px]">
+        
+        <!-- Cerita 1 -->
+        <div class="group relative overflow-hidden rounded-xl cursor-pointer transition-all duration-500 ease-in-out col-span-1 will-change-transform hover:scale-105 hover:shadow-[0_15px_30px_rgba(168,85,247,0.15)]">
+          <img src="assets/gambar1.jpg" class="object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-105" alt="Cerita 1" />
+          <div class="absolute inset-0 bg-gradient-to-br from-blue-950/90 via-purple-900/90 to-pink-950/80 flex flex-col justify-center items-center text-white text-center px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <p class="font-semibold text-sm md:text-lg">Alhamdulillah Jadi Peserta yudisium terbaik dan jadi wisudawan terbaik, Rasa nya ga nyangka tapi senang dan bersyukur banget.</p>
+          </div>
+        </div>
+
+        <!-- Cerita 2 -->
+        <div class="group relative overflow-hidden rounded-xl cursor-pointer transition-all duration-500 ease-in-out col-span-1 will-change-transform hover:scale-105 hover:shadow-[0_15px_30px_rgba(168,85,247,0.15)]">
+          <img src="assets/gambar2.jpg" class="object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-105" alt="Cerita 2" />
+          <div class="absolute inset-0 bg-gradient-to-br from-blue-950/90 via-purple-900/90 to-pink-950/80 flex flex-col justify-center items-center text-white text-center px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <p class="font-semibold text-sm md:text-lg">Dari yang suka bertukar pikiran, mendengarkan, juga rasa penasaran tinggi terhadap ilmu baru. Sampe Join Organisasi Kampus mulai dari Dewan Perwakilan Mahasiswa dan BEM.</p>
+          </div>
+        </div>
+        
+        <!-- Cerita 3 -->
+        <div class="group relative overflow-hidden rounded-xl cursor-pointer transition-all duration-500 ease-in-out col-span-1 will-change-transform hover:scale-105 hover:shadow-[0_15px_30px_rgba(168,85,247,0.15)]">
+          <img src="assets/gambar3.jpg" class="object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-105" alt="Cerita 3" />
+          <div class="absolute inset-0 bg-gradient-to-br from-blue-950/90 via-purple-900/90 to-pink-950/80 flex flex-col justify-center items-center text-white text-center px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <p class="font-semibold text-sm md:text-lg">Pengalaman tak terlupakan adalah menjadi bagian dari Program Pertukaran mahasiswa merdeka 3 di universitas esa unggul.</p>
+          </div>
+        </div>
+
+        <!-- Cerita 4 -->
+        <div class="group relative overflow-hidden rounded-xl cursor-pointer transition-all duration-500 ease-in-out col-span-1 will-change-transform hover:scale-105 hover:shadow-[0_15px_30px_rgba(168,85,247,0.15)]">
+          <img src="assets/gambar4.jpg" class="object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-105" alt="Cerita 4" />
+          <div class="absolute inset-0 bg-gradient-to-br from-blue-950/90 via-purple-900/90 to-pink-950/80 flex flex-col justify-center items-center text-white text-center px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <p class="font-semibold text-sm md:text-lg">yang awalnya bukan siapa-siapa, tapi diberikan kepercayaan buat ikut hibah bareng dosen dan punya pengalaman kerja di dua PT .</p>
+          </div>
+        </div>
+        
+        <!-- Cerita 5 -->
+        <div class="group relative overflow-hidden rounded-xl cursor-pointer transition-all duration-500 ease-in-out col-span-1 will-change-transform hover:scale-105 hover:shadow-[0_15px_30px_rgba(168,85,247,0.15)]">
+          <img src="assets/gambar5.jpg" class="object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-105" alt="Cerita 5" />
+          <div class="absolute inset-0 bg-gradient-to-br from-blue-950/90 via-purple-900/90 to-pink-950/80 flex flex-col justify-center items-center text-white text-center px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <p class="font-semibold text-sm md:text-lg">Dari yang suka yapping, tapi malah menjadi skill Public Speaking yang akhirnya jadi MC di acara fakultas, universitas bahkan acara diluar kampus, selain MC kadang nyanyi dan baca puisi.</p>
+          </div>
+        </div>
+
+        <!-- Cerita 6 -->
+        <div class="group relative overflow-hidden rounded-xl cursor-pointer transition-all duration-500 ease-in-out col-span-1 will-change-transform hover:scale-105 hover:shadow-[0_15px_30px_rgba(168,85,247,0.15)]">
+          <img src="assets/gambar6.jpg" class="object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-105" alt="Cerita 6" />
+          <div class="absolute inset-0 bg-gradient-to-br from-blue-950/90 via-purple-900/90 to-pink-950/80 flex flex-col justify-center items-center text-white text-center px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <p class="font-semibold text-sm md:text-lg"> Hanya mahasiswa biasa yang punya keinginan luar biasa untuk terus berjuang dan semnagat dalam menciptakan sesuatu. Ini Dia beberapa project yang pernah dibuat.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+<section class="project  reveal" id="project">
+        <p>.......</p>
+        <h1 style="font-family:'Satoshi',sans-serif;font-weight:700;">Projects</h1>
+        <hr>
+        <div class="info-pro">
+            <p>A showcase of my recent projects demonstrating expertise in full-stack </p>
+            <p>development, modern frameworks, and creative problem-solving.</p>
+        </div>
+        <div class="projects-container">
+
+    <div class="project-card">
+      <div class="slider-container" style="position: relative; overflow: hidden; width: 100%;">
+        <div class="slider-track" style="display: flex; transition: transform 0.5s ease;">
+          <img src="images/V1.png" alt="E-Commerce Website 1" style="min-width: 100%; object-fit: cover;">
+          <img src="images/V2.png" alt="E-Commerce Website 2" style="min-width: 100%; object-fit: cover;">
+          <img src="images/V3.png" alt="E-Commerce Website 3" style="min-width: 100%; object-fit: cover;">
+        </div>
+        <button class="prev-btn" onclick="slideImage(this, -1)" style="position: absolute; top: 50%; left: 5px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; padding: 5px 10px;">&#10094;</button>
+        <button class="next-btn" onclick="slideImage(this, 1)" style="position: absolute; top: 50%; right: 5px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; padding: 5px 10px;">&#10095;</button>
+      </div>
+      <h3>E-Commerce Website</h3>
+      <p>Modern online store with product filtering, cart, and payment system.</p>
+      <div class="skills">
+        <a href="#">phpMyAdmin</a>
+        <a href="#">MySQL</a>
+        <a href="#">XAMPP</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="slider-container" style="position: relative; overflow: hidden; width: 100%;">
+        <div class="slider-track" style="display: flex; transition: transform 0.5s ease;">
+          <img src="images/porto11.png" alt="Portfolio Website 1" style="min-width: 100%; object-fit: cover;">
+          <img src="images/porto22.png" alt="Portfolio Website 2" style="min-width: 100%; object-fit: cover;">
+          <img src="images/porto 33.png" alt="Portfolio Website 3" style="min-width: 100%; object-fit: cover;">
+            <img src="images/P2.png" alt="Portfolio Website 3" style="min-width: 100%; object-fit: cover;">
+              <img src="images/P1.png" alt="Portfolio Website 3" style="min-width: 100%; object-fit: cover;">
+                <img src="images/P3.png" alt="Portfolio Website 3" style="min-width: 100%; object-fit: cover;">
+        </div>
+        <button class="prev-btn" onclick="slideImage(this, -1)" style="position: absolute; top: 50%; left: 5px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; padding: 5px 10px;">&#10094;</button>
+        <button class="next-btn" onclick="slideImage(this, 1)" style="position: absolute; top: 50%; right: 5px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; padding: 5px 10px;">&#10095;</button>
+      </div>
+      <h3>Portfolio Website</h3>
+      <p>Personal portfolio to showcase my design and coding projects.</p>
+      <div class="skills">
+        <a href="#">HTML</a>
+        <a href="#">CSS</a>
+        <a href="#">JavaScript</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="slider-container" style="position: relative; overflow: hidden; width: 100%;">
+        <div class="slider-track" style="display: flex; transition: transform 0.5s ease;">
+          <img src="images/GAME1.png" alt="Game Education 3D 1" style="min-width: 100%; object-fit: cover;">
+          <img src="images/GAME2.png" alt="Game Education 3D 2" style="min-width: 100%; object-fit: cover;">
+          <img src="images/GAME3.png" alt="Game Education 3D 3" style="min-width: 100%; object-fit: cover;">
+          <img src="images/GAME11.jpg" alt="Game Education 3D 3" style="min-width: 100%; object-fit: cover;">
+          <img src="images/GAME 22.jpg" alt="Game Education 3D 3" style="min-width: 100%; object-fit: cover;">
+          <img src="images/GAME33.jpg" alt="Game Education 3D 3" style="min-width: 100%; object-fit: cover;">
+          <img src="images/APALEH1.png" alt="Game Education 3D 3" style="min-width: 100%; object-fit: cover;">
+          <img src="images/APALEH2.png" alt="Game Education 3D 3" style="min-width: 100%; object-fit: cover;">
+          <img src="images/APALEH3.png" alt="Game Education 3D 3" style="min-width: 100%; object-fit: cover;">
+        </div>
+        <button class="prev-btn" onclick="slideImage(this, -1)" style="position: absolute; top: 50%; left: 5px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; padding: 5px 10px;">&#10094;</button>
+        <button class="next-btn" onclick="slideImage(this, 1)" style="position: absolute; top: 50%; right: 5px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; padding: 5px 10px;">&#10095;</button>
+      </div>
+      <h3> Game Education & Animation</h3>
+      <p>Interactive 3D modeling animation and game for educational purposes.</p>
+      <div class="skills">
+        <a href="#">Unity Engine</a>
+        <a href="#">C# </a>
+        <a href="#">Blender</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="slider-container" style="position: relative; overflow: hidden; width: 100%;">
+        <div class="slider-track" style="display: flex; transition: transform 0.5s ease;">
+          <img src="images/ui ux1.png" alt="Blog Website 1" style="min-width: 100%; object-fit: cover;">
+          <img src="images/ui ux2.png" alt="Blog Website 2" style="min-width: 100%; object-fit: cover;">
+        </div>
+        <button class="prev-btn" onclick="slideImage(this, -1)" style="position: absolute; top: 50%; left: 5px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; padding: 5px 10px;">&#10094;</button>
+        <button class="next-btn" onclick="slideImage(this, 1)" style="position: absolute; top: 50%; right: 5px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; padding: 5px 10px;">&#10095;</button>
+      </div>
+      <h3>UI UX Design</h3>
+      <p>Simple Design for a website</p>
+      <div class="skills">
+        <a href="#">Figma</a>
+        <a href="#">UI Design</a>
+        <a href="#">Prototype</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="slider-container" style="position: relative; overflow: hidden; width: 100%;">
+        <div class="slider-track" style="display: flex; transition: transform 0.5s ease;">
+          <img src="images/SOSMED.png" alt="Game Landing Page 1" style="min-width: 100%; object-fit: cover;">
+          <img src="images/d1.png" alt="Game Landing Page 1" style="min-width: 100%; object-fit: cover;">
+          <img src="images/d2.png" alt="Game Landing Page 2" style="min-width: 100%; object-fit: cover;">
+          <img src="images/lpi.png" alt="Game Landing Page 3" style="min-width: 100%; object-fit: cover;">
+        </div>
+        <button class="prev-btn" onclick="slideImage(this, -1)" style="position: absolute; top: 50%; left: 5px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; padding: 5px 10px;">&#10094;</button>
+        <button class="next-btn" onclick="slideImage(this, 1)" style="position: absolute; top: 50%; right: 5px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; padding: 5px 10px;">&#10095;</button>
+      </div>
+      <h3>Design Projects</h3>
+      <p>Design for Account Social Media Management with modern aesthetics</p>
+      <div class="skills">
+        <a href="#">Figma</a>
+        <a href="#">Canva</a>
+        <a href="#">Adobe Photoshop</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="slider-container" style="position: relative; overflow: hidden; width: 100%;">
+        <div class="slider-track" style="display: flex; transition: transform 0.5s ease;">
+          <img src="images/baju design.png" alt="Task Manager 1" style="min-width: 100%; object-fit: cover;">
+        </div>
+        <button class="prev-btn" onclick="slideImage(this, -1)" style="position: absolute; top: 50%; left: 5px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; padding: 5px 10px;">&#10094;</button>
+        <button class="next-btn" onclick="slideImage(this, 1)" style="position: absolute; top: 50%; right: 5px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; padding: 5px 10px;">&#10095;</button>
+      </div>
+      <h3>Design Customization</h3>
+      <p>Creating custom designs tailored to brand identity</p>
+      <div class="skills">
+        <a href="#">Adobe Illustrator</a>
+        <a href="#">Adobe Photoshop</a>
+      </div>
+    </div>
+  </div>
+      </section>
+
+    <!-- CERTIFICATE SECTION: seluruh gambar diambil dari dokumen sertifikat Sarah Nadia -->
+    <section class="certificate-section reveal" id="certificate" aria-labelledby="certificate-title">
+        <div class="certificate-heading">
+            <span class="certificate-kicker"><i class="fa-solid fa-certificate" aria-hidden="true"></i> Achievements</span>
+            <h2 id="certificate-title">Certificates</h2>
+            <hr>
+            <p>Kumpulan sertifikat kegiatan, program, dan pengalaman yang pernah diikuti oleh Sarah Nadia.</p>
+        </div>
+        <div class="certificate-grid">
+            <article class="certificate-card reveal-certificate">
+                <button class="certificate-preview" type="button"
+                    data-certificate-src="certificates/sertifikat-01-fasilitator-aceh-utara.jpg"
+                    data-certificate-title="Fasilitator Komik Matematika Digital"
+                    aria-label="Perbesar sertifikat Fasilitator Komik Matematika Digital">
+                    <img src="certificates/sertifikat-01-fasilitator-aceh-utara.jpg" alt="Sertifikat Sarah Nadia: Fasilitator Komik Matematika Digital" loading="lazy">
+                    <span class="certificate-zoom"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Lihat</span>
+                </button>
+                <div class="certificate-card-body">
+                    <span class="certificate-badge"><i class="fa-solid fa-award" aria-hidden="true"></i> Fasilitator</span>
+                    <h3>Fasilitator Komik Matematika Digital</h3>
+                    <p>Aceh Utara • 27–28 Juli 2023</p>
+                </div>
+            </article>
+            <article class="certificate-card reveal-certificate">
+                <button class="certificate-preview" type="button"
+                    data-certificate-src="certificates/sertifikat-02-fasilitator-bireuen.jpg"
+                    data-certificate-title="Fasilitator Komik Matematika Digital"
+                    aria-label="Perbesar sertifikat Fasilitator Komik Matematika Digital">
+                    <img src="certificates/sertifikat-02-fasilitator-bireuen.jpg" alt="Sertifikat Sarah Nadia: Fasilitator Komik Matematika Digital" loading="lazy">
+                    <span class="certificate-zoom"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Lihat</span>
+                </button>
+                <div class="certificate-card-body">
+                    <span class="certificate-badge"><i class="fa-solid fa-award" aria-hidden="true"></i> Fasilitator</span>
+                    <h3>Fasilitator Komik Matematika Digital</h3>
+                    <p>Bireuen • 2–3 Agustus 2023</p>
+                </div>
+            </article>
+            <article class="certificate-card reveal-certificate">
+                <button class="certificate-preview" type="button"
+                    data-certificate-src="certificates/sertifikat-03-fasilitator-pidie.jpg"
+                    data-certificate-title="Fasilitator Komik Matematika Digital"
+                    aria-label="Perbesar sertifikat Fasilitator Komik Matematika Digital">
+                    <img src="certificates/sertifikat-03-fasilitator-pidie.jpg" alt="Sertifikat Sarah Nadia: Fasilitator Komik Matematika Digital" loading="lazy">
+                    <span class="certificate-zoom"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Lihat</span>
+                </button>
+                <div class="certificate-card-body">
+                    <span class="certificate-badge"><i class="fa-solid fa-award" aria-hidden="true"></i> Fasilitator</span>
+                    <h3>Fasilitator Komik Matematika Digital</h3>
+                    <p>Pidie • 31 Agustus–3 September 2023</p>
+                </div>
+            </article>
+            <article class="certificate-card reveal-certificate">
+                <button class="certificate-preview" type="button"
+                    data-certificate-src="certificates/sertifikat-04-fasilitator-bahan-ajar-slb.jpg"
+                    data-certificate-title="Fasilitator Bahan Ajar Matematika SLB"
+                    aria-label="Perbesar sertifikat Fasilitator Bahan Ajar Matematika SLB">
+                    <img src="certificates/sertifikat-04-fasilitator-bahan-ajar-slb.jpg" alt="Sertifikat Sarah Nadia: Fasilitator Bahan Ajar Matematika SLB" loading="lazy">
+                    <span class="certificate-zoom"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Lihat</span>
+                </button>
+                <div class="certificate-card-body">
+                    <span class="certificate-badge"><i class="fa-solid fa-award" aria-hidden="true"></i> Fasilitator</span>
+                    <h3>Fasilitator Bahan Ajar Matematika SLB</h3>
+                    <p>Budaya Lokal Aceh & E-Modul • 4 Agustus 2023</p>
+                </div>
+            </article>
+            <article class="certificate-card reveal-certificate">
+                <button class="certificate-preview" type="button"
+                    data-certificate-src="certificates/sertifikat-05-peserta-program-pmm.jpg"
+                    data-certificate-title="Program Pertukaran Mahasiswa Merdeka"
+                    aria-label="Perbesar sertifikat Program Pertukaran Mahasiswa Merdeka">
+                    <img src="certificates/sertifikat-05-peserta-program-pmm.jpg" alt="Sertifikat Sarah Nadia: Program Pertukaran Mahasiswa Merdeka" loading="lazy">
+                    <span class="certificate-zoom"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Lihat</span>
+                </button>
+                <div class="certificate-card-body">
+                    <span class="certificate-badge"><i class="fa-solid fa-award" aria-hidden="true"></i> Peserta</span>
+                    <h3>Program Pertukaran Mahasiswa Merdeka</h3>
+                    <p>Peserta PMM • 5 April 2024</p>
+                </div>
+            </article>
+            <article class="certificate-card reveal-certificate">
+                <button class="certificate-preview" type="button"
+                    data-certificate-src="certificates/sertifikat-06-peserta-pmm-batch-3.png"
+                    data-certificate-title="PMM Batch 3 Inbound"
+                    aria-label="Perbesar sertifikat PMM Batch 3 Inbound">
+                    <img src="certificates/sertifikat-06-peserta-pmm-batch-3.png" alt="Sertifikat Sarah Nadia: PMM Batch 3 Inbound" loading="lazy">
+                    <span class="certificate-zoom"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Lihat</span>
+                </button>
+                <div class="certificate-card-body">
+                    <span class="certificate-badge"><i class="fa-solid fa-award" aria-hidden="true"></i> Peserta</span>
+                    <h3>PMM Batch 3 Inbound</h3>
+                    <p>Universitas Esa Unggul • 2023/2024</p>
+                </div>
+            </article>
+            <article class="certificate-card reveal-certificate">
+                <button class="certificate-preview" type="button"
+                    data-certificate-src="certificates/sertifikat-07-panitia-parade-budaya.jpg"
+                    data-certificate-title="Parade Budaya PMM Batch 3"
+                    aria-label="Perbesar sertifikat Parade Budaya PMM Batch 3">
+                    <img src="certificates/sertifikat-07-panitia-parade-budaya.jpg" alt="Sertifikat Sarah Nadia: Parade Budaya PMM Batch 3" loading="lazy">
+                    <span class="certificate-zoom"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Lihat</span>
+                </button>
+                <div class="certificate-card-body">
+                    <span class="certificate-badge"><i class="fa-solid fa-award" aria-hidden="true"></i> Panitia</span>
+                    <h3>Parade Budaya PMM Batch 3</h3>
+                    <p>Universitas Esa Unggul • 27 Januari 2024</p>
+                </div>
+            </article>
+            <article class="certificate-card reveal-certificate">
+                <button class="certificate-preview" type="button"
+                    data-certificate-src="certificates/sertifikat-08-kuliah-umum-film-digitalisasi.jpg"
+                    data-certificate-title="Kuliah Umum Film dan Digitalisasi"
+                    aria-label="Perbesar sertifikat Kuliah Umum Film dan Digitalisasi">
+                    <img src="certificates/sertifikat-08-kuliah-umum-film-digitalisasi.jpg" alt="Sertifikat Sarah Nadia: Kuliah Umum Film dan Digitalisasi" loading="lazy">
+                    <span class="certificate-zoom"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Lihat</span>
+                </button>
+                <div class="certificate-card-body">
+                    <span class="certificate-badge"><i class="fa-solid fa-award" aria-hidden="true"></i> Peserta</span>
+                    <h3>Kuliah Umum Film dan Digitalisasi</h3>
+                    <p>Universitas Almuslim • 13 Maret 2023</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <div class="certificate-modal" id="certificateModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="certificateModalTitle">
+        <button class="certificate-modal-close" type="button" aria-label="Tutup tampilan sertifikat">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+        <div class="certificate-modal-dialog">
+            <h2 id="certificateModalTitle">Certificate</h2>
+            <img id="certificateModalImage" src="" alt="">
+        </div>
+    </div>
+
+<script>
+  // Store the current slide index for each project card
+  const slideIndexes = {};
+
+  function slideImage(button, direction) {
+    const card = button.closest('.project-card');
+    const track = card.querySelector('.slider-track');
+    const images = track.querySelectorAll('img');
+    
+    // Initialize index if not exists
+    if (!slideIndexes[card]) {
+      slideIndexes[card] = 0;
+    }
+
+    slideIndexes[card] += direction;
+
+    // Loop around if out of bounds
+    if (slideIndexes[card] >= images.length) {
+      slideIndexes[card] = 0;
+    } else if (slideIndexes[card] < 0) {
+      slideIndexes[card] = images.length - 1;
+    }
+
+    // Move track
+    track.style.transform = `translateX(-${slideIndexes[card] * 100}%)`;
+  }
+</script>
+<!-- Services Section -->
+        <section id="service" class="section services reveal">
+            <p>.......</p>
+            <h3>Services</h3>
+            <hr>
+            <div class="container">
+                <div class="services-content">
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3>Web Development</h3>
+                            <p>Building responsive and modern websites by combining creative multimedia design with up-to-date web technologies and clean code.</p>
+                            <div class="service-features">
+                                <span>Responsive Layouts</span>
+                                <span>Frontend Coding</span>
+                                <span>Creative Integration</span>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h3>Data Management</h3>
+                            <p>Handling systematic data organization, processing, and management tasks accurately to support digital workflows and projects.</p>
+                            <div class="service-features">
+                                <span>Data Processing</span>
+                                <span>Organization</span>
+                                <span>Administrative Support</span>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h3>UI/UX Design</h3>
+                            <p>Designing intuitive, accessible, and user-centered interfaces for websites and applications to ensure exceptional digital experiences.</p>
+                            <div class="service-features">
+                                <span>User-Centered</span>
+                                <span>Wireframing</span>
+                                <span>Modern UI Layouts</span>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-gamepad"></i>
+                            </div>
+                            <h3>Game Development</h3>
+                            <p>Developing interactive 2D and 3D educational games and digital media using Unity Engine and C# programming based on proper structured methods.</p>
+                            <div class="service-features">
+                                <span>Unity Engine</span>
+                                <span>C# Programming</span>
+                                <span>Educational Games</span>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <h3>Graphic Design & Animation</h3>
+                            <p>Creating engaging visual arts, 2D/3D character modeling, and animations using tools like Blender, Adobe Animate, and creative design software.</p>
+                            <div class="service-features">
+                                <span>3D Modeling & Blender</span>
+                                <span>Adobe Animate</span>
+                                <span>Visual Arts</span>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <h3>Video Editing & Production</h3>
+                            <p>Producing and editing high-quality video content, media projects, and digital assets with professional creative storytelling.</p>
+                            <div class="service-features">
+                                <span>Video Editing</span>
+                                <span>Multimedia Production</span>
+                                <span>Content Creation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+<!-- =========================
+     FOOTER SARAH — AMAN, TANPA KONFLIK CLASS
+========================= -->
+<style>
+  #sarah-footer {
+    position: relative;
+    overflow: hidden;
+    padding: 84px 24px 28px;
+    font-family: "Inter", sans-serif;
+    isolation: isolate;
+  }
+
+  #sarah-footer * {
+    box-sizing: border-box;
+  }
+
+  #sarah-footer::before,
+  #sarah-footer::after {
+    content: "";
+    position: absolute;
+    border-radius: 999px;
+    filter: blur(90px);
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  #sarah-footer::before {
+    width: 360px;
+    height: 360px;
+    left: -110px;
+    top: 20px;
+    background: rgba(124, 58, 237, 0.34);
+    animation: snfGlowLeft 10s ease-in-out infinite alternate;
+  }
+
+  #sarah-footer::after {
+    width: 340px;
+    height: 340px;
+    right: -100px;
+    bottom: -80px;
+    background: rgba(236, 72, 153, 0.26);
+    animation: snfGlowRight 12s ease-in-out infinite alternate;
+  }
+
+  @keyframes snfGlowLeft {
+    from { transform: translate(0, 0) scale(1); }
+    to { transform: translate(90px, 35px) scale(1.14); }
+  }
+
+  @keyframes snfGlowRight {
+    from { transform: translate(0, 0) scale(1); }
+    to { transform: translate(-85px, -30px) scale(1.12); }
+  }
+
+  #sarah-footer .snf-shell {
+    position: relative;
+    max-width: 1240px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 34px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background:
+      linear-gradient(
+        135deg,
+        rgba(15, 23, 42, 0.95),
+        rgba(30, 27, 75, 0.93),
+        rgba(59, 7, 100, 0.90)
+      );
+    box-shadow:
+      0 26px 70px rgba(2, 6, 23, 0.45),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  }
+
+  #sarah-footer .snf-shell::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(circle at 15% 25%, rgba(96, 165, 250, 0.15), transparent 28%),
+      radial-gradient(circle at 80% 20%, rgba(216, 180, 254, 0.15), transparent 26%),
+      radial-gradient(circle at 75% 85%, rgba(244, 114, 182, 0.12), transparent 28%);
+  }
+
+  #sarah-footer .snf-accent {
+    height: 4px;
+    background: linear-gradient(90deg, #2563eb, #7c3aed, #ec4899, #2563eb);
+    background-size: 260% 100%;
+    animation: snfGradientMove 7s linear infinite;
+  }
+
+  @keyframes snfGradientMove {
+    from { background-position: 0% 50%; }
+    to { background-position: 260% 50%; }
+  }
+
+  #sarah-footer .snf-content {
+    position: relative;
+    z-index: 1;
+    padding: 56px 58px 30px;
+  }
+
+  #sarah-footer .snf-main {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(290px, 0.65fr);
+    gap: 68px;
+    align-items: center;
+  }
+
+  #sarah-footer .snf-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+    color: #c4b5fd;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  #sarah-footer .snf-eyebrow::before {
+    content: "";
+    width: 32px;
+    height: 2px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #60a5fa, #c084fc, #f472b6);
+  }
+
+  #sarah-footer .snf-title {
+    max-width: 720px;
+    margin: 0 0 20px;
+    color: #ffffff;
+    font-size: clamp(38px, 5vw, 66px);
+    font-weight: 800;
+    line-height: 1.04;
+    letter-spacing: -2px;
+  }
+
+  #sarah-footer .snf-title span {
+    background: linear-gradient(90deg, #60a5fa, #c084fc, #f472b6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+
+  #sarah-footer .snf-description {
+    max-width: 700px;
+    margin: 0;
+    color: #cbd5e1;
+    font-family: "Delius", cursive;
+    font-size: 16px;
+    line-height: 1.85;
+  }
+
+  #sarah-footer .snf-contact {
+    padding-left: 34px;
+    border-left: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  #sarah-footer .snf-contact-label {
+    margin: 0 0 12px;
+    color: #f8fafc;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+  }
+
+  #sarah-footer .snf-contact-text {
+    margin: 0 0 20px;
+    color: #cbd5e1;
+    font-family: "Delius", cursive;
+    line-height: 1.75;
+  }
+
+  #sarah-footer .snf-meta {
+    display: grid;
+    gap: 11px;
+    margin-bottom: 22px;
+  }
+
+  #sarah-footer .snf-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #dbeafe;
+    font-size: 14px;
+  }
+
+  #sarah-footer .snf-meta-item i {
+    width: 20px;
+    color: #c084fc;
+    text-align: center;
+  }
+
+  #sarah-footer .snf-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 46px;
+    padding: 12px 22px;
+    border-radius: 999px;
+    color: #ffffff;
+    font-weight: 800;
+    text-decoration: none;
+    background: linear-gradient(90deg, #2563eb, #7c3aed, #ec4899);
+    background-size: 200% 100%;
+    box-shadow: 0 12px 28px rgba(124, 58, 237, 0.30);
+    animation: snfButtonMove 5s ease infinite;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  #sarah-footer .snf-whatsapp:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 34px rgba(124, 58, 237, 0.42);
+  }
+
+  @keyframes snfButtonMove {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  #sarah-footer .snf-divider {
+    height: 1px;
+    margin: 42px 0 24px;
+    border: 0;
+    background:
+      linear-gradient(
+        90deg,
+        transparent,
+        rgba(96, 165, 250, 0.30),
+        rgba(192, 132, 252, 0.34),
+        rgba(244, 114, 182, 0.28),
+        transparent
+      );
+  }
+
+  #sarah-footer .snf-social-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  #sarah-footer .snf-social-heading {
+    color: #e2e8f0;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+  }
+
+  #sarah-footer .snf-social-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  #sarah-footer .snf-social-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    min-height: 42px;
+    padding: 9px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 999px;
+    color: #dbeafe;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.055);
+    transition:
+      transform 0.3s ease,
+      color 0.3s ease,
+      border-color 0.3s ease,
+      background 0.3s ease;
+  }
+
+  #sarah-footer .snf-social-item i {
+    font-size: 18px;
+  }
+
+  #sarah-footer .snf-social-item:hover {
+    color: #ffffff;
+    transform: translateY(-3px);
+    border-color: rgba(192, 132, 252, 0.34);
+    background: rgba(255, 255, 255, 0.10);
+  }
+
+  #sarah-footer .snf-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin-top: 22px;
+    color: #94a3b8;
+    font-size: 13px;
+  }
+
+  #sarah-footer .snf-top {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #c4b5fd;
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  #sarah-footer .snf-top:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 900px) {
+    #sarah-footer .snf-content {
+      padding: 46px 34px 26px;
+    }
+
+    #sarah-footer .snf-main {
+      grid-template-columns: 1fr;
+      gap: 38px;
+    }
+
+    #sarah-footer .snf-contact {
+      padding-top: 28px;
+      padding-left: 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      border-left: 0;
+    }
+  }
+
+  @media (max-width: 640px) {
+    #sarah-footer {
+      padding: 58px 14px 20px;
+    }
+
+    #sarah-footer .snf-shell {
+      border-radius: 24px;
+    }
+
+    #sarah-footer .snf-content {
+      padding: 36px 22px 22px;
+    }
+
+    #sarah-footer .snf-title {
+      font-size: 38px;
+      letter-spacing: -1px;
+    }
+
+    #sarah-footer .snf-social-area,
+    #sarah-footer .snf-bottom {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    #sarah-footer .snf-social-list {
+      width: 100%;
+    }
+
+    #sarah-footer .snf-social-item {
+      flex: 1 1 calc(50% - 10px);
+      justify-content: center;
+    }
+  }
+</style>
+
+<section id="sarah-footer" aria-label="Footer Portofolio Sarah Nadia">
+  <footer class="snf-shell">
+    <div class="snf-accent"></div>
+
+    <div class="snf-content">
+      <div class="snf-main">
+        <div>
+          <div class="snf-eyebrow">Sarah Nadia Portfolio</div>
+
+          <h2 class="snf-title">
+            Let's bring your ideas 
+            <span> to life</span>
+          </h2>
+
+          <p class="snf-description">
+            Terima kasih telah mengunjungi web portofolio saya.
+            Saya terbuka untuk kolaborasi, pengembangan website,
+            desain, multimedia, pengelolaan media digital,
+            serta berbagai proyek kreatif lainnya.
+          </p>
+        </div>
+
+        <div class="snf-contact">
+          <h3 class="snf-contact-label">Mulai Percakapan</h3>
+
+          <p class="snf-contact-text">
+            Punya ide, proyek, atau ingin bekerja sama?
+            Silakan hubungi saya melalui WhatsApp.
+          </p>
+
+          <div class="snf-meta">
+            <div class="snf-meta-item">
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              <span>Kota Bireuen, Provinsi Aceh</span>
+            </div>
+
+            <div class="snf-meta-item">
+              <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+              <span>Terbuka untuk kolaborasi dan freelance</span>
+            </div>
+
+            <div class="snf-meta-item">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              <span>nadiasarah663gmail.com@gmail.com</span>
+            </div>
+          </div>
+
+          <a
+            class="snf-whatsapp"
+            href="https://wa.me/6285362226893?text=Halo%20Sarah"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            Hubungi Sarah
+          </a>
+        </div>
+      </div>
+
+<hr class="snf-divider">
+
+<div class="snf-social-area">
+  <div class="snf-social-heading">Temukan Saya</div>
+
+  <div class="snf-social-list">
+    <a
+      class="snf-social-item"
+      href="https://id.linkedin.com/in/sarahnadia-sarnadya/in"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+      LinkedIn
+    </a>
+
+    <a
+      class="snf-social-item"
+      href="https://www.instagram.com/sarnadya_/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+      Instagram
+    </a>
+
+    <a
+      class="snf-social-item"
+      href="https://www.facebook.com/sarah.nadia.71653"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+      Facebook
+    </a>
+
+    <a
+      class="snf-social-item"
+      href="https://www.tiktok.com/@sarnadya_"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+      TikTok
+    </a>
+
+          <a
+            class="snf-social-item"
+            href="https://wa.me/6285362226893?text=Halo%20Sarah"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <div class="snf-bottom">
+        <p>© 2026 Sarah Nadia. Website Portofolio</p>
+
+        <a class="snf-top" href="#home">
+          Kembali ke atas
+          <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+</section>
+
+</div>
+<script src="script.js"></script>
+
+<!-- Script interaktif ID Card: aktif di desktop, tidak mengunci scroll HP -->
+<script id="responsive-id-card-drag">
+  (() => {
+    const draggableCard = document.getElementById("draggableCard");
+    const idCardBody = document.getElementById("idCardBody");
+    if (!draggableCard || !idCardBody) return;
+
+    let dragging = false;
+    let startX = 0;
+    let startY = 0;
+    let pointerId = null;
+
+    const canDrag = (event) =>
+      window.matchMedia("(min-width: 781px)").matches &&
+      event.pointerType !== "touch";
+
+    function resetCard() {
+      dragging = false;
+      pointerId = null;
+      draggableCard.style.transition = "transform .55s cubic-bezier(.175,.885,.32,1.275)";
+      idCardBody.style.transition = "transform .55s cubic-bezier(.175,.885,.32,1.275)";
+      draggableCard.style.transform = "translate3d(0,0,0)";
+      idCardBody.style.transform = "rotate(0deg)";
+    }
+
+    draggableCard.addEventListener("pointerdown", (event) => {
+      if (!canDrag(event)) return;
+      dragging = true;
+      pointerId = event.pointerId;
+      startX = event.clientX;
+      startY = event.clientY;
+      draggableCard.setPointerCapture?.(pointerId);
+      draggableCard.style.transition = "none";
+      idCardBody.style.transition = "none";
+    });
+
+    draggableCard.addEventListener("pointermove", (event) => {
+      if (!dragging || event.pointerId !== pointerId) return;
+      let x = event.clientX - startX;
+      let y = event.clientY - startY;
+      x = Math.max(-150, Math.min(150, x));
+      y = Math.max(-45, Math.min(125, y));
+      draggableCard.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+      idCardBody.style.transform = `rotate(${x * .07}deg)`;
+    });
+
+    draggableCard.addEventListener("pointerup", resetCard);
+    draggableCard.addEventListener("pointercancel", resetCard);
+    window.addEventListener("blur", resetCard);
+  })();
+</script>
+
+<style id="portfolio-theme-motion-style">
+  /* =========================================================
+     BACKGROUND GRADASI BERGERAK DAN MODE TERANG/GELAP
+     Class dibuat khusus agar tidak merusak style lama.
+  ========================================================== */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  #real-site {
+    position: relative;
+    min-height: 100vh;
+    isolation: isolate;
+    background: transparent !important;
+  }
+
+  #real-site > section {
+    position: relative;
+    z-index: 2;
+  }
+
+  #real-site > header {
+    z-index: 1000;
+  }
+
+  #real-site .home,
+  #real-site .about,
+  #real-site .skill,
+  #real-site #galeri,
+  #real-site .project,
+  #real-site .services,
+  #real-site #contact,
+  #real-site #sarah-footer {
+    background: transparent !important;
+  }
+
+  /* Background utama */
+  #portfolioMotionBg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+    background:
+      radial-gradient(circle at 15% 22%, rgba(124, 58, 237, 0.30), transparent 30%),
+      radial-gradient(circle at 83% 18%, rgba(37, 99, 235, 0.26), transparent 29%),
+      radial-gradient(circle at 78% 82%, rgba(236, 72, 153, 0.22), transparent 30%),
+      linear-gradient(-45deg, #050816, #11133a, #27104d, #07152e);
+    background-size: 300% 300%;
+    animation: pmBackgroundFlow 14s ease-in-out infinite;
+    transition: background 0.55s ease;
+  }
+
+  #portfolioMotionBg::before {
+    content: "";
+    position: absolute;
+    inset: -45%;
+    background:
+      conic-gradient(
+        from 10deg,
+        rgba(37, 99, 235, 0.28),
+        rgba(124, 58, 237, 0.38),
+        rgba(236, 72, 153, 0.26),
+        rgba(14, 165, 233, 0.24),
+        rgba(37, 99, 235, 0.28)
+      );
+    filter: blur(100px);
+    opacity: 0.75;
+    animation: pmAuroraRotate 22s linear infinite;
+  }
+
+  #portfolioMotionBg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.20;
+    background-image:
+      radial-gradient(circle, rgba(255, 255, 255, 0.34) 1px, transparent 1.5px);
+    background-size: 58px 58px;
+    animation: pmStarsMove 26s linear infinite;
+  }
+
+  .pm-orb {
+    position: absolute;
+    display: block;
+    border-radius: 999px;
+    filter: blur(75px);
+    opacity: 0.62;
+    will-change: transform;
+  }
+
+  .pm-orb-one {
+    width: 390px;
+    height: 390px;
+    top: 8%;
+    left: -120px;
+    background: rgba(139, 92, 246, 0.48);
+    animation: pmOrbOne 12s ease-in-out infinite alternate;
+  }
+
+  .pm-orb-two {
+    width: 350px;
+    height: 350px;
+    right: -100px;
+    top: 30%;
+    background: rgba(59, 130, 246, 0.40);
+    animation: pmOrbTwo 15s ease-in-out infinite alternate;
+  }
+
+  .pm-orb-three {
+    width: 330px;
+    height: 330px;
+    left: 38%;
+    bottom: -130px;
+    background: rgba(236, 72, 153, 0.34);
+    animation: pmOrbThree 17s ease-in-out infinite alternate;
+  }
+
+  .pm-light-ring {
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    top: -190px;
+    left: 50%;
+    border: 2px solid rgba(216, 180, 254, 0.34);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    box-shadow:
+      0 0 35px rgba(192, 132, 252, 0.42),
+      0 0 110px rgba(59, 130, 246, 0.24);
+    animation: pmRingPulse 6s ease-in-out infinite;
+  }
+
+  .pm-light-ring::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 50%;
+    bottom: -9px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #60a5fa, #c084fc, #f472b6);
+    box-shadow: 0 0 24px rgba(192, 132, 252, 0.95);
+  }
+
+  .pm-grid {
+    position: absolute;
+    inset: 0;
+    opacity: 0.07;
+    background:
+      repeating-linear-gradient(
+        90deg,
+        transparent 0,
+        transparent 89px,
+        rgba(255, 255, 255, 0.22) 90px
+      ),
+      repeating-linear-gradient(
+        0deg,
+        transparent 0,
+        transparent 89px,
+        rgba(255, 255, 255, 0.18) 90px
+      );
+    mask-image: linear-gradient(to bottom, transparent, #000 20%, #000 78%, transparent);
+  }
+
+  @keyframes pmBackgroundFlow {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  @keyframes pmAuroraRotate {
+    from { transform: rotate(0deg) scale(1); }
+    to { transform: rotate(360deg) scale(1.16); }
+  }
+
+  @keyframes pmStarsMove {
+    from { transform: translate(0, 0); }
+    to { transform: translate(-58px, -58px); }
+  }
+
+  @keyframes pmOrbOne {
+    from { transform: translate(0, 0) scale(1); }
+    to { transform: translate(190px, 95px) scale(1.22); }
+  }
+
+  @keyframes pmOrbTwo {
+    from { transform: translate(0, 0) scale(1); }
+    to { transform: translate(-180px, 120px) scale(1.18); }
+  }
+
+  @keyframes pmOrbThree {
+    from { transform: translate(0, 0) scale(1); }
+    to { transform: translate(120px, -150px) scale(1.20); }
+  }
+
+  @keyframes pmRingPulse {
+    0%, 100% {
+      transform: translateX(-50%) scale(1);
+      opacity: 0.70;
+    }
+    50% {
+      transform: translateX(-50%) scale(1.12);
+      opacity: 1;
+    }
+  }
+
+  /* Tombol tema */
+  #portfolioThemeToggle {
+    position: fixed;
+    top: 22px;
+    right: 22px;
+    z-index: 99999;
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    color: #f8fafc;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 50%;
+    background: rgba(15, 23, 42, 0.58);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    box-shadow:
+      0 12px 30px rgba(2, 6, 23, 0.28),
+      inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    transition:
+      transform 0.3s ease,
+      color 0.3s ease,
+      background 0.3s ease,
+      border-color 0.3s ease;
+  }
+
+  #portfolioThemeToggle:hover {
+    transform: translateY(-3px) rotate(8deg);
+    border-color: rgba(192, 132, 252, 0.55);
+  }
+
+  #portfolioThemeToggle i {
+    position: absolute;
+    font-size: 20px;
+    transition:
+      opacity 0.3s ease,
+      transform 0.4s ease;
+  }
+
+  #portfolioThemeToggle .pm-sun {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+
+  #portfolioThemeToggle .pm-moon {
+    opacity: 0;
+    transform: scale(0.45) rotate(-45deg);
+  }
+
+  /* =========================
+     MODE TERANG
+  ========================= */
+  html[data-portfolio-theme="light"] {
+    color-scheme: light;
+  }
+
+  html[data-portfolio-theme="light"] body {
+    color: #1e293b;
+    background: #eef2ff;
+  }
+
+  html[data-portfolio-theme="light"] #portfolioMotionBg {
+    background:
+      radial-gradient(circle at 13% 18%, rgba(167, 139, 250, 0.48), transparent 31%),
+      radial-gradient(circle at 86% 20%, rgba(96, 165, 250, 0.42), transparent 30%),
+      radial-gradient(circle at 72% 82%, rgba(244, 114, 182, 0.34), transparent 31%),
+      linear-gradient(-45deg, #f5f3ff, #dbeafe, #fce7f3, #e0e7ff);
+    background-size: 300% 300%;
+  }
+
+  html[data-portfolio-theme="light"] #portfolioMotionBg::before {
+    opacity: 0.48;
+  }
+
+  html[data-portfolio-theme="light"] #portfolioMotionBg::after {
+    opacity: 0.12;
+  }
+
+  html[data-portfolio-theme="light"] .pm-orb {
+    opacity: 0.46;
+  }
+
+  html[data-portfolio-theme="light"] .pm-grid {
+    opacity: 0.10;
+  }
+
+  html[data-portfolio-theme="light"] #portfolioThemeToggle {
+    color: #5b21b6;
+    border-color: rgba(124, 58, 237, 0.22);
+    background: rgba(255, 255, 255, 0.62);
+    box-shadow:
+      0 12px 30px rgba(91, 33, 182, 0.16),
+      inset 0 1px 0 rgba(255, 255, 255, 0.82);
+  }
+
+  html[data-portfolio-theme="light"] #portfolioThemeToggle .pm-sun {
+    opacity: 0;
+    transform: scale(0.45) rotate(45deg);
+  }
+
+  html[data-portfolio-theme="light"] #portfolioThemeToggle .pm-moon {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+
+  /* Navbar lama */
+  html[data-portfolio-theme="light"] .div-list {
+    border-color: rgba(255, 255, 255, 0.70) !important;
+    background: rgba(255, 255, 255, 0.60) !important;
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 14px 34px rgba(91, 33, 182, 0.12) !important;
+  }
+
+  html[data-portfolio-theme="light"] .ul-list a,
+  html[data-portfolio-theme="light"] .ul-list i {
+    color: #334155 !important;
+  }
+
+  /* Teks utama */
+  html[data-portfolio-theme="light"] .home h1,
+  html[data-portfolio-theme="light"] .home h3,
+  html[data-portfolio-theme="light"] .about h3,
+  html[data-portfolio-theme="light"] .skill h1,
+  html[data-portfolio-theme="light"] .project h1,
+  html[data-portfolio-theme="light"] .services > h3,
+  html[data-portfolio-theme="light"] #contact h1,
+  html[data-portfolio-theme="light"] #contact h2,
+  html[data-portfolio-theme="light"] #contact h3 {
+    color: #172554 !important;
+  }
+
+  html[data-portfolio-theme="light"] .home-p,
+  html[data-portfolio-theme="light"] .info-p p,
+  html[data-portfolio-theme="light"] .info-p2 p,
+  html[data-portfolio-theme="light"] .about-text p,
+  html[data-portfolio-theme="light"] .info-pro p {
+    color: #475569 !important;
+  }
+
+  /* Panel dan card pada mode terang */
+  html[data-portfolio-theme="light"] #skill [class*="bg-slate-900/80"],
+  html[data-portfolio-theme="light"] #skill [class*="bg-slate-900/90"],
+  html[data-portfolio-theme="light"] .project-card,
+  html[data-portfolio-theme="light"] .service-card,
+  html[data-portfolio-theme="light"] .contact-content,
+  html[data-portfolio-theme="light"] .contact-form,
+  html[data-portfolio-theme="light"] .contact-info {
+    border-color: rgba(124, 58, 237, 0.16) !important;
+    background: rgba(255, 255, 255, 0.68) !important;
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 18px 42px rgba(91, 33, 182, 0.12) !important;
+  }
+
+  html[data-portfolio-theme="light"] #skill [class*="bg-slate-800/80"],
+  html[data-portfolio-theme="light"] #skill .icon-box {
+    border-color: rgba(124, 58, 237, 0.13) !important;
+    background: rgba(255, 255, 255, 0.74) !important;
+  }
+
+  html[data-portfolio-theme="light"] #skill [class*="bg-slate-900/"] p,
+  html[data-portfolio-theme="light"] #skill .icon-box span,
+  html[data-portfolio-theme="light"] .project-card p,
+  html[data-portfolio-theme="light"] .service-card p,
+  html[data-portfolio-theme="light"] .contact-info p,
+  html[data-portfolio-theme="light"] .contact-item,
+  html[data-portfolio-theme="light"] .contact-item span {
+    color: #334155 !important;
+  }
+
+  html[data-portfolio-theme="light"] .project-card h3,
+  html[data-portfolio-theme="light"] .service-card h3 {
+    color: #1e293b;
+  }
+
+  html[data-portfolio-theme="light"] .form-group input,
+  html[data-portfolio-theme="light"] .form-group textarea {
+    color: #1e293b !important;
+    border-color: rgba(124, 58, 237, 0.18) !important;
+    background: rgba(255, 255, 255, 0.74) !important;
+  }
+
+  html[data-portfolio-theme="light"] .form-group input::placeholder,
+  html[data-portfolio-theme="light"] .form-group textarea::placeholder {
+    color: #64748b !important;
+  }
+
+  /* Footer mode terang */
+  html[data-portfolio-theme="light"] #sarah-footer .snf-shell {
+    border-color: rgba(255, 255, 255, 0.72) !important;
+    background:
+      linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.70),
+        rgba(238, 242, 255, 0.66),
+        rgba(250, 232, 255, 0.62)
+      ) !important;
+    box-shadow:
+      0 24px 60px rgba(91, 33, 182, 0.14),
+      inset 0 1px 0 rgba(255, 255, 255, 0.84) !important;
+  }
+
+  html[data-portfolio-theme="light"] #sarah-footer .snf-title,
+  html[data-portfolio-theme="light"] #sarah-footer .snf-contact-label {
+    color: #1e1b4b !important;
+  }
+
+  html[data-portfolio-theme="light"] #sarah-footer .snf-description,
+  html[data-portfolio-theme="light"] #sarah-footer .snf-contact-text,
+  html[data-portfolio-theme="light"] #sarah-footer .snf-meta-item,
+  html[data-portfolio-theme="light"] #sarah-footer .snf-social-heading,
+  html[data-portfolio-theme="light"] #sarah-footer .snf-bottom {
+    color: #475569 !important;
+  }
+
+  html[data-portfolio-theme="light"] #sarah-footer .snf-social-item {
+    color: #475569 !important;
+    border-color: rgba(124, 58, 237, 0.14) !important;
+    background: rgba(255, 255, 255, 0.44) !important;
+  }
+
+  html[data-portfolio-theme="light"] #sarah-footer .snf-social-item:hover {
+    color: #6d28d9 !important;
+    background: rgba(255, 255, 255, 0.74) !important;
+  }
+
+  /* =========================
+     MODE GELAP
+  ========================= */
+  html[data-portfolio-theme="dark"] {
+    color-scheme: dark;
+  }
+
+  html[data-portfolio-theme="dark"] #portfolioThemeToggle .pm-sun {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+
+  html[data-portfolio-theme="dark"] #portfolioThemeToggle .pm-moon {
+    opacity: 0;
+    transform: scale(0.45) rotate(-45deg);
+  }
+
+  @media (max-width: 640px) {
+    #portfolioThemeToggle {
+      top: 14px;
+      right: 14px;
+      width: 44px;
+      height: 44px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #portfolioMotionBg,
+    #portfolioMotionBg::before,
+    #portfolioMotionBg::after,
+    .pm-orb,
+    .pm-light-ring {
+      animation-duration: 40s !important;
+    }
+  }
+</style>
+
+
+<script id="portfolio-theme-motion-script">
+  (() => {
+    const STORAGE_KEY = "sarah-portfolio-theme";
+    const root = document.documentElement;
+    const button = document.getElementById("portfolioThemeToggle");
+
+    function getPreferredTheme() {
+      try {
+        const savedTheme = localStorage.getItem(STORAGE_KEY);
+        if (savedTheme === "light" || savedTheme === "dark") {
+          return savedTheme;
+        }
+      } catch (error) {
+        console.warn("Tema tidak dapat dibaca dari penyimpanan browser.", error);
+      }
+
+      return window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: light)").matches
+          ? "light"
+          : "dark";
+    }
+
+    function applyTheme(theme) {
+      const isDark = theme === "dark";
+
+      root.setAttribute("data-portfolio-theme", theme);
+
+      if (button) {
+        button.setAttribute("aria-pressed", String(isDark));
+        button.setAttribute(
+          "aria-label",
+          isDark ? "Aktifkan mode terang" : "Aktifkan mode gelap"
+        );
+        button.setAttribute(
+          "title",
+          isDark ? "Aktifkan mode terang" : "Aktifkan mode gelap"
+        );
+      }
+    }
+
+    applyTheme(getPreferredTheme());
+
+    if (button) {
+      button.addEventListener("click", () => {
+        const currentTheme =
+          root.getAttribute("data-portfolio-theme") === "light"
+            ? "light"
+            : "dark";
+
+        const nextTheme = currentTheme === "dark" ? "light" : "dark";
+
+        applyTheme(nextTheme);
+
+        try {
+          localStorage.setItem(STORAGE_KEY, nextTheme);
+        } catch (error) {
+          console.warn("Tema tidak dapat disimpan di browser.", error);
+        }
+      });
+    }
+  })();
+</script>
+
+
+<style id="portfolio-responsive-revision">
+  /* =========================================================
+     RESPONSIVE REVISION — DESKTOP, TABLET, DAN MOBILE
+     Diletakkan paling akhir agar aman menimpa style lama.
+  ========================================================== */
+  :root {
+    --page-max: 1240px;
+    --page-pad: clamp(18px, 4vw, 56px);
+    --section-space: clamp(74px, 8vw, 118px);
+    --glass-border: rgba(255,255,255,.12);
+    --glass-bg: rgba(15,23,42,.68);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { scroll-padding-top: 112px; }
+
+  body {
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  img, svg, video, canvas {
+    max-width: 100%;
+  }
+
+  a, button { -webkit-tap-highlight-color: transparent; }
+
+  p, h1, h2, h3, h4, span, a {
+    overflow-wrap: anywhere;
+  }
+
+  #real-site { width: 100%; }
+
+  #real-site > section:not(#about):not(#sarah-footer) {
+    width: min(100%, var(--page-max));
+    margin-inline: auto;
+    padding-inline: var(--page-pad);
+  }
+
+  /* ---------- NAVBAR DESKTOP ---------- */
+  #real-site > header {
+    position: fixed !important;
+    top: 18px;
+    left: 50%;
+    width: min(calc(100% - 32px), 1120px);
+    transform: translateX(-50%);
+    z-index: 10000 !important;
+    pointer-events: none;
+  }
+
+  #real-site > header .div-list {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 9px 12px !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: 999px !important;
+    background: rgba(9,14,35,.76) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(145%);
+    backdrop-filter: blur(20px) saturate(145%);
+    box-shadow: 0 16px 45px rgba(2,6,23,.30) !important;
+    pointer-events: auto;
+  }
+
+  #real-site > header .ul-list {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: clamp(2px, .5vw, 8px) !important;
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none;
+  }
+
+  #real-site > header .ul-list li {
+    display: flex !important;
+    align-items: center !important;
+    gap: 7px !important;
+    min-width: 0;
+    padding: 9px clamp(9px, 1.15vw, 16px) !important;
+    border-radius: 999px !important;
+    white-space: nowrap;
+    transition: background .25s ease, transform .25s ease;
+  }
+
+  #real-site > header .ul-list li:hover,
+  #real-site > header .ul-list li.active {
+    background: rgba(168,85,247,.15) !important;
+    transform: translateY(-1px);
+  }
+
+  #real-site > header .ul-list a {
+    font-size: clamp(11px, .9vw, 14px) !important;
+    text-decoration: none;
+  }
+
+  #real-site > header .ul-list i { font-size: 14px; }
+
+  .mobile-nav-toggle { display: none; }
+
+  /* ---------- HOME ---------- */
+  #home.home {
+    min-height: 100svh;
+    padding-top: clamp(132px, 14vh, 178px) !important;
+    padding-bottom: var(--section-space) !important;
+  }
+
+  #home .home-p {
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 0 28px !important;
+  }
+
+  #home .home-container {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.15fr) minmax(330px, .85fr) !important;
+    align-items: center !important;
+    gap: clamp(42px, 6vw, 92px) !important;
+    width: 100%;
+  }
+
+  #home .home-section,
+  #home .info-home { width: 100% !important; min-width: 0; }
+
+  #home .info-home h1 {
+    margin: 0 0 16px !important;
+    font-size: clamp(48px, 6vw, 82px) !important;
+    line-height: 1.02 !important;
+    letter-spacing: -2.5px;
+  }
+
+  #home .info-home h3 {
+    margin: 0 0 24px !important;
+    font-size: clamp(22px, 2.6vw, 36px) !important;
+    line-height: 1.2 !important;
+  }
+
+  #home .info-p {
+    max-width: 690px;
+    display: grid;
+    gap: 7px;
+  }
+
+  #home .info-p p,
+  #home .info-p2 p { margin: 0; line-height: 1.7; }
+
+  #home .info-p2 {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 10px 24px !important;
+    margin-top: 23px;
+  }
+
+  #home .btnn {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 12px !important;
+    margin-top: 28px;
+  }
+
+  #home .btnn a {
+    min-height: 48px;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 12px 20px !important;
+  }
+
+  #home .follow {
+    display: flex !important;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px 18px !important;
+  }
+
+  #home .follow ul {
+    display: flex !important;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none;
+  }
+
+  #home .follow a {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+  }
+
+  #home .lanyard-container {
+    width: min(100%, 360px);
+    margin-inline: auto;
+  }
+
+  #home #idCardBody {
+    width: min(320px, calc(100vw - 48px)) !important;
+  }
+
+  /* ---------- SECTION SPACING ---------- */
+  #skill.skill,
+  #galeri,
+  #project.project,
+  #service.services {
+    padding-top: var(--section-space) !important;
+    padding-bottom: var(--section-space) !important;
+  }
+
+  #skill > div,
+  #galeri > div,
+  #project > div,
+  #service > .container { min-width: 0; }
+
+  /* ---------- SKILL ---------- */
+  #skill .software-icons { align-items: stretch; }
+
+  #skill .icon-box {
+    min-width: 0;
+    min-height: 112px;
+    text-align: center;
+  }
+
+  #skill .icon-box img { flex: 0 0 auto; }
+
+  /* ---------- GALLERY ---------- */
+  #gallery {
+    width: 100%;
+    max-width: 1160px;
+    margin-inline: auto;
+    padding-inline: 0 !important;
+  }
+
+  #gallery > .group { min-width: 0; }
+
+  /* ---------- PROJECT ---------- */
+  #project > p,
+  #service > p { display: none !important; }
+
+ #project > h1,
+#service > h3 {
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 700; /* atau 900 jika ingin lebih tebal */
+    margin: 0 !important;
+    text-align: center;
+    font-size: clamp(34px, 4.5vw, 58px) !important;
+}
+
+  #project > hr,
+  #service > hr {
+    width: 88px;
+    margin: 18px auto 26px !important;
+  }
+
+  #project .info-pro {
+    max-width: 760px;
+    margin: 0 auto 42px !important;
+    text-align: center;
+  }
+
+  #project .info-pro p { margin: 4px 0; }
+
+  #project .projects-container {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 24px !important;
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+
+  #project .project-card {
+    min-width: 0;
+    height: 100%;
+    display: flex !important;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 24px !important;
+  }
+
+  #project .slider-container {
+    aspect-ratio: 16 / 10;
+    flex: 0 0 auto;
+    border-radius: 18px;
+  }
+
+  #project .slider-track,
+  #project .slider-track img { height: 100%; }
+
+  #project .slider-track img {
+    width: 100%;
+    min-width: 100% !important;
+    object-fit: cover !important;
+  }
+
+  #project .project-card h3 { margin-top: 20px !important; }
+  #project .project-card p { line-height: 1.65; }
+
+  #project .project-card .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+  }
+
+  #project .prev-btn,
+  #project .next-btn {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    padding: 0 !important;
+    border-radius: 50%;
+    backdrop-filter: blur(8px);
+  }
+
+  /* ---------- SERVICES ---------- */
+  #service .container,
+  #service .services-content { width: 100% !important; max-width: none !important; }
+
+  #service .services-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 24px !important;
+    width: 100%;
+    max-width: 1200px;
+    margin: 44px auto 0 !important;
+  }
+
+  #service .service-card {
+    min-width: 0;
+    height: 100%;
+    padding: 28px !important;
+    border-radius: 24px !important;
+  }
+
+  #service .service-card p { line-height: 1.7; }
+
+  #service .service-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  
+  /* ---------- TABLET ---------- */
+  @media (max-width: 1050px) {
+    #real-site > header { width: min(calc(100% - 24px), 980px); }
+
+    #real-site > header .ul-list li {
+      gap: 5px !important;
+      padding-inline: 10px !important;
+    }
+
+    #real-site > header .ul-list a { font-size: 11px !important; }
+
+    #home .home-container {
+      grid-template-columns: minmax(0, 1fr) minmax(300px, 380px) !important;
+      gap: 42px !important;
+    }
+
+    #project .projects-container,
+    #service .services-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+  }
+
+  /* ---------- MOBILE NAV + LAYOUT ---------- */
+  @media (max-width: 780px) {
+    html { scroll-padding-top: 82px; }
+
+    #real-site > header {
+      top: 12px;
+      left: 12px;
+      width: auto;
+      transform: none;
+    }
+
+    .mobile-nav-toggle {
+      position: relative;
+      z-index: 2;
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      padding: 0;
+      color: #fff;
+      cursor: pointer;
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 15px;
+      background: rgba(9,14,35,.82);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 12px 30px rgba(2,6,23,.28);
+      pointer-events: auto;
+    }
+
+    .mobile-nav-toggle i { transition: transform .25s ease; }
+
+    #real-site > header.nav-open .mobile-nav-toggle i {
+      transform: rotate(90deg);
+    }
+
+    #real-site > header .div-list {
+      position: absolute !important;
+      top: 56px;
+      left: 0;
+      width: min(290px, calc(100vw - 24px)) !important;
+      padding: 10px !important;
+      border-radius: 22px !important;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-8px) scale(.98);
+      transform-origin: top left;
+      transition: opacity .25s ease, visibility .25s ease, transform .25s ease;
+    }
+
+    #real-site > header.nav-open .div-list {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0) scale(1);
+    }
+
+    #real-site > header .ul-list {
+      display: grid !important;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 6px !important;
+    }
+
+    #real-site > header .ul-list li {
+      width: 100%;
+      justify-content: flex-start;
+      padding: 11px 12px !important;
+      border-radius: 14px !important;
+    }
+
+    #real-site > header .ul-list a {
+      display: block;
+      width: 100%;
+      font-size: 12px !important;
+    }
+
+    #portfolioThemeToggle {
+      top: 12px !important;
+      right: 12px !important;
+    }
+
+    #home.home {
+      min-height: auto;
+      padding-top: 112px !important;
+      text-align: center;
+    }
+
+    #home .home-p { margin-inline: auto !important; }
+
+    #home .home-container {
+      grid-template-columns: 1fr !important;
+      gap: 46px !important;
+    }
+
+    #home .home-section { order: 1; }
+    #home .home-container > .flex { order: 2; }
+
+    #home .info-home h1 {
+      font-size: clamp(42px, 12vw, 64px) !important;
+      letter-spacing: -1.5px;
+    }
+
+    #home .info-home h3 {
+      font-size: clamp(21px, 6vw, 30px) !important;
+    }
+
+    #home .info-p2,
+    #home .btnn,
+    #home .follow { justify-content: center; }
+
+    #home .hhr { max-width: 520px; margin-inline: auto; }
+
+    #home .lanyard-container {
+      cursor: default;
+      touch-action: pan-y;
+      filter: drop-shadow(0 14px 24px rgba(0,0,0,.24));
+    }
+
+    #skill.skill,
+    #galeri,
+    #project.project,
+    #service.services {
+      padding-top: 82px !important;
+      padding-bottom: 82px !important;
+    }
+
+    #skill > .max-w-5xl { padding: 24px !important; }
+
+    #project .projects-container,
+    #service .services-grid {
+      gap: 18px !important;
+    }
+  }
+
+  /* ---------- SMALL MOBILE ---------- */
+  @media (max-width: 600px) {
+    :root { --page-pad: 16px; }
+
+    #real-site > section:not(#about):not(#sarah-footer) {
+      padding-inline: 16px !important;
+    }
+
+    #home .btnn { flex-direction: column; }
+    #home .btnn a { width: 100%; }
+
+    #home .info-p2 {
+      flex-direction: column;
+      align-items: center;
+      gap: 8px !important;
+    }
+
+    #home .lanyard-strap-svg { width: 220px; }
+
+    #about.sac-about { padding-top: 82px !important; }
+
+    #about .sac-topbar { margin-bottom: 24px; }
+
+    #about .sac-title {
+      font-size: clamp(34px, 11vw, 46px) !important;
+      line-height: 1.03;
+    }
+
+    #about .sac-center {
+      min-height: 0 !important;
+      padding: 18px !important;
+      overflow: visible;
+    }
+
+    #about .sac-coordinate {
+      position: static;
+      margin-bottom: 16px;
+    }
+
+    #about .sac-orbit-stage {
+      position: relative;
+      inset: auto;
+      display: block;
+    }
+
+    #about .sac-orbit {
+      width: 100% !important;
+      aspect-ratio: auto !important;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      padding: 174px 0 0;
+      border: 0;
+      border-radius: 0;
+      animation: none;
+    }
+
+    #about .sac-orbit::before,
+    #about .sac-orbit::after,
+    #about .sac-scan,
+    #about .sac-photo-core { display: none !important; }
+
+    #about .sac-photo {
+      top: 8px;
+      left: 50%;
+      inset: auto auto auto 50%;
+      width: 148px;
+      height: 148px;
+      transform: translateX(-50%);
+    }
+
+    #about .sac-node-wrap {
+      position: static !important;
+      inset: auto !important;
+      width: auto !important;
+      height: auto !important;
+    }
+
+    #about .sac-node-wrap:last-of-type { grid-column: 1 / -1; }
+
+    #about .sac-node {
+      position: relative !important;
+      width: 100% !important;
+      min-height: 64px !important;
+      transform: none !important;
+      scale: 1 !important;
+      padding: 10px !important;
+      border-radius: 15px !important;
+    }
+
+    #about .sac-node i { font-size: 16px; }
+    #about .sac-node span { font-size: 10px; }
+
+    #about .sac-right {
+      min-height: 0 !important;
+      overflow: hidden;
+    }
+
+    #about .sac-panel {
+      position: relative !important;
+      inset: auto !important;
+      display: none;
+      padding: 24px 20px !important;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+    }
+
+    #about .sac-panel.is-active { display: block; }
+
+    #about .sac-panel-footer {
+      position: static !important;
+      margin-top: 28px;
+    }
+
+    #about .sac-panel-title { font-size: 26px; }
+    #about .sac-auto-status { display: none; }
+
+    #skill .software-icons {
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      gap: 10px !important;
+    }
+
+    #skill .icon-box {
+      min-height: 104px;
+      padding: 14px 8px !important;
+    }
+
+    #gallery {
+      grid-template-columns: 1fr !important;
+      grid-auto-rows: 280px !important;
+      gap: 14px !important;
+    }
+
+    #gallery > .group:hover { transform: none !important; }
+
+    #gallery > .group > div {
+      justify-content: flex-end !important;
+      padding: 24px 18px !important;
+      opacity: 1 !important;
+      background: linear-gradient(to top, rgba(2,6,23,.94), rgba(30,27,75,.42) 62%, transparent) !important;
+    }
+
+    #gallery > .group p {
+      margin: 0;
+      font-size: 13px !important;
+      line-height: 1.55;
+    }
+
+    #project .projects-container,
+    #service .services-grid {
+      grid-template-columns: 1fr !important;
+    }
+
+    #project .project-card,
+    #service .service-card {
+      border-radius: 20px !important;
+    }
+
+    #project .project-card { padding: 16px !important; }
+    #service .service-card { padding: 22px !important; }
+
+    #sarah-footer .snf-social-item {
+      flex-basis: 100% !important;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 380px) {
+    #real-site > header .ul-list { grid-template-columns: 1fr; }
+    #real-site > header .div-list { width: min(250px, calc(100vw - 24px)) !important; }
+    #gallery { grid-auto-rows: 240px !important; }
+    #home #idCardBody { width: calc(100vw - 36px) !important; }
+  }
+
+  @media (hover: none) {
+    #project .project-card:hover,
+    #service .service-card:hover,
+    #skill .icon-box:hover { transform: none !important; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      scroll-behavior: auto !important;
+      animation-duration: .01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: .01ms !important;
+    }
+  }
+</style>
+
+
+
+<style id="about-node-layout-fix">
+  /* =========================================================
+     FINAL FIX ABOUT NODE
+     Tombol Profile, Experience, Focus, Toolkit, dan Vision
+     ditempatkan di luar foto agar tidak bertumpuk.
+  ========================================================= */
+
+  @media (min-width: 861px) {
+    #about .sac-center {
+      min-height: 560px !important;
+      overflow: hidden !important;
+    }
+
+    #about .sac-orbit-stage {
+      position: absolute !important;
+      inset: 58px 18px 24px !important;
+      display: grid !important;
+      place-items: center !important;
+    }
+
+    #about .sac-orbit {
+      position: relative !important;
+      width: min(430px, 88%) !important;
+      aspect-ratio: 1 !important;
+      display: block !important;
+      padding: 0 !important;
+      border: 1px solid rgba(192, 132, 252, 0.18) !important;
+      border-radius: 50% !important;
+    }
+
+    /* Semua wrapper memakai seluruh area orbit. */
+    #about .sac-node-wrap {
+      position: absolute !important;
+      inset: 0 !important;
+      z-index: 8 !important;
+      width: 100% !important;
+      height: 100% !important;
+      pointer-events: none !important;
+    }
+
+    #about .sac-node {
+      position: absolute !important;
+      z-index: 9 !important;
+      width: 96px !important;
+      min-height: 82px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 6px !important;
+      padding: 10px !important;
+      border-radius: 24px !important;
+      pointer-events: auto !important;
+      transform: translate(-50%, -50%) !important;
+      transform-origin: center !important;
+      scale: 1 !important;
+    }
+
+    #about .sac-node:hover {
+      transform: translate(-50%, calc(-50% - 5px)) !important;
+      scale: 1 !important;
+    }
+
+    /* Posisi melengkung di sisi dan bawah foto. */
+    #about .sac-node[data-sac-target="profile"] {
+      left: 16% !important;
+      top: 67% !important;
+    }
+
+    #about .sac-node[data-sac-target="experience"] {
+      left: 35% !important;
+      top: 84% !important;
+    }
+
+    #about .sac-node[data-sac-target="focus"] {
+      left: 50% !important;
+      top: 90% !important;
+    }
+
+    #about .sac-node[data-sac-target="toolkit"] {
+      left: 65% !important;
+      top: 84% !important;
+    }
+
+    #about .sac-node[data-sac-target="vision"] {
+      left: 84% !important;
+      top: 67% !important;
+    }
+
+    #about .sac-node i {
+      font-size: 18px !important;
+    }
+
+    #about .sac-node span {
+      font-size: 11px !important;
+      line-height: 1.2 !important;
+      text-align: center !important;
+      letter-spacing: 0 !important;
+    }
+  }
+
+  /* Tablet: tetap mengelilingi foto, tetapi ukurannya diperkecil. */
+  @media (min-width: 601px) and (max-width: 860px) {
+    #about .sac-center {
+      min-height: 540px !important;
+      overflow: hidden !important;
+    }
+
+    #about .sac-orbit-stage {
+      position: absolute !important;
+      inset: 58px 14px 20px !important;
+      display: grid !important;
+      place-items: center !important;
+    }
+
+    #about .sac-orbit {
+      position: relative !important;
+      width: min(350px, 88%) !important;
+      aspect-ratio: 1 !important;
+      display: block !important;
+      padding: 0 !important;
+      border-radius: 50% !important;
+    }
+
+    #about .sac-node-wrap {
+      position: absolute !important;
+      inset: 0 !important;
+      z-index: 8 !important;
+      width: 100% !important;
+      height: 100% !important;
+      pointer-events: none !important;
+    }
+
+    #about .sac-node {
+      position: absolute !important;
+      width: 82px !important;
+      min-height: 70px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 5px !important;
+      padding: 8px 7px !important;
+      border-radius: 20px !important;
+      pointer-events: auto !important;
+      transform: translate(-50%, -50%) !important;
+      scale: 1 !important;
+    }
+
+    #about .sac-node:hover {
+      transform: translate(-50%, calc(-50% - 4px)) !important;
+    }
+
+    #about .sac-node[data-sac-target="profile"] {
+      left: 14% !important;
+      top: 67% !important;
+    }
+
+    #about .sac-node[data-sac-target="experience"] {
+      left: 33% !important;
+      top: 84% !important;
+    }
+
+    #about .sac-node[data-sac-target="focus"] {
+      left: 50% !important;
+      top: 90% !important;
+    }
+
+    #about .sac-node[data-sac-target="toolkit"] {
+      left: 67% !important;
+      top: 84% !important;
+    }
+
+    #about .sac-node[data-sac-target="vision"] {
+      left: 86% !important;
+      top: 67% !important;
+    }
+
+    #about .sac-node i {
+      font-size: 16px !important;
+    }
+
+    #about .sac-node span {
+      font-size: 10px !important;
+      line-height: 1.15 !important;
+      text-align: center !important;
+      letter-spacing: 0 !important;
+    }
+  }
+
+  /* HP tetap memakai susunan grid dari revisi responsive sebelumnya. */
+  @media (max-width: 600px) {
+    #about .sac-node-wrap {
+      pointer-events: auto !important;
+    }
+
+    #about .sac-node {
+      transform: none !important;
+    }
+
+    #about .sac-node:hover {
+      transform: none !important;
+    }
+  }
+</style>
+
+<script id="portfolio-responsive-navigation">
+  (() => {
+    const header = document.querySelector("#real-site > header");
+    const toggle = document.getElementById("mobileNavToggle");
+    const navLinks = Array.from(document.querySelectorAll("#portfolioNavigation a[href^='#']"));
+    if (!header || !toggle) return;
+
+    const setOpen = (open) => {
+      header.classList.toggle("nav-open", open);
+      toggle.setAttribute("aria-expanded", String(open));
+      toggle.setAttribute("aria-label", open ? "Tutup menu navigasi" : "Buka menu navigasi");
+      const icon = toggle.querySelector("i");
+      if (icon) icon.className = open ? "fa-solid fa-xmark" : "fa-solid fa-bars";
+    };
+
+    toggle.addEventListener("click", (event) => {
+      event.stopPropagation();
+      setOpen(!header.classList.contains("nav-open"));
+    });
+
+    navLinks.forEach((link) => link.addEventListener("click", () => setOpen(false)));
+
+    document.addEventListener("click", (event) => {
+      if (!header.contains(event.target)) setOpen(false);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") setOpen(false);
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 780) setOpen(false);
+    });
+
+    const sections = navLinks
+      .map((link) => document.querySelector(link.getAttribute("href")))
+      .filter(Boolean);
+
+    if ("IntersectionObserver" in window && sections.length) {
+      const observer = new IntersectionObserver((entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (!visible) return;
+        navLinks.forEach((link) => {
+          const active = link.getAttribute("href") === `#${visible.target.id}`;
+          link.closest("li")?.classList.toggle("active", active);
+        });
+      }, { rootMargin: "-28% 0px -58%", threshold: [0.05, 0.2, 0.5] });
+      sections.forEach((section) => observer.observe(section));
+    }
+  })();
+</script>
+
+
+<style id="portfolio-final-revision">
+  /* =========================================================
+     FINAL REVISION: LIGHT MODE, SOCIAL ICONS, HEADER SPACING,
+     AND CERTIFICATE GALLERY
+  ========================================================== */
+
+  /* Header is still the same pill design, only neater and more compact. */
+  #real-site > header {
+    top: 12px !important;
+    width: min(calc(100% - 28px), 1200px) !important;
+  }
+
+  #real-site > header .div-list {
+    padding: 7px 10px !important;
+  }
+
+  #real-site > header .ul-list {
+    gap: clamp(1px, .35vw, 6px) !important;
+  }
+
+  #real-site > header .ul-list li {
+    padding: 8px clamp(8px, .9vw, 13px) !important;
+  }
+
+  #home.home {
+    padding-top: clamp(108px, 11vh, 138px) !important;
+  }
+
+  /* Follow me label remains readable in both themes. */
+  #home .followw {
+    margin: 0 !important;
+    color: #e2e8f0 !important;
+    font-weight: 700;
+  }
+
+  html[data-portfolio-theme="light"] #home .followw {
+    color: #334155 !important;
+  }
+
+  /* The responsive navbar used a dark !important background after the old light rule. */
+  html[data-portfolio-theme="light"] #real-site > header .div-list {
+    border-color: rgba(255, 255, 255, .82) !important;
+    background: rgba(255, 255, 255, .76) !important;
+    box-shadow: 0 14px 34px rgba(91, 33, 182, .14) !important;
+  }
+
+  html[data-portfolio-theme="light"] #real-site > header .ul-list {
+    border-color: rgba(124, 58, 237, .10) !important;
+    background: rgba(255, 255, 255, .30) !important;
+    box-shadow: none !important;
+  }
+
+  html[data-portfolio-theme="light"] #real-site > header .ul-list a,
+  html[data-portfolio-theme="light"] #real-site > header .ul-list i {
+    color: #334155 !important;
+  }
+
+  html[data-portfolio-theme="light"] #real-site > header .ul-list li:hover,
+  html[data-portfolio-theme="light"] #real-site > header .ul-list li.active {
+    background: rgba(124, 58, 237, .11) !important;
+  }
+
+  html[data-portfolio-theme="light"] .mobile-nav-toggle {
+    color: #5b21b6 !important;
+    border-color: rgba(124, 58, 237, .18) !important;
+    background: rgba(255, 255, 255, .82) !important;
+  }
+
+  /* Blue–purple–pink gradient for the social icons at the top/home section. */
+  #home .follow ul a {
+    position: relative;
+    border: 1px solid rgba(168, 85, 247, .22);
+    border-radius: 14px;
+    background: rgba(15, 23, 42, .34);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, .14);
+  }
+
+  #home .follow ul a i {
+    display: inline-block;
+    background: linear-gradient(135deg, #38bdf8 8%, #8b5cf6 52%, #ec4899 94%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent !important;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 3px 8px rgba(139, 92, 246, .30));
+  }
+
+  #home .follow ul a:hover {
+    transform: translateY(-3px);
+    border-color: rgba(236, 72, 153, .48);
+    background: rgba(124, 58, 237, .16);
+    box-shadow: 0 12px 26px rgba(124, 58, 237, .24);
+  }
+
+  html[data-portfolio-theme="light"] #home .follow ul a {
+    border-color: rgba(124, 58, 237, .16);
+    background: rgba(255, 255, 255, .62);
+    box-shadow: 0 8px 20px rgba(91, 33, 182, .10);
+  }
+
+  /* Hard Skills & Tools Stack was white on a light panel. */
+  html[data-portfolio-theme="light"] #skill .max-w-5xl > h3 {
+    color: #172554 !important;
+  }
+
+  html[data-portfolio-theme="light"] #skill .max-w-5xl > h3 i {
+    color: #7c3aed !important;
+  }
+
+  /* Make every text inside skill cards readable in light mode. */
+  html[data-portfolio-theme="light"] #skill [class*="bg-slate-900/"] h3:not([class*="text-transparent"]),
+  html[data-portfolio-theme="light"] #skill [class*="bg-slate-900/"] h4:not([class*="text-transparent"]) {
+    color: #1e293b !important;
+  }
+
+  /* Certificate section follows the same visual language as Projects. */
+  #certificate.certificate-section {
+    width: min(100%, var(--page-max, 1240px));
+    margin-inline: auto;
+    padding: var(--section-space, 96px) var(--page-pad, 42px);
+    color: #f8fafc;
+  }
+
+  .certificate-heading {
+    max-width: 760px;
+    margin: 0 auto 42px;
+    text-align: center;
+  }
+
+  .certificate-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 11px;
+    color: #c4b5fd;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+  }
+
+  .certificate-heading h2 {
+    margin: 0;
+    color: #f8fafc;
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(34px, 4.5vw, 58px);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -1.5px;
+  }
+
+  .certificate-heading hr {
+    width: 88px;
+    height: 3px;
+    margin: 18px auto 22px;
+    border: 0;
+    border-radius: 99px;
+    background: linear-gradient(90deg, #38bdf8, #8b5cf6, #ec4899);
+  }
+
+  .certificate-heading p {
+    margin: 0;
+    color: #cbd5e1;
+    font-family: 'Delius', cursive;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .certificate-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+
+  .certificate-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid rgba(192, 132, 252, .22);
+    border-radius: 24px;
+    background: rgba(15, 23, 42, .67);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 18px 42px rgba(2, 6, 23, .24);
+    transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+  }
+
+  .certificate-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(236, 72, 153, .46);
+    box-shadow: 0 24px 50px rgba(124, 58, 237, .22);
+  }
+
+  .certificate-preview {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 11;
+    display: block;
+    overflow: hidden;
+    padding: 0;
+    border: 0;
+    border-bottom: 1px solid rgba(192, 132, 252, .16);
+    cursor: zoom-in;
+    background: rgba(255, 255, 255, .94);
+  }
+
+  .certificate-preview img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    transition: transform .45s ease;
+  }
+
+  .certificate-card:hover .certificate-preview img {
+    transform: scale(1.035);
+  }
+
+  .certificate-zoom {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 11px;
+    border: 1px solid rgba(255, 255, 255, .20);
+    border-radius: 999px;
+    color: #fff;
+    background: rgba(15, 23, 42, .72);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    font-size: 11px;
+    font-weight: 800;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity .3s ease, transform .3s ease;
+  }
+
+  .certificate-preview:hover .certificate-zoom,
+  .certificate-preview:focus-visible .certificate-zoom {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .certificate-preview:focus-visible {
+    outline: 3px solid rgba(56, 189, 248, .82);
+    outline-offset: -3px;
+  }
+
+  .certificate-card-body {
+    padding: 20px 21px 22px;
+  }
+
+  .certificate-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 13px;
+    padding: 6px 10px;
+    border: 1px solid rgba(168, 85, 247, .25);
+    border-radius: 999px;
+    color: #ddd6fe;
+    background: rgba(124, 58, 237, .13);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .7px;
+    text-transform: uppercase;
+  }
+
+  .certificate-card h3 {
+    margin: 0 0 8px;
+    color: #f8fafc;
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    line-height: 1.35;
+  }
+
+  .certificate-card p {
+    margin: 0;
+    color: #cbd5e1;
+    font-family: 'Delius', cursive;
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  html[data-portfolio-theme="light"] #certificate {
+    color: #1e293b;
+  }
+
+  html[data-portfolio-theme="light"] .certificate-kicker {
+    color: #6d28d9;
+  }
+
+  html[data-portfolio-theme="light"] .certificate-heading h2 {
+    color: #172554;
+  }
+
+  html[data-portfolio-theme="light"] .certificate-heading p {
+    color: #475569;
+  }
+
+  html[data-portfolio-theme="light"] .certificate-card {
+    border-color: rgba(124, 58, 237, .16);
+    background: rgba(255, 255, 255, .70);
+    box-shadow: 0 18px 42px rgba(91, 33, 182, .12);
+  }
+
+  html[data-portfolio-theme="light"] .certificate-card h3 {
+    color: #1e293b;
+  }
+
+  html[data-portfolio-theme="light"] .certificate-card p {
+    color: #475569;
+  }
+
+  html[data-portfolio-theme="light"] .certificate-badge {
+    color: #6d28d9;
+    border-color: rgba(124, 58, 237, .16);
+    background: rgba(124, 58, 237, .08);
+  }
+
+  /* Full-screen certificate preview. */
+  .certificate-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 120000;
+    display: grid;
+    place-items: center;
+    padding: 64px 24px 24px;
+    visibility: hidden;
+    opacity: 0;
+    background: rgba(2, 6, 23, .86);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    transition: opacity .25s ease, visibility .25s ease;
+  }
+
+  .certificate-modal.is-open {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .certificate-modal-dialog {
+    width: min(1120px, 100%);
+    max-height: calc(100svh - 88px);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 16px;
+    overflow: auto;
+    border: 1px solid rgba(192, 132, 252, .34);
+    border-radius: 24px;
+    background: rgba(15, 23, 42, .94);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, .42);
+    transform: scale(.96);
+    transition: transform .25s ease;
+  }
+
+  .certificate-modal.is-open .certificate-modal-dialog {
+    transform: scale(1);
+  }
+
+  .certificate-modal-dialog h2 {
+    margin: 0;
+    padding-inline: 4px;
+    color: #fff;
+    font-size: clamp(18px, 2.2vw, 28px);
+  }
+
+  .certificate-modal-dialog img {
+    width: 100%;
+    max-height: calc(100svh - 170px);
+    object-fit: contain;
+    border-radius: 15px;
+    background: #fff;
+  }
+
+  .certificate-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 16px;
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    border: 1px solid rgba(255,255,255,.20);
+    border-radius: 14px;
+    color: #fff;
+    cursor: pointer;
+    background: rgba(15,23,42,.78);
+  }
+
+  body.certificate-modal-open { overflow: hidden; }
+
+  @media (max-width: 1120px) {
+    #real-site > header .ul-list li {
+      gap: 5px !important;
+      padding-inline: 9px !important;
+    }
+
+    #real-site > header .ul-list a {
+      font-size: 11px !important;
+    }
+  }
+
+  @media (max-width: 1050px) {
+    .certificate-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+
+  @media (max-width: 780px) {
+    #real-site > header {
+      top: 12px !important;
+      width: auto !important;
+    }
+
+    #home.home { padding-top: 96px !important; }
+
+    #certificate.certificate-section {
+      padding-top: 82px;
+      padding-bottom: 82px;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .certificate-grid { grid-template-columns: 1fr; gap: 18px; }
+    .certificate-heading { margin-bottom: 30px; }
+    .certificate-card-body { padding: 18px; }
+    .certificate-zoom { opacity: 1; transform: none; }
+    .certificate-modal { padding: 62px 10px 10px; }
+    .certificate-modal-dialog { padding: 10px; border-radius: 17px; }
+  }
+</style>
+
+<script id="certificate-gallery-script">
+  (() => {
+    const modal = document.getElementById('certificateModal');
+    const modalImage = document.getElementById('certificateModalImage');
+    const modalTitle = document.getElementById('certificateModalTitle');
+    const closeButton = modal?.querySelector('.certificate-modal-close');
+    const previewButtons = Array.from(document.querySelectorAll('.certificate-preview'));
+    let lastFocused = null;
+
+    if (!modal || !modalImage || !modalTitle || !closeButton) return;
+
+    const closeModal = () => {
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('certificate-modal-open');
+      modalImage.removeAttribute('src');
+      modalImage.alt = '';
+      if (lastFocused) lastFocused.focus();
+    };
+
+    const openModal = (button) => {
+      const src = button.dataset.certificateSrc;
+      const title = button.dataset.certificateTitle || 'Certificate';
+      if (!src) return;
+
+      lastFocused = button;
+      modalImage.src = src;
+      modalImage.alt = `Sertifikat Sarah Nadia: ${title}`;
+      modalTitle.textContent = title;
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('certificate-modal-open');
+      closeButton.focus();
+    };
+
+    previewButtons.forEach((button) => {
+      button.addEventListener('click', () => openModal(button));
+    });
+
+    closeButton.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', (event) => {
+      if (event.target === modal) closeModal();
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+    });
+  })();
+</script>
+
+</body>
+</html>
