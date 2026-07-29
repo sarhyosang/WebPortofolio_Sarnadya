@@ -577,126 +577,248 @@ hr {
   box-shadow: 0 0 25px rgba(131, 56, 236, 0.4);
 }
 
-/* ===== PROJECT SECTION ===== */
+/* =========================================================
+   PROJECT SECTION (Disesuaikan dengan Style Certificates)
+   ========================================================= */
+
+#project.project,
 .project {
-    margin: 160px 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    color: #f2f2f2;
+  width: min(100%, var(--page-max, 1240px));
+  margin: 96px auto;
+  padding: var(--section-space, 0px) var(--page-pad, 42px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #f8fafc;
+  box-sizing: border-box;
 }
 
-.info-pro{
-    margin-bottom: 20px;
+.project-heading {
+  max-width: 760px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.project-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 11px;
+  color: #c4b5fd;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
 }
 
 .project h1 {
-    font-family: "Orbitron", sans-serif;
-    padding-bottom: 10px;
-    color: #f1f3f7;
-    letter-spacing: 1px;
+  margin: 0;
+  color: #f8fafc;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(34px, 4.5vw, 58px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -1.5px;
 }
 
-/* SUB TEXT */
-.project p {
-    padding-bottom: 20px;
-    font-size: 14px;
-    color: #c9c9c9;
-}
-
-/* LINE */
 .project hr {
-    width: 80px;
-    height: 3px;
-    border: none;
-    background: linear-gradient(90deg, #3a86ff, #8338ec);
-    margin-bottom: 20px;
-    border-radius: 10px;
+  width: 88px;
+  height: 3px;
+  margin: 18px auto 22px;
+  border: 0;
+  border-radius: 99px;
+  background: linear-gradient(90deg, #38bdf8, #8b5cf6, #ec4899);
 }
 
 .info-pro {
-    padding-top: 20px;
-    text-align: center;
+  margin-bottom: 42px;
+  text-align: center;
 }
 
-.info-pro p {
-    padding-bottom: 10px;
-    color: #bdbdbd;
+.info-pro p,
+.project > p {
+  margin: 0;
+  color: #cbd5e1;
+  font-family: 'Delius', cursive;
+  font-size: 15px;
+  line-height: 1.7;
 }
 
 /* PROJECT GRID */
 .projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    max-width: 1100px;
-    margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  box-sizing: border-box;
 }
+
 .project-card {
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 80, 120, 0.25);
-    padding: 22px;
-    border-radius: 18px;
-    backdrop-filter: blur(12px);
-    box-shadow: 0 0 25px rgba(42, 42, 107, 0.15);
-    transition: 0.35s ease;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(192, 132, 252, .22);
+  border-radius: 24px;
+  background: rgba(15, 23, 42, .67);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 18px 42px rgba(2, 6, 23, .24);
+  transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+  box-sizing: border-box;
 }
 
 .project-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 0 35px rgba(255, 80, 120, 0.45);
+  transform: translateY(-7px);
+  border-color: rgba(236, 72, 153, .46);
+  box-shadow: 0 24px 50px rgba(124, 58, 237, .22);
 }
 
 .project-card img {
-    width: 100%;
-    border-radius: 14px;
-    margin-bottom: 15px;
-    border: 1px solid rgba(255, 80, 120, 0.25);
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  object-fit: cover;
+  display: block;
+  border: 0;
+  border-bottom: 1px solid rgba(192, 132, 252, .16);
+  border-radius: 0;
+  margin: 0;
+}
+
+/* CARD CONTENT & TEXT */
+.project-card-body {
+  padding: 24px 36px !important; /* Memaksa padding diterapkan dengan jarak yang lebih jauh */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .project-card h3 {
-    color: #ff9db3;
-    margin-bottom: 8px;
+  margin: 0 0 8px;
+  color: #f8fafc;
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  line-height: 1.35;
 }
 
-/* TEXT */
 .project-card p {
-    color: #d1d1d1;
-    font-size: 0.9rem;
-    margin-bottom: 15px;
+  margin: 0 0 15px;
+  color: #cbd5e1;
+  font-family: 'Delius', cursive;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.project-card .skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: auto;
 }
 
 .project-card .skills a {
-    display: inline-block;
-    margin: 4px 6px 0 0;
-    padding: 6px 12px;
-    font-size: 11px;
-    border-radius: 20px;
-    color: #799ced;
-    border: 1px solid rgba(30, 11, 141, 0.4);
-    background: rgba(9, 29, 182, 0.08);
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin: 0;
+  padding: 6px 10px;
+  border: 1px solid rgba(168, 85, 247, .25);
+  border-radius: 999px;
+  color: #ddd6fe;
+  background: rgba(124, 58, 237, .13);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .7px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background .2s ease;
+}
+
+.project-card .skills a:hover {
+  background: rgba(124, 58, 237, .3);
 }
 
 .project-card .btns {
-    display: flex;
-    gap: 10px;
-    margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
 }
 
 .project-card .btn {
-    padding: 8px 14px;
-    border-radius: 20px;
-    font-size: 13px;
-    color: #fff;
-    background: linear-gradient(135deg, #4da3ff, #1217ac);
-    text-decoration: none;
-    transition: 0.3s ease;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, #38bdf8, #8b5cf6);
+  text-decoration: none;
+  transition: transform .2s ease, box-shadow .2s ease;
 }
 
 .project-card .btn:hover {
-    box-shadow: 0 0 18px rgba(80, 138, 255, 0.6);
-    transform: translateY(-2px);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(139, 92, 246, .4);
+}
+
+/* =========================================================
+   LIGHT MODE UNTUK PROJECT
+   ========================================================= */
+html[data-portfolio-theme="light"] .project {
+  color: #1e293b;
+}
+
+html[data-portfolio-theme="light"] .project-kicker {
+  color: #6d28d9;
+}
+
+html[data-portfolio-theme="light"] .project h1 {
+  color: #172554;
+}
+
+html[data-portfolio-theme="light"] .info-pro p,
+html[data-portfolio-theme="light"] .project > p {
+  color: #475569;
+}
+
+html[data-portfolio-theme="light"] .project-card {
+  border-color: rgba(124, 58, 237, .16);
+  background: rgba(255, 255, 255, .70);
+  box-shadow: 0 18px 42px rgba(91, 33, 182, .12);
+}
+
+html[data-portfolio-theme="light"] .project-card h3 {
+  color: #1e293b;
+}
+
+html[data-portfolio-theme="light"] .project-card p {
+  color: #475569;
+}
+
+html[data-portfolio-theme="light"] .project-card .skills a {
+  color: #6d28d9;
+  border-color: rgba(124, 58, 237, .16);
+  background: rgba(124, 58, 237, .08);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1050px) {
+  .projects-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .projects-container {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .project {
+    margin: 80px 16px;
+  }
 }
 
 .about {
@@ -814,44 +936,39 @@ hr {
     transform: rotate(10deg);
 }
 
-
-.services::before {
-    content: '';
-    position: absolute;
-    top: 20%;
-    right: -10%;
-    width: 420px;
-    height: 420px;
-    background: radial-gradient(circle, rgba(255, 80, 120, 0.25) 0%, transparent 70%);
-    border-radius: 50%;
-    filter: blur(120px);
-    animation: float 8s ease-in-out infinite;
-    z-index: -1;
+/* CONTAINER SERVICES */
+.services {
+    margin: 60px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #f2f2f2;
 }
 
-/* CONTAINER */
 .services-content {
-    max-width: 1300px;
-    margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
 }
 
+/* 6 KOLOM DENGAN JARAK LEBIH RAPAT */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2.5rem;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px; /* Jarak antar card diperkecil */
 }
 
 .service-card {
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 80, 120, 0.25);
-    border-radius: 22px;
-    padding: 2.5rem;
+    border-radius: 12px;
+    padding: 0.9rem; /* Padding card sangat ringkas */
     text-align: center;
     backdrop-filter: blur(14px);
     transition: 0.4s ease;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 0 25px rgba(255, 80, 120, 0.15);
+    box-shadow: 0 0 15px rgba(255, 80, 120, 0.15);
 }
 
 .service-card::before {
@@ -875,55 +992,57 @@ hr {
 }
 
 .service-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 0 40px rgba(255, 80, 120, 0.5);
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 0 25px rgba(255, 80, 120, 0.4);
 }
 
 .service-icon {
-    width: 85px;
-    height: 85px;
+    width: 42px; /* Ukuran ikon diperkecil drastis */
+    height: 42px;
     background: linear-gradient(135deg, #4d77ff, #1717a0);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1.5rem;
-    font-size: 2.2rem;
+    margin: 0 auto 0.6rem;
+    font-size: 1.1rem;
     color: #fff;
-    box-shadow: 0 0 25px rgba(80, 156, 255, 0.6);
+    box-shadow: 0 0 10px rgba(80, 156, 255, 0.6);
 }
 
-.section-title{
-    margin-bottom: 20px;
+.section-title {
+    margin-bottom: 15px;
 }
 
 .service-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 0.95rem; /* Ukuran judul lebih kecil */
+    margin-bottom: 0.5rem;
     color: #ff9db3;
 }
 
 .service-card p {
     color: #d0d0d0;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
+    line-height: 1.3;
+    font-size: 0.75rem; /* Ukuran teks deskripsi diperkecil */
+    margin-bottom: 0.8rem;
 }
 
 .service-features {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.6rem;
+    gap: 3px;
     justify-content: center;
 }
 
 .service-features span {
     background: rgba(255, 80, 120, 0.15);
     color: #ff9db3;
-    padding: 0.35rem 0.9rem;
-    border-radius: 20px;
-    font-size: 0.85rem;
+    padding: 0.2rem 0.4rem;
+    border-radius: 12px;
+    font-size: 0.6rem; /* Ukuran tag/badge sangat kecil */
     border: 1px solid rgba(255, 80, 120, 0.35);
 }
+
 @keyframes float {
     0%, 100% {
         transform: translateY(0);
@@ -933,26 +1052,16 @@ hr {
     }
 }
 
-.services {
-    margin: 160px 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    color: #f2f2f2;
-}
-
-.info-pro{
-    margin-bottom: 20px;
+.info-pro {
+    margin-bottom: 15px;
 }
 
 .services h1 {
     font-family: "Orbitron", sans-serif;
-    padding-bottom: 10px;
+    padding-bottom: 8px;
     color: #ff4d6d;
     letter-spacing: 1px;
 }
-
 /* SUB TEXT */
 .services p {
     padding-bottom: 20px;
@@ -1101,41 +1210,5 @@ hr {
   .social-links {
     justify-content: center;
   }
-}
-/* ===================================================
-   FIX TAMPILAN GAMBAR PROJECT DI IPHONE / IOS SAFARI
-   =================================================== */
-
-/* 1. Atur jarak antar kartu project */
-.projects-container {
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 32px !important; /* Memberi jarak 32px antar kartu project */
-  width: 100%;
-}
-
-/* 2. Fix bug gambar slide di iPhone biar gak rapat & gepeng */
-.slider-container {
-  width: 100% !important;
-  overflow: hidden !important;
-}
-
-.slider-track {
-  display: flex !important;
-}
-
-.slider-track img {
-  min-width: 100% !important;
-  max-width: 100% !important;
-  height: auto !important;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  flex-shrink: 0 !important; /* Mencegah gambar menyusut/mampet di iOS */
-}
-
-/* 3. Atur jarak bawah kartu project sebagai proteksi tambahan */
-.project-card {
-  margin-bottom: 24px !important;
-  width: 100%;
 }
 
