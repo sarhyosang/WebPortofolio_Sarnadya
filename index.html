@@ -3797,26 +3797,53 @@
     transition: transform 0.5s ease;
   }
 
-  #project .slider-track .certificate-preview {
-    flex: 0 0 100% !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 100% !important;
-    background: none !important;
-    border: none !important;
-    padding: 0 !important;
-    position: relative !important;
-    display: block !important;
-    cursor: pointer;
-  }
+  /* ---------- PROJECT SLIDER FIX (SAFARI PROOF) ---------- */
+#project .slider-container {
+  aspect-ratio: 16 / 10;
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+}
 
-  #project .slider-track img {
-    width: 100% !important;
-    height: 100% !important;
-    min-width: 100% !important;
-    object-fit: cover !important;
-    display: block !important;
-  }
+#project .slider-track {
+  display: flex !important;
+  flex-wrap: nowrap !important; /* Mencegah item turun ke bawah di iOS Safari */
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  scroll-snap-type: x mandatory !important;
+  scrollbar-width: none !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+#project .slider-track::-webkit-scrollbar {
+  display: none !important;
+}
+
+#project .slider-track .certificate-preview {
+  flex: 0 0 100% !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 100% !important;
+  height: 100% !important;
+  scroll-snap-align: start !important;
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  position: relative !important;
+  display: block !important;
+  cursor: pointer;
+}
+
+#project .slider-track img {
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
 
   #project .project-card h3 { margin-top: 20px !important; }
   #project .project-card p { line-height: 1.65; }
@@ -4934,6 +4961,62 @@
       if (event.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
     });
   })();
+</script>
+<style id="project-safari-scroll-fix">
+  /* ---------- PROJECT SLIDER FIX (SAFARI PROOF) ---------- */
+  #project .slider-container {
+    aspect-ratio: 16 / 10;
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+  }
+
+  #project .slider-track {
+    display: flex !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    scrollbar-width: none !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  #project .slider-track::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  #project .slider-track .certificate-preview {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    height: 100% !important;
+    scroll-snap-align: start !important;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    display: block !important;
+    cursor: pointer;
+  }
+
+  #project .slider-track img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+</style>
+
+<script id="project-safari-scroll-script">
+  function slideImage(button, direction) {
+    const container = button.closest('.slider-container');
+    const track = container.querySelector('.slider-track');
+    const itemWidth = track.clientWidth;
+    
+    track.scrollBy({
+      left: direction * itemWidth,
+      behavior: 'smooth'
+    });
+  }
 </script>
 
 </body>
