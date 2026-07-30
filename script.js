@@ -99,28 +99,17 @@ if (closeModalBtn) {
 }
 
 // ===============================
-// PROJECT IMAGE SLIDER (FIXED SAFARI)
+// PROJECT IMAGE SLIDER (SCROLL SNAP SAFARI SAFE)
 // ===============================
 function slideImage(button, direction) {
-  const sliderContainer = button.closest('.slider-container');
-  const track = sliderContainer.querySelector('.slider-track');
-  const items = track.querySelectorAll('.certificate-preview');
+  const container = button.closest('.slider-container');
+  const track = container.querySelector('.slider-track');
+  const itemWidth = track.clientWidth;
   
-  let currentIndex = parseInt(track.dataset.index || '0', 10);
-  
-  currentIndex += direction;
-  
-  if (currentIndex < 0) {
-    currentIndex = items.length - 1;
-  } else if (currentIndex >= items.length) {
-    currentIndex = 0;
-  }
-  
-  track.dataset.index = currentIndex;
-  
-  // Menggunakan piksel akurat agar Safari tidak error saat menghitung persentase
-  const itemWidth = items[0].getBoundingClientRect().width;
-  track.style.transform = `translateX(${-currentIndex * itemWidth}px)`;
+  track.scrollBy({
+    left: direction * itemWidth,
+    behavior: 'smooth'
+  });
 }
 
 // ===============================
