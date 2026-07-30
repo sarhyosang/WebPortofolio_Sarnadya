@@ -1,7 +1,4 @@
-
-
 window.addEventListener("load", () => {
-
     const animations = [
         { selector: ".top-tags", class: "from-top", delay: 0 },
         { selector: ".left h1", class: "from-left", delay: 0.3 },
@@ -32,9 +29,13 @@ window.addEventListener("load", () => {
             intro.style.display = "none";
             site.style.display = "block";
             initScrollAnimations(); 
+
+            // Memaksa Safari membaca ulang layout setelah intro hilang
+            window.dispatchEvent(new Event('resize'));
         }, 500);
     }, 1000);
 });
+
 const words = ["Sarah Nadia"];
 let wordIndex = 0;
 let charIndex = 0;
@@ -43,6 +44,7 @@ let deleting = false;
 const typing = document.querySelector(".typing");
 
 function typeEffect() {
+    if (!typing) return;
     const currentWord = words[wordIndex];
 
     if (!deleting) {
@@ -63,7 +65,6 @@ function typeEffect() {
 }
 
 typeEffect();
-
 
 // ===============================
 // SCROLL REVEAL (SECTIONS)
@@ -98,7 +99,31 @@ if (closeModalBtn) {
 }
 
 // ===============================
+// PROJECT IMAGE SLIDER (FIXED SAFARI)
+// ===============================
+function slideImage(button, direction) {
+  const sliderContainer = button.closest('.slider-container');
+  const track = sliderContainer.querySelector('.slider-track');
+  const items = track.querySelectorAll('.certificate-preview');
+  
+  let currentIndex = parseInt(track.dataset.index || '0', 10);
+  
+  currentIndex += direction;
+  
+  if (currentIndex < 0) {
+    currentIndex = items.length - 1;
+  } else if (currentIndex >= items.length) {
+    currentIndex = 0;
+  }
+  
+  track.dataset.index = currentIndex;
+  
+  // Menggunakan piksel akurat agar Safari tidak error saat menghitung persentase
+  const itemWidth = items[0].getBoundingClientRect().width;
+  track.style.transform = `translateX(${-currentIndex * itemWidth}px)`;
+}
 
+// ===============================
 const sections = document.querySelectorAll("section");
 const navItems = document.querySelectorAll(".ul-list li");
 
@@ -138,4 +163,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
-
