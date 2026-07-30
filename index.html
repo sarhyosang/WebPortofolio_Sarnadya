@@ -3736,15 +3736,14 @@
   }
 
   #gallery > .group { min-width: 0; }
-
-  /* ---------- PROJECT ---------- */
+/* ---------- PROJECT ---------- */
   #project > p,
   #service > p { display: none !important; }
 
  #project > h1,
 #service > h3 {
     font-family: 'Satoshi', sans-serif;
-    font-weight: 700; /* atau 900 jika ingin lebih tebal */
+    font-weight: 700;
     margin: 0 !important;
     text-align: center;
     font-size: clamp(34px, 4.5vw, 58px) !important;
@@ -3782,20 +3781,41 @@
     border-radius: 24px !important;
   }
 
-  
   #project .slider-container {
     aspect-ratio: 16 / 10;
     flex: 0 0 auto;
     border-radius: 18px;
+    position: relative;
+    overflow: hidden;
   }
 
-  #project .slider-track,
-  #project .slider-track img { height: 100%; }
+  #project .slider-track {
+    display: flex !important;
+    height: 100% !important;
+    width: 100% !important;
+    transition: transform 0.5s ease;
+  }
+
+  /* Perbaikan khusus Safari untuk tombol preview / item di dalam slider track */
+  #project .slider-track .certificate-preview {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    position: relative !important;
+    display: block !important;
+    cursor: pointer;
+  }
 
   #project .slider-track img {
-    width: 100%;
+    width: 100% !important;
+    height: 100% !important;
     min-width: 100% !important;
     object-fit: cover !important;
+    display: block !important;
   }
 
   #project .project-card h3 { margin-top: 20px !important; }
@@ -3817,36 +3837,8 @@
     padding: 0 !important;
     border-radius: 50%;
     backdrop-filter: blur(8px);
+    z-index: 2;
   }
-
-  /* ---------- SERVICES ---------- */
-  #service .container,
-  #service .services-content { width: 100% !important; max-width: none !important; }
-
-  #service .services-grid {
-    display: grid !important;
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    gap: 24px !important;
-    width: 100%;
-    max-width: 1200px;
-    margin: 44px auto 0 !important;
-  }
-
-  #service .service-card {
-    min-width: 0;
-    height: 100%;
-    padding: 28px !important;
-    border-radius: 24px !important;
-  }
-
-  #service .service-card p { line-height: 1.7; }
-
-  #service .service-features {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
   
   /* ---------- TABLET ---------- */
   @media (max-width: 1050px) {
