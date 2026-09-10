@@ -357,8 +357,6 @@ body {
 @keyframes fromBottom { to { opacity:1; transform:translateY(0);} }
 @keyframes zoomIn { to { opacity:1; transform:scale(1);} }
 
-
-
 header {
   position: fixed;
   top: 0;
@@ -466,7 +464,7 @@ header {
   font-weight: 800; /* Buat lebih tebal mirip gaya "About me, without the long story." */
   letter-spacing: -1px; /* Opsional: membuat jarak antar huruf lebih rapat ala modern heading */
   margin-bottom: 20px;
-  
+
   /* Tetap pertahankan agar sejajar dan tidak turun baris */
   display: flex;
   align-items: center;
@@ -1212,3 +1210,603 @@ html[data-portfolio-theme="light"] .project-card .skills a {
   }
 }
 
+/* =========================================================
+   FINAL RESPONSIVE SAFETY FIX
+   File ini mempertahankan desain utama.
+   Fokus: mencegah elemen melebar/keluar viewport,
+   merapikan Project, dan menjaga About tetap compact.
+========================================================= */
+
+/* ---------- GLOBAL ---------- */
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden !important;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  max-width: 100%;
+}
+
+/* Jangan biarkan wrapper umum membuat halaman melebar */
+#real-site,
+main,
+section,
+header,
+footer {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* ---------- HOME ---------- */
+.home {
+  width: min(100%, 1240px) !important;
+  max-width: 1240px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: clamp(16px, 4vw, 42px);
+  padding-right: clamp(16px, 4vw, 42px);
+  box-sizing: border-box;
+}
+
+.home *,
+.home *::before,
+.home *::after {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.home img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------- ABOUT CONSTELLATION ---------- */
+/* Khusus tampilan About yang memakai .sac-about */
+#about.sac-about {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+#about.sac-about .sac-shell {
+  width: min(100%, 1320px) !important;
+  max-width: 1320px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+#about.sac-about .sac-topbar,
+#about.sac-about .sac-layout {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+}
+
+#about.sac-about .sac-layout {
+  grid-template-columns:
+    minmax(0, .72fr)
+    minmax(0, 1.12fr)
+    minmax(0, .84fr) !important;
+}
+
+#about.sac-about .sac-left,
+#about.sac-about .sac-center,
+#about.sac-about .sac-right {
+  min-width: 0 !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+#about.sac-about .sac-center,
+#about.sac-about .sac-right {
+  overflow: hidden !important;
+}
+
+#about.sac-about .sac-panel,
+#about.sac-about .sac-signal {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+#about.sac-about .sac-panel-copy {
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+#about.sac-about .sac-tags {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+#about.sac-about .sac-tag {
+  max-width: 100%;
+}
+
+/* ---------- PROJECT ---------- */
+#project.project,
+.project {
+  width: min(100%, 1240px) !important;
+  max-width: 1240px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: clamp(12px, 3vw, 42px) !important;
+  padding-right: clamp(12px, 3vw, 42px) !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+#project .project-heading,
+#project .info-pro {
+  width: 100%;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+#project .projects-container {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 20px !important;
+  box-sizing: border-box !important;
+}
+
+#project .project-card {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+#project .project-card-body {
+  width: 100% !important;
+  min-width: 0 !important;
+  padding: 18px 20px 20px !important;
+  box-sizing: border-box !important;
+}
+
+#project .project-card h3,
+#project .project-card p {
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+#project .project-card .skills {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 6px !important;
+  min-width: 0 !important;
+}
+
+#project .project-card .skills a {
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+/* Project slider: aman untuk mouse + touch/iPhone */
+#project .slider-container {
+  position: relative !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  aspect-ratio: 16 / 10 !important;
+  height: auto !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+#project .slider-track {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  scroll-snap-type: x mandatory !important;
+  -webkit-overflow-scrolling: touch !important;
+  scrollbar-width: none !important;
+  transform: none !important;
+  touch-action: pan-x !important;
+  box-sizing: border-box !important;
+}
+
+#project .slider-track::-webkit-scrollbar {
+  display: none !important;
+}
+
+#project .slider-track .certificate-preview {
+  flex: 0 0 100% !important;
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  scroll-snap-align: start !important;
+  box-sizing: border-box !important;
+}
+
+#project .slider-track .certificate-preview img {
+  display: block !important;
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  margin: 0 !important;
+}
+
+/* Tombol slider tetap berada di dalam gambar */
+#project .prev-btn,
+#project .next-btn {
+  position: absolute !important;
+  top: 50% !important;
+  z-index: 10 !important;
+  transform: translateY(-50%) !important;
+}
+
+#project .prev-btn {
+  left: 8px !important;
+}
+
+#project .next-btn {
+  right: 8px !important;
+}
+
+/* ---------- CERTIFICATE ---------- */
+#certificate.certificate-section,
+.certificate-section {
+  width: 100%;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#certificate .certificate-grid,
+.certificate-grid {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+#certificate img,
+.certificate-section img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------- SERVICES ---------- */
+#service.services,
+.services {
+  width: min(100%, 1240px) !important;
+  max-width: 1240px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: clamp(12px, 3vw, 32px);
+  padding-right: clamp(12px, 3vw, 32px);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.services-content {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.services-grid {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* ---------- CONTACT ---------- */
+#contact {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-left: clamp(12px, 4vw, 40px) !important;
+  padding-right: clamp(12px, 4vw, 40px) !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+.contact-content {
+  width: min(100%, 1100px) !important;
+  max-width: 1100px !important;
+  box-sizing: border-box !important;
+}
+
+.contact-content > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.contact-form {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 1050px) {
+  #project .projects-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  #about.sac-about .sac-layout {
+    grid-template-columns:
+      minmax(0, .7fr)
+      minmax(0, 1.1fr)
+      minmax(0, .8fr) !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .home {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  #about.sac-about {
+    overflow: visible !important;
+  }
+
+  #about.sac-about .sac-shell {
+    width: calc(100% - 20px) !important;
+    max-width: 100% !important;
+  }
+
+  #about.sac-about .sac-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  #project.project,
+  .project {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  #project .projects-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 16px !important;
+  }
+
+  #contact {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+}
+
+@media (max-width: 620px) {
+  #project .projects-container {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  #project .project-card {
+    width: 100% !important;
+  }
+
+  #project .project-card-body {
+    padding: 16px !important;
+  }
+
+  #project .slider-container {
+    aspect-ratio: 16 / 10 !important;
+  }
+
+  #project .prev-btn,
+  #project .next-btn {
+    width: 34px !important;
+    height: 34px !important;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media (max-width: 480px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+  }
+
+  .home {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #project.project,
+  .project {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  #project .projects-container {
+    width: 100% !important;
+    gap: 14px !important;
+  }
+
+  #project .project-card-body {
+    padding: 14px !important;
+  }
+
+  #project .project-card h3 {
+    font-size: 15px !important;
+  }
+
+  #project .project-card p {
+    font-size: 11px !important;
+    line-height: 1.5 !important;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  #contact {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+}
+
+/* FINAL PRINT SAFETY */
+@page{size:A4 landscape;margin:8mm}
+@media print{
+  #intro,#portfolioMotionBg,#portfolioThemeToggle,#mobileNavToggle,header,
+  .certificate-zoom,.prev-btn,.next-btn,.sac-auto-status{display:none!important}
+  #real-site{display:block!important}
+  html,body{overflow:visible!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+  #home{break-after:page}
+  #about,#skill,#galeri,#project,#certificate,#service{break-before:page}
+  #project .project-card,#certificate .certificate-card,#galeri #gallery .group{break-inside:avoid!important}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+
+/* =========================================================
+   FIX UKURAN SERTIFIKAT TOEFL
+   TOEFL mengikuti ukuran kartu sertifikat lainnya
+========================================================= */
+
+#certificate .certificate-preview {
+    width: 100% !important;
+    aspect-ratio: 16 / 11 !important;
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: rgba(255, 255, 255, 0.94) !important;
+}
+
+#certificate .certificate-preview img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    display: block !important;
+}
+
+/* Khusus TOEFL — seluruh dokumen terlihat utuh */
+#certificate .certificate-card:last-child .certificate-preview img {
+    object-fit: contain !important;
+    object-position: center !important;
+    transform: none !important;
+}
+
+/* Hover TOEFL tetap konsisten dengan sertifikat lainnya */
+#certificate .certificate-card:last-child:hover .certificate-preview img {
+    transform: scale(1.02) !important;
+}
+
+/* =========================================================
+   CERTIFICATE — UKURAN GAMBAR SERAGAM
+   Semua sertifikat, termasuk TOEFL, menggunakan frame
+   dan skala visual yang konsisten.
+========================================================= */
+
+#certificate .certificate-preview {
+    width: 100%;
+    aspect-ratio: 16 / 11;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.94);
+}
+
+#certificate .certificate-preview img {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.45s ease;
+}
+
+#certificate .certificate-card:hover .certificate-preview img {
+    transform: scale(1.035);
+}
+
+/* TOEFL mengikuti ukuran visual sertifikat lainnya */
+#certificate .certificate-card:last-child .certificate-preview img {
+    object-fit: cover;
+    object-position: center;
+}
+
+/* =========================================================
+   CERTIFICATE — MOBILE
+========================================================= */
+
+@media (max-width: 620px) {
+    #certificate .certificate-preview {
+        aspect-ratio: 16 / 11;
+    }
+
+    #certificate .certificate-preview img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
