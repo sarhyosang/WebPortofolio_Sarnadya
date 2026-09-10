@@ -99,18 +99,34 @@ if (closeModalBtn) {
 }
 
 // ===============================
-// PROJECT IMAGE SLIDER (SCROLL SNAP SAFARI SAFE)
+// PROJECT IMAGE SLIDER — iPhone / Safari safe
+// Tidak memakai inline onclick dan tidak bergantung pada transform.
 // ===============================
 function slideImage(button, direction) {
-  const container = button.closest('.slider-container');
-  const track = container.querySelector('.slider-track');
-  const itemWidth = track.clientWidth;
-  
-  track.scrollBy({
-    left: direction * itemWidth,
+  const container = button?.closest('.slider-container');
+  const track = container?.querySelector('.slider-track');
+  if (!track) return;
+
+  const width = track.getBoundingClientRect().width;
+  if (!width) return;
+
+  const currentIndex = Math.round(track.scrollLeft / width);
+  const total = track.querySelectorAll('.certificate-preview').length;
+  const nextIndex = Math.max(0, Math.min(total - 1, currentIndex + Number(direction)));
+
+  track.scrollTo({
+    left: nextIndex * width,
     behavior: 'smooth'
   });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('#project .prev-btn, #project .next-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      slideImage(button, Number(button.dataset.slideDirection || 0));
+    });
+  });
+});
 
 // ===============================
 const sections = document.querySelectorAll("section");
