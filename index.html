@@ -53,6 +53,455 @@
         transition: box-shadow 0.2s ease;
     }
 </style>
+
+<style id="final-presentation-fix">
+/* =========================================================
+   FINAL PRESENTATION FIX
+   Desain asli dipertahankan; ukuran dan overflow dirapikan.
+========================================================= */
+html,body{width:100%;max-width:100%;overflow-x:hidden!important}
+*,*::before,*::after{box-sizing:border-box}
+img,video,canvas,svg{max-width:100%}
+
+/* ABOUT */
+#about.sac-about{
+  width:100%!important;max-width:100%!important;
+  min-height:100svh!important;height:auto!important;
+  padding:104px clamp(14px,4vw,52px) 48px!important;
+  overflow:hidden!important;
+}
+#about.sac-about .sac-shell{
+  width:min(100%,1320px)!important;max-width:1320px!important;
+  margin:0 auto!important;padding:clamp(22px,3vw,40px)!important;
+  overflow:hidden!important;
+}
+#about.sac-about .sac-topbar{gap:22px!important;margin-bottom:20px!important}
+#about.sac-about .sac-title{
+  max-width:700px!important;font-size:clamp(38px,4.6vw,64px)!important;
+  line-height:.98!important;
+}
+#about.sac-about .sac-top-note{
+  max-width:300px!important;font-size:13px!important;line-height:1.5!important;
+}
+#about.sac-about .sac-layout{
+  grid-template-columns:minmax(190px,.72fr) minmax(300px,1.08fr) minmax(220px,.82fr)!important;
+  gap:18px!important;
+}
+#about.sac-about .sac-signal{min-height:0!important;padding:16px!important}
+#about.sac-about .sac-signal-value{font-size:14px!important}
+#about.sac-about .sac-center,#about.sac-about .sac-right{
+  min-height:0!important;height:470px!important;
+}
+#about.sac-about .sac-orbit{width:min(350px,86%)!important}
+#about.sac-about .sac-photo{width:140px!important;height:140px!important}
+#about.sac-about .sac-photo-core{width:180px!important;height:180px!important}
+#about.sac-about .sac-panel{padding:22px!important}
+#about.sac-about .sac-panel-index{margin-bottom:16px!important}
+#about.sac-about .sac-panel-icon{width:54px!important;height:54px!important;margin-bottom:15px!important}
+#about.sac-about .sac-panel-title{font-size:25px!important}
+#about.sac-about .sac-panel-copy{
+  font-size:13px!important;line-height:1.55!important;margin-bottom:15px!important;
+}
+#about.sac-about .sac-tag{padding:6px 9px!important;font-size:10px!important}
+#about.sac-about .sac-panel-footer{
+  left:22px!important;right:22px!important;bottom:22px!important;
+}
+
+/* EXPERIENCE: teks SELALU di bawah gambar */
+#galeri{
+  width:min(100%,1240px)!important;max-width:1240px!important;
+  margin:0 auto!important;padding:72px clamp(12px,3.5vw,40px)!important;
+  overflow:hidden!important;
+}
+#galeri #gallery{
+  width:100%!important;max-width:1160px!important;margin:0 auto!important;padding:0!important;
+  display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:18px!important;grid-auto-rows:auto!important;
+}
+#galeri #gallery .group{
+  width:100%!important;min-width:0!important;height:auto!important;min-height:0!important;
+  display:flex!important;flex-direction:column!important;align-items:stretch!important;
+  overflow:hidden!important;transform:none!important;
+  background:rgba(15,23,42,.52)!important;
+  border:1px solid rgba(192,132,252,.18)!important;
+  box-shadow:0 15px 34px rgba(2,6,23,.18)!important;
+}
+#galeri #gallery .group>img{
+  position:relative!important;inset:auto!important;width:100%!important;height:auto!important;
+  aspect-ratio:16/9!important;object-fit:cover!important;flex:0 0 auto!important;
+  transform:none!important;
+}
+#galeri #gallery .group>div{
+  position:static!important;inset:auto!important;width:100%!important;
+  min-height:82px!important;height:auto!important;padding:14px 16px!important;
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  opacity:1!important;visibility:visible!important;transform:none!important;
+  background:linear-gradient(135deg,rgba(18,35,76,.96),rgba(66,30,99,.96),rgba(86,24,82,.96))!important;
+}
+#galeri #gallery .group>div p{
+  margin:0!important;color:#f8fafc!important;
+  font-size:clamp(10px,1.05vw,13px)!important;line-height:1.55!important;
+  text-align:center!important;
+}
+
+/* PROJECT */
+#project.project{
+  width:min(100%,1240px)!important;max-width:1240px!important;
+  margin:72px auto!important;padding:0 clamp(12px,3.5vw,40px)!important;
+  overflow:hidden!important;
+}
+#project .projects-container{
+  width:100%!important;max-width:1160px!important;margin:0 auto!important;
+  display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:18px!important;
+}
+#project .project-card{
+  width:100%!important;min-width:0!important;max-width:100%!important;
+  border-radius:20px!important;overflow:hidden!important;
+}
+#project .slider-container{
+  width:100%!important;height:auto!important;aspect-ratio:16/10!important;
+  overflow:hidden!important;
+}
+#project .slider-track{
+  width:100%!important;height:100%!important;min-width:0!important;
+  display:flex!important;flex-wrap:nowrap!important;
+  overflow-x:auto!important;overflow-y:hidden!important;
+  scroll-snap-type:x mandatory!important;scroll-behavior:smooth!important;
+  -webkit-overflow-scrolling:touch!important;scrollbar-width:none!important;
+  transform:none!important;transition:none!important;
+}
+#project .slider-track::-webkit-scrollbar{display:none!important}
+#project .slider-track .certificate-preview{
+  flex:0 0 100%!important;width:100%!important;min-width:100%!important;
+  max-width:100%!important;height:100%!important;min-height:100%!important;
+  padding:0!important;margin:0!important;border:0!important;overflow:hidden!important;
+  scroll-snap-align:start!important;
+}
+#project .slider-track .certificate-preview img{
+  width:100%!important;min-width:100%!important;max-width:100%!important;
+  height:100%!important;object-fit:cover!important;object-position:center!important;
+}
+#project .project-card-body{
+  width:100%!important;min-width:0!important;padding:17px 18px 18px!important;
+}
+#project .project-card h3{font-size:16px!important;line-height:1.3!important}
+#project .project-card p{font-size:12px!important;line-height:1.5!important}
+#project .project-card .skills{display:flex!important;flex-wrap:wrap!important;gap:5px!important}
+#project .project-card .skills a{font-size:9px!important;padding:5px 8px!important}
+
+/* CERTIFICATES */
+#certificate{
+  width:min(100%,1240px)!important;max-width:1240px!important;margin:0 auto!important;
+  padding-left:clamp(12px,3.5vw,40px)!important;
+  padding-right:clamp(12px,3.5vw,40px)!important;overflow:hidden!important;
+}
+#certificate .certificate-grid{
+  width:100%!important;max-width:1160px!important;margin:0 auto!important;
+}
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+  #about.sac-about .sac-layout{
+    grid-template-columns:minmax(180px,.7fr) minmax(280px,1.1fr) minmax(200px,.8fr)!important;
+  }
+  #project .projects-container{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media(max-width:820px){
+  #about.sac-about{min-height:auto!important;padding:92px 12px 45px!important;overflow:visible!important}
+  #about.sac-about .sac-shell{padding:22px!important}
+  #about.sac-about .sac-topbar{flex-direction:column!important}
+  #about.sac-about .sac-top-note{max-width:100%!important}
+  #about.sac-about .sac-layout{grid-template-columns:1fr!important}
+  #about.sac-about .sac-center{height:420px!important}
+  #about.sac-about .sac-right{height:390px!important}
+  #galeri #gallery{grid-template-columns:1fr!important}
+}
+@media(max-width:620px){
+  #project .projects-container{grid-template-columns:1fr!important}
+  #project.project{padding-left:10px!important;padding-right:10px!important}
+  #galeri{padding-left:10px!important;padding-right:10px!important}
+  #galeri #gallery .group>div{min-height:72px!important;padding:12px!important}
+}
+
+/* PRINT / SAVE AS PDF */
+@page{size:A4 landscape;margin:8mm}
+@media print{
+  html,body{
+    width:100%!important;max-width:none!important;overflow:visible!important;
+    background:#120b2b!important;color:#fff!important;
+    -webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;
+  }
+  #intro,#portfolioMotionBg,#portfolioThemeToggle,#mobileNavToggle,header,
+  .certificate-zoom,.prev-btn,.next-btn,.sac-auto-status{display:none!important}
+  #real-site{display:block!important;width:100%!important;max-width:none!important}
+  #home{break-after:page}
+  #about,#skill,#galeri,#project,#certificate,#service{break-before:page}
+  section{break-inside:avoid}
+  #about.sac-about{
+    height:178mm!important;min-height:0!important;max-height:178mm!important;
+    padding:7mm!important;overflow:hidden!important;
+  }
+  #about.sac-about .sac-shell{
+    height:164mm!important;max-height:164mm!important;padding:7mm!important;
+  }
+  #about.sac-about .sac-title{font-size:31pt!important}
+  #about.sac-about .sac-top-note{font-size:9pt!important}
+  #about.sac-about .sac-layout{
+    grid-template-columns:24% 40% 36%!important;gap:4mm!important;height:122mm!important;
+  }
+  #about.sac-about .sac-center,#about.sac-about .sac-right{
+    height:122mm!important;min-height:0!important;
+  }
+  #about.sac-about .sac-orbit{width:82mm!important}
+  #about.sac-about .sac-photo{width:32mm!important;height:32mm!important}
+  #about.sac-about .sac-photo-core{width:42mm!important;height:42mm!important}
+  #about.sac-about .sac-panel{padding:6mm!important}
+  #about.sac-about .sac-panel-title{font-size:17pt!important}
+  #about.sac-about .sac-panel-copy{font-size:8.5pt!important}
+  #galeri{padding:8mm!important}
+  #galeri #gallery{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:4mm!important;
+  }
+  #galeri #gallery .group{break-inside:avoid!important}
+  #galeri #gallery .group>img{aspect-ratio:16/8.5!important}
+  #galeri #gallery .group>div{min-height:22mm!important;padding:3mm!important}
+  #galeri #gallery .group>div p{font-size:7.5pt!important;line-height:1.35!important}
+  #project.project{padding:7mm!important;margin:0!important}
+  #project .project-heading{margin-bottom:6mm!important}
+  #project .info-pro{margin-bottom:6mm!important}
+  #project .projects-container{
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:4mm!important;
+  }
+  #project .project-card{break-inside:avoid!important;border-radius:4mm!important}
+  #project .slider-container{aspect-ratio:16/9!important}
+  #project .project-card-body{padding:3.5mm!important}
+  #project .project-card h3{font-size:9.5pt!important}
+  #project .project-card p{font-size:7pt!important;line-height:1.35!important}
+  #project .project-card .skills a{font-size:6pt!important;padding:1.2mm 2mm!important}
+  #certificate{padding:7mm!important}
+  #certificate .certificate-grid{
+    grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:3mm!important;
+  }
+  #certificate .certificate-card{break-inside:avoid!important}
+  #certificate .certificate-card-body{padding:2.5mm!important}
+  #certificate .certificate-card-body h3{font-size:7pt!important}
+  #certificate .certificate-card-body p{font-size:6pt!important}
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+
+
+<style id="pdf-final-layout-fix">
+@page { size: A4 landscape; margin: 8mm; }
+@media print {
+  :root { --pdf-page-w: 281mm; --pdf-page-h: 194mm; }
+  html, body {
+    width: 100% !important; max-width: none !important;
+    min-width: 0 !important; overflow: visible !important;
+    margin: 0 !important; padding: 0 !important;
+    background: #14102f !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  body * { animation: none !important; transition: none !important; }
+  #intro, #portfolioMotionBg, #portfolioThemeToggle, #mobileNavToggle, header,
+  .certificate-zoom, .prev-btn, .next-btn, .sac-auto-status,
+  .sac-orbit-controls, .orbit-controls { display:none !important; }
+  #real-site {
+    display:block !important; width:100% !important; max-width:none !important;
+    overflow:visible !important; margin:0 !important; padding:0 !important;
+  }
+  #real-site > section,
+  #home, #about, #skill, #galeri, #project, #certificate, #service, #contact {
+    width:100% !important; max-width:none !important; min-width:0 !important;
+    margin:0 !important; box-sizing:border-box !important;
+  }
+  /* Each major area starts cleanly on its own printed page. */
+  #home, #about, #skill, #galeri, #project, #certificate, #service, #contact {
+    break-before: page !important;
+    page-break-before: always !important;
+  }
+  #home { break-before:auto !important; page-break-before:auto !important; }
+
+  /* ABOUT: fixed to the printable landscape page, no oversized viewport math. */
+  #about.sac-about {
+    height:var(--pdf-page-h) !important; min-height:var(--pdf-page-h) !important;
+    max-height:var(--pdf-page-h) !important; padding:5mm !important; overflow:hidden !important;
+  }
+  #about.sac-about .sac-shell {
+    width:100% !important; height:100% !important; max-width:none !important;
+    margin:0 !important; padding:5mm !important; overflow:hidden !important;
+  }
+  #about.sac-about .sac-topbar { margin-bottom:3mm !important; gap:8mm !important; }
+  #about.sac-about .sac-title { font-size:25pt !important; line-height:1 !important; max-width:62% !important; }
+  #about.sac-about .sac-top-note { font-size:8pt !important; line-height:1.35 !important; max-width:32% !important; }
+  #about.sac-about .sac-layout {
+    height:calc(100% - 30mm) !important; grid-template-columns:24% 42% 34% !important;
+    gap:3mm !important; min-height:0 !important;
+  }
+  #about.sac-about .sac-left, #about.sac-about .sac-center, #about.sac-about .sac-right {
+    min-height:0 !important; height:100% !important;
+  }
+  #about.sac-about .sac-signal { padding:4mm !important; min-height:0 !important; }
+  #about.sac-about .sac-signal-value { font-size:8pt !important; }
+  #about.sac-about .sac-center { overflow:hidden !important; }
+  #about.sac-about .sac-orbit { width:75mm !important; height:75mm !important; }
+  #about.sac-about .sac-photo-core { width:39mm !important; height:39mm !important; }
+  #about.sac-about .sac-photo { width:30mm !important; height:30mm !important; }
+  #about.sac-about .sac-panel { padding:5mm !important; overflow:hidden !important; }
+  #about.sac-about .sac-panel-title { font-size:15pt !important; }
+  #about.sac-about .sac-panel-copy { font-size:7.5pt !important; line-height:1.35 !important; }
+  #about.sac-about .sac-tag { font-size:6.5pt !important; padding:1.5mm 2.2mm !important; }
+
+  /* EXPERIENCE: cards stay together and captions remain below images. */
+  #galeri { padding:6mm !important; }
+  #galeri #gallery {
+    width:100% !important; max-width:none !important; margin:0 !important;
+    display:grid !important; grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:4mm !important;
+  }
+  #galeri #gallery .group {
+    width:100% !important; height:auto !important; min-height:0 !important;
+    display:flex !important; flex-direction:column !important;
+    break-inside:avoid !important; page-break-inside:avoid !important;
+    overflow:hidden !important; transform:none !important;
+  }
+  #galeri #gallery .group > img {
+    position:static !important; width:100% !important; height:auto !important;
+    aspect-ratio:16/8.5 !important; object-fit:cover !important; transform:none !important;
+  }
+  #galeri #gallery .group > div {
+    position:static !important; width:100% !important; height:auto !important;
+    min-height:14mm !important; padding:2.5mm 3mm !important;
+    opacity:1 !important; visibility:visible !important; transform:none !important;
+    display:flex !important; align-items:center !important; justify-content:center !important;
+  }
+  #galeri #gallery .group > div p { font-size:6.5pt !important; line-height:1.25 !important; margin:0 !important; }
+
+  /* PROJECT: 3 columns, compact cards; may naturally continue to page 2 without splitting cards. */
+  #project.project { padding:6mm !important; overflow:visible !important; }
+  #project .projects-container {
+    width:100% !important; max-width:none !important; margin:0 !important;
+    display:grid !important; grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+    gap:4mm !important;
+  }
+  #project .project-card {
+    width:100% !important; min-width:0 !important; max-width:none !important;
+    break-inside:avoid !important; page-break-inside:avoid !important;
+    overflow:hidden !important;
+  }
+  #project .slider-container { width:100% !important; aspect-ratio:16/9 !important; height:auto !important; overflow:hidden !important; }
+  #project .slider-track { width:100% !important; height:100% !important; transform:none !important; overflow:hidden !important; display:flex !important; }
+  #project .slider-track .certificate-preview { flex:0 0 100% !important; width:100% !important; min-width:100% !important; height:100% !important; }
+  #project .slider-track .certificate-preview:not(:first-child) { display:none !important; }
+  #project .slider-track img { width:100% !important; height:100% !important; object-fit:cover !important; }
+  #project .project-card-body { padding:3mm !important; }
+  #project .project-card h3 { font-size:8.5pt !important; line-height:1.2 !important; margin:0 0 1.5mm !important; }
+  #project .project-card p { font-size:6.5pt !important; line-height:1.25 !important; margin:0 0 2mm !important; }
+  #project .project-card .skills { gap:1mm !important; }
+  #project .project-card .skills a { font-size:5.5pt !important; padding:1mm 1.5mm !important; }
+
+  /* CERTIFICATES: compact 4-column grid; cards never split. */
+  #certificate { padding:6mm !important; overflow:visible !important; }
+  #certificate .certificate-grid {
+    width:100% !important; max-width:none !important; margin:0 !important;
+    display:grid !important; grid-template-columns:repeat(4,minmax(0,1fr)) !important; gap:3mm !important;
+  }
+  #certificate .certificate-card { break-inside:avoid !important; page-break-inside:avoid !important; }
+  #certificate .certificate-card-body { padding:2mm !important; }
+  #certificate .certificate-card-body h3 { font-size:6.5pt !important; line-height:1.15 !important; }
+  #certificate .certificate-card-body p { font-size:5.5pt !important; line-height:1.15 !important; }
+}
+</style>
+
+
+<style id="certificate-final-size-fix">
+/* =========================================================
+   FINAL CERTIFICATE LAYOUT FIX
+   Semua sertifikat berada di dalam grid/card yang sama.
+========================================================= */
+#certificate {
+  width: min(100%, 1240px);
+  max-width: 1240px;
+  margin: 0 auto;
+  padding-left: clamp(12px, 3.5vw, 40px);
+  padding-right: clamp(12px, 3.5vw, 40px);
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+#certificate .certificate-grid {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+#certificate .certificate-card {
+  min-width: 0;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+#certificate .certificate-preview {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.94);
+}
+
+#certificate .certificate-preview img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+  box-sizing: border-box;
+}
+
+#certificate .certificate-card.toefl-card .certificate-preview img {
+  object-fit: contain;
+  object-position: center;
+  transform: none;
+}
+
+#certificate .certificate-card.toefl-card:hover .certificate-preview img {
+  transform: scale(1.02);
+}
+
+@media (max-width: 1100px) {
+  #certificate .certificate-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  #certificate .certificate-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  #certificate .certificate-preview {
+    aspect-ratio: 16 / 11;
+  }
+}
+</style>
+
 </head>
 
 <body>
@@ -178,7 +627,7 @@
                 <div class="follow">
                     <p class="followw">Follow me:</p>
                     <ul>
-                        </li><a href="https://wa.me/6285362226893" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
+                        <li><a href="https://wa.me/6285362226893" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
                         <li><a href="https://discord.com/users/sarhyosang" target="_blank"><i class="fa-brands fa-discord"></i></a></li>
                         <li><a href="https://id.linkedin.com/in/sarahnadia-sarnadya/in" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
                         <li><a href="https://www.instagram.com/sarnadya_/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
@@ -211,7 +660,7 @@
                          <i class="fa-solid fa-id-card"></i> ID CARD
                      </div>
                      <div class="w-full h-[360px] rounded-2xl overflow-hidden border border-purple-500/20 bg-slate-800 mt-2 mb-3 shadow-inner">
-                         <img src="images/img11.jpeg" alt="Sarah Nadia ID Card" class="object-cover w-full h-full pointer-events-none">
+                         <img src="images/img123.jpeg" alt="Sarah Nadia ID Card" class="object-cover w-full h-full pointer-events-none">
                      </div>
                      <div class="text-center w-full pb-1">
                          <h4 class="text-white font-bold text-base tracking-wide bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">SARAH NADIA, S.Kom</h4>
@@ -241,7 +690,8 @@
     font-family: "Inter", sans-serif;
   }
 
-  #about.sac-about * {
+  #about.sac-about
+   * {
     box-sizing: border-box;
   }
 
@@ -1750,7 +2200,7 @@
             </h3>
             
             <!-- Container Icon Software -->
-            <div class="software-icons grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4">
+            <div class="software-icons grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-4">
                 <div class="icon-box p-4 bg-slate-800/80 rounded-2xl flex flex-col items-center justify-center hover:scale-105 transition shadow-sm border border-purple-500/20"><img src="icons/html.png" alt="HTML" class="w-10 h-10 object-contain mb-2"><span class="text-xs font-semibold text-white">HTML</span></div>
                 <div class="icon-box p-4 bg-slate-800/80 rounded-2xl flex flex-col items-center justify-center hover:scale-105 transition shadow-sm border border-purple-500/20"><img src="icons/css.png" alt="CSS" class="w-10 h-10 object-contain mb-2"><span class="text-xs font-semibold text-white">CSS</span></div>
                 <div class="icon-box p-4 bg-slate-800/80 rounded-2xl flex flex-col items-center justify-center hover:scale-105 transition shadow-sm border border-purple-500/20"><img src="icons/js.png" alt="JavaScript" class="w-10 h-10 object-contain mb-2"><span class="text-xs font-semibold text-white">JavaScript</span></div>
@@ -1771,7 +2221,8 @@
                 <div class="icon-box p-4 bg-slate-800/80 rounded-2xl flex flex-col items-center justify-center hover:scale-105 transition shadow-sm border border-purple-500/20"><img src="icons/word.png" alt="Word" class="w-10 h-10 object-contain mb-2"><span class="text-xs font-semibold text-white">Word</span></div>
                 <div class="icon-box p-4 bg-slate-800/80 rounded-2xl flex flex-col items-center justify-center hover:scale-105 transition shadow-sm border border-purple-500/20"><img src="icons/ppt.png" alt="PowerPoint" class="w-10 h-10 object-contain mb-2"><span class="text-xs font-semibold text-white">PowerPoint</span></div>
                 <div class="icon-box p-4 bg-slate-800/80 rounded-2xl flex flex-col items-center justify-center hover:scale-105 transition shadow-sm border border-purple-500/20"><img src="icons/xapp.png" alt="XAMPP" class="w-10 h-10 object-contain mb-2"><span class="text-xs font-semibold text-white">XAMPP</span></div>
-            </div>
+                <div class="icon-box p-4 bg-slate-800/80 rounded-2xl flex flex-col items-center justify-center hover:scale-105 transition shadow-sm border border-purple-500/20"><img src="icons/am.png" alt="XAMPP" class="w-10 h-10 object-contain mb-2"><span class="text-xs font-semibold text-white">XAMPP</span></div>
+              </div>
         </div>
 <!-- Experience / Skill Cards Layout (Total 6 Cards tanpa gambar) -->
         <div class="text-center mb-8">
@@ -1890,9 +2341,9 @@
 
         <!-- Cerita 6 -->
         <div class="group relative overflow-hidden rounded-xl cursor-pointer transition-all duration-500 ease-in-out col-span-1 will-change-transform hover:scale-105 hover:shadow-[0_15px_30px_rgba(168,85,247,0.15)]">
-          <img src="assets/gambar6.jpg" class="object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-105" alt="Cerita 6" />
+          <img src="assets/gambar7.png" class="object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-105" alt="Cerita 6" />
           <div class="absolute inset-0 bg-gradient-to-br from-blue-950/90 via-purple-900/90 to-pink-950/80 flex flex-col justify-center items-center text-white text-center px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <p class="font-semibold text-sm md:text-lg"> Hanya mahasiswa biasa yang punya keinginan luar biasa untuk terus berjuang dan semnagat dalam menciptakan sesuatu. Ini Dia beberapa project yang pernah dibuat.</p>
+            <p class="font-semibold text-sm md:text-lg"> Membuat Pendataan dan segmentasi data secara otomatis menggunakan metode K-Means. Serta membuat Contenct Plan dan Report atau Rancangan Bulanan Pekerjaan untuk memudahkan pekerjaan.</p>
           </div>
         </div>
 
@@ -1903,8 +2354,7 @@
     <h1 style="font-family:'Satoshi',sans-serif;font-weight:700;">Projects</h1>
     <hr>
     <div class="info-pro">
-        <p>A showcase of my recent projects demonstrating expertise in full-stack </p>
-        <p>development, modern frameworks, and creative problem-solving.</p>
+        <p>Beberapa Hasil Project yang pernah saya kerjakan.</p>
     </div>
     <div class="projects-container">
 
@@ -1912,97 +2362,50 @@
     <div class="project-card">
       <div class="slider-container" style="position: relative; overflow: hidden; width: 100%;">
         <div class="slider-track" style="display: flex; transition: transform 0.5s ease;">
+
           
-          <button class="certificate-preview" type="button" data-certificate-src="images/V1.png" data-certificate-title="E-Commerce Website" style="background:none; border:none; padding:0; min-width: 100%; cursor: pointer; position: relative;">
-            <img src="images/V1.png" alt="E-Commerce Website 1" style="width: 100%; min-width: 100%; object-fit: cover; display: block;">
+          <button class="certificate-preview" type="button" data-certificate-src="images/canva (1).png" data-certificate-title="E-Commerce Website" style="background:none; border:none; padding:0; min-width: 100%; cursor: pointer; position: relative;">
+            <img src="images/canva (1).png" alt="E-Commerce Website 2" style="width: 100%; min-width: 100%; object-fit: cover; display: block;">
             <span class="certificate-zoom"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Lihat</span>
           </button>
           
-          <button class="certificate-preview" type="button" data-certificate-src="images/V2.png" data-certificate-title="E-Commerce Website" style="background:none; border:none; padding:0; min-width: 100%; cursor: pointer; position: relative;">
-            <img src="images/V2.png" alt="E-Commerce Website 2" style="width: 100%; min-width: 100%; object-fit: cover; display: block;">
-            <span class="certificate-zoom"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Lihat</span>
-          </button>
-          
-          <button class="certificate-preview" type="button" data-certificate-src="images/V3.png" data-certificate-title="E-Commerce Website" style="background:none; border:none; padding:0; min-width: 100%; cursor: pointer; position: relative;">
-            <img src="images/V3.png" alt="E-Commerce Website 3" style="width: 100%; min-width: 100%; object-fit: cover; display: block;">
+          <button class="certificate-preview" type="button" data-certificate-src="images/canva.png" data-certificate-title="E-Commerce Website" style="background:none; border:none; padding:0; min-width: 100%; cursor: pointer; position: relative;">
+            <img src="images/canva.png" alt="E-Commerce Website 3" style="width: 100%; min-width: 100%; object-fit: cover; display: block;">
             <span class="certificate-zoom"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Lihat</span>
           </button>
 
         </div>
-        <button class="prev-btn" onclick="slideImage(this, -1)" style="position: absolute; top: 50%; left: 5px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; padding: 5px 10px; z-index: 2;">&#10094;</button>
-        <button class="next-btn" onclick="slideImage(this, 1)" style="position: absolute; top: 50%; right: 5px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; padding: 5px 10px; z-index: 2;">&#10095;</button>
+        <button class="prev-btn" data-slide-direction="-1" style="position: absolute; top: 50%; left: 5px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; padding: 5px 10px; z-index: 2;">&#10094;</button>
+        <button class="next-btn" data-slide-direction="1" style="position: absolute; top: 50%; right: 5px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; padding: 5px 10px; z-index: 2;">&#10095;</button>
       </div>
       <div class="project-card-body">
-        <h3>E-Commerce Website</h3>
-        <p>Modern online store with product filtering, cart, and payment system.</p>
+        <h3>Website </h3>
+        <p>Beberapa Hasil Web development<p>
         <div class="skills">
           <a href="#">phpMyAdmin</a>
           <a href="#">MySQL</a>
-          <a href="#">XAMPP</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- PROJECT 2 -->
-    <div class="project-card">
-      <div class="slider-container" style="position: relative; overflow: hidden; width: 100%;">
-        <div class="slider-track" style="display: flex; transition: transform 0.5s ease;">
-          
-          <button class="certificate-preview" type="button" data-certificate-src="images/porto11.png" data-certificate-title="Portfolio Website" style="background:none; border:none; padding:0; min-width: 100%; cursor: pointer; position: relative;">
-            <img src="images/porto11.png" alt="Portfolio Website 1" style="width: 100%; min-width: 100%; object-fit: cover; display: block;">
-            <span class="certificate-zoom"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Lihat</span>
-          </button>
-          
-          <button class="certificate-preview" type="button" data-certificate-src="images/porto22.png" data-certificate-title="Portfolio Website" style="background:none; border:none; padding:0; min-width: 100%; cursor: pointer; position: relative;">
-            <img src="images/porto22.png" alt="Portfolio Website 2" style="width: 100%; min-width: 100%; object-fit: cover; display: block;">
-            <span class="certificate-zoom"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Lihat</span>
-          </button>
-
-          <button class="certificate-preview" type="button" data-certificate-src="images/porto 33.png" data-certificate-title="Portfolio Website" style="background:none; border:none; padding:0; min-width: 100%; cursor: pointer; position: relative;">
-            <img src="images/porto 33.png" alt="Portfolio Website 3" style="width: 100%; min-width: 100%; object-fit: cover; display: block;">
-            <span class="certificate-zoom"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Lihat</span>
-          </button>
-
-          <button class="certificate-preview" type="button" data-certificate-src="images/P2.png" data-certificate-title="Portfolio Website" style="background:none; border:none; padding:0; min-width: 100%; cursor: pointer; position: relative;">
-            <img src="images/P2.png" alt="Portfolio Website 4" style="width: 100%; min-width: 100%; object-fit: cover; display: block;">
-            <span class="certificate-zoom"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Lihat</span>
-          </button>
-
-          <button class="certificate-preview" type="button" data-certificate-src="images/P1.png" data-certificate-title="Portfolio Website" style="background:none; border:none; padding:0; min-width: 100%; cursor: pointer; position: relative;">
-            <img src="images/P1.png" alt="Portfolio Website 5" style="width: 100%; min-width: 100%; object-fit: cover; display: block;">
-            <span class="certificate-zoom"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Lihat</span>
-          </button>
-
-          <button class="certificate-preview" type="button" data-certificate-src="images/P3.png" data-certificate-title="Portfolio Website" style="background:none; border:none; padding:0; min-width: 100%; cursor: pointer; position: relative;">
-            <img src="images/P3.png" alt="Portfolio Website 6" style="width: 100%; min-width: 100%; object-fit: cover; display: block;">
-            <span class="certificate-zoom"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Lihat</span>
-          </button>
-
-        </div>
-        <button class="prev-btn" onclick="slideImage(this, -1)" style="position: absolute; top: 50%; left: 5px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; padding: 5px 10px; z-index: 2;">&#10094;</button>
-        <button class="next-btn" onclick="slideImage(this, 1)" style="position: absolute; top: 50%; right: 5px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; padding: 5px 10px; z-index: 2;">&#10095;</button>
-      </div>
-      <div class="project-card-body">
-        <h3>Portfolio Website</h3>
-        <p>Personal portfolio to showcase my design and coding projects.</p>
-        <div class="skills">
-          <a href="#">HTML</a>
-          <a href="#">CSS</a>
+          <a href="#">HTML CSS </a>
           <a href="#">JavaScript</a>
         </div>
       </div>
     </div>
 
+    
     <!-- PROJECT 3 -->
     <div class="project-card">
       <div class="slider-container" style="position: relative; overflow: hidden; width: 100%;">
         <div class="slider-track" style="display: flex; transition: transform 0.5s ease;">
           
+          <button class="certificate-preview" type="button" data-certificate-src="images/canva (2).png" data-certificate-title="Game Education & Animation" style="background:none; border:none; padding:0; min-width: 100%; cursor: pointer; position: relative;">
+            <img src="images/canva (2).png" alt="Game 1" style="width: 100%; min-width: 100%; object-fit: cover; display: block;">
+            <span class="certificate-zoom"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Lihat</span>
+          </button>
+           
           <button class="certificate-preview" type="button" data-certificate-src="images/GAME1.png" data-certificate-title="Game Education & Animation" style="background:none; border:none; padding:0; min-width: 100%; cursor: pointer; position: relative;">
             <img src="images/GAME1.png" alt="Game 1" style="width: 100%; min-width: 100%; object-fit: cover; display: block;">
             <span class="certificate-zoom"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Lihat</span>
           </button>
-          
+
           <button class="certificate-preview" type="button" data-certificate-src="images/GAME2.png" data-certificate-title="Game Education & Animation" style="background:none; border:none; padding:0; min-width: 100%; cursor: pointer; position: relative;">
             <img src="images/GAME2.png" alt="Game 2" style="width: 100%; min-width: 100%; object-fit: cover; display: block;">
             <span class="certificate-zoom"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Lihat</span>
@@ -2044,15 +2447,16 @@
           </button>
 
         </div>
-        <button class="prev-btn" onclick="slideImage(this, -1)" style="position: absolute; top: 50%; left: 5px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; padding: 5px 10px; z-index: 2;">&#10094;</button>
-        <button class="next-btn" onclick="slideImage(this, 1)" style="position: absolute; top: 50%; right: 5px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; padding: 5px 10px; z-index: 2;">&#10095;</button>
+        <button class="prev-btn" data-slide-direction="-1" style="position: absolute; top: 50%; left: 5px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; padding: 5px 10px; z-index: 2;">&#10094;</button>
+        <button class="next-btn" data-slide-direction="1" style="position: absolute; top: 50%; right: 5px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; padding: 5px 10px; z-index: 2;">&#10095;</button>
       </div>
       <div class="project-card-body">
         <h3>Game Education & Animation</h3>
-        <p>Interactive 3D modeling animation and game for educational purposes.</p>
+        <p>Beberapa Hasil Game development dan Animasi.</p>
         <div class="skills">
           <a href="#">Unity Engine</a>
           <a href="#">C# </a>
+          <a href="#">Adobe Animate </a>
           <a href="#">Blender</a>
         </div>
       </div>
@@ -2063,7 +2467,12 @@
       <div class="slider-container" style="position: relative; overflow: hidden; width: 100%;">
         <div class="slider-track" style="display: flex; transition: transform 0.5s ease;">
           
-          <button class="certificate-preview" type="button" data-certificate-src="images/ui ux1.png" data-certificate-title="UI UX Design" style="background:none; border:none; padding:0; min-width: 100%; cursor: pointer; position: relative;">
+          <button class="certificate-preview" type="button" data-certificate-src="images/canva (4).png" data-certificate-title="UI UX Design" style="background:none; border:none; padding:0; min-width: 100%; cursor: pointer; position: relative;">
+            <img src="images/canva (4).png" alt="UI UX 1" style="width: 100%; min-width: 100%; object-fit: cover; display: block;">
+            <span class="certificate-zoom"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Lihat</span>
+          </button>
+
+           <button class="certificate-preview" type="button" data-certificate-src="images/ui ux1.png" data-certificate-title="UI UX Design" style="background:none; border:none; padding:0; min-width: 100%; cursor: pointer; position: relative;">
             <img src="images/ui ux1.png" alt="UI UX 1" style="width: 100%; min-width: 100%; object-fit: cover; display: block;">
             <span class="certificate-zoom"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Lihat</span>
           </button>
@@ -2074,16 +2483,15 @@
           </button>
 
         </div>
-        <button class="prev-btn" onclick="slideImage(this, -1)" style="position: absolute; top: 50%; left: 5px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; padding: 5px 10px; z-index: 2;">&#10094;</button>
-        <button class="next-btn" onclick="slideImage(this, 1)" style="position: absolute; top: 50%; right: 5px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; padding: 5px 10px; z-index: 2;">&#10095;</button>
+        <button class="prev-btn" data-slide-direction="-1" style="position: absolute; top: 50%; left: 5px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; padding: 5px 10px; z-index: 2;">&#10094;</button>
+        <button class="next-btn" data-slide-direction="1" style="position: absolute; top: 50%; right: 5px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; padding: 5px 10px; z-index: 2;">&#10095;</button>
       </div>
       <div class="project-card-body">
         <h3>UI UX Design</h3>
-        <p>Simple Design for a website</p>
+        <p>Beberapa Hasil Simple Design UI/UX</p>
         <div class="skills">
           <a href="#">Figma</a>
           <a href="#">UI Design</a>
-          <a href="#">Prototype</a>
         </div>
       </div>
     </div>
@@ -2093,11 +2501,16 @@
       <div class="slider-container" style="position: relative; overflow: hidden; width: 100%;">
         <div class="slider-track" style="display: flex; transition: transform 0.5s ease;">
           
-          <button class="certificate-preview" type="button" data-certificate-src="images/SOSMED.png" data-certificate-title="Design Projects" style="background:none; border:none; padding:0; min-width: 100%; cursor: pointer; position: relative;">
-            <img src="images/SOSMED.png" alt="Design 1" style="width: 100%; min-width: 100%; object-fit: cover; display: block;">
+          <button class="certificate-preview" type="button" data-certificate-src="images/canva (5).png" data-certificate-title="Design Projects" style="background:none; border:none; padding:0; min-width: 100%; cursor: pointer; position: relative;">
+            <img src="images/canva (5).png" alt="Design 1" style="width: 100%; min-width: 100%; object-fit: cover; display: block;">
             <span class="certificate-zoom"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Lihat</span>
           </button>
           
+          <button class="certificate-preview" type="button" data-certificate-src="images/ss d1.png" data-certificate-title="Design Projects" style="background:none; border:none; padding:0; min-width: 100%; cursor: pointer; position: relative;">
+            <img src="images/ss d1.png" alt="Design 2" style="width: 100%; min-width: 100%; object-fit: cover; display: block;">
+            <span class="certificate-zoom"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Lihat</span>
+          </button>
+
           <button class="certificate-preview" type="button" data-certificate-src="images/d1.png" data-certificate-title="Design Projects" style="background:none; border:none; padding:0; min-width: 100%; cursor: pointer; position: relative;">
             <img src="images/d1.png" alt="Design 2" style="width: 100%; min-width: 100%; object-fit: cover; display: block;">
             <span class="certificate-zoom"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Lihat</span>
@@ -2114,16 +2527,15 @@
           </button>
 
         </div>
-        <button class="prev-btn" onclick="slideImage(this, -1)" style="position: absolute; top: 50%; left: 5px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; padding: 5px 10px; z-index: 2;">&#10094;</button>
-        <button class="next-btn" onclick="slideImage(this, 1)" style="position: absolute; top: 50%; right: 5px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; padding: 5px 10px; z-index: 2;">&#10095;</button>
+        <button class="prev-btn" data-slide-direction="-1" style="position: absolute; top: 50%; left: 5px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; padding: 5px 10px; z-index: 2;">&#10094;</button>
+        <button class="next-btn" data-slide-direction="1" style="position: absolute; top: 50%; right: 5px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; padding: 5px 10px; z-index: 2;">&#10095;</button>
       </div>
       <div class="project-card-body">
         <h3>Design Projects</h3>
-        <p>Design for Account Social Media Management with modern aesthetics</p>
+        <p>Design Social Media Specialist</p>
         <div class="skills">
           <a href="#">Figma</a>
           <a href="#">Canva</a>
-          <a href="#">Adobe Photoshop</a>
         </div>
       </div>
     </div>
@@ -2133,26 +2545,58 @@
       <div class="slider-container" style="position: relative; overflow: hidden; width: 100%;">
         <div class="slider-track" style="display: flex; transition: transform 0.5s ease;">
           
+          <button class="certificate-preview" type="button" data-certificate-src="images/canva (6).png" data-certificate-title="Design Customization" style="background:none; border:none; padding:0; min-width: 100%; cursor: pointer; position: relative;">
+            <img src="images/canva (6).png" alt="Custom Design 1" style="width: 100%; min-width: 100%; object-fit: cover; display: block;">
+            <span class="certificate-zoom"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Lihat</span>
+          </button>
+
           <button class="certificate-preview" type="button" data-certificate-src="images/baju design.png" data-certificate-title="Design Customization" style="background:none; border:none; padding:0; min-width: 100%; cursor: pointer; position: relative;">
             <img src="images/baju design.png" alt="Custom Design 1" style="width: 100%; min-width: 100%; object-fit: cover; display: block;">
             <span class="certificate-zoom"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Lihat</span>
           </button>
 
         </div>
-        <button class="prev-btn" onclick="slideImage(this, -1)" style="position: absolute; top: 50%; left: 5px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; padding: 5px 10px; z-index: 2;">&#10094;</button>
-        <button class="next-btn" onclick="slideImage(this, 1)" style="position: absolute; top: 50%; right: 5px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; padding: 5px 10px; z-index: 2;">&#10095;</button>
+        <button class="prev-btn" data-slide-direction="-1" style="position: absolute; top: 50%; left: 5px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; padding: 5px 10px; z-index: 2;">&#10094;</button>
+        <button class="next-btn" data-slide-direction="1" style="position: absolute; top: 50%; right: 5px; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; padding: 5px 10px; z-index: 2;">&#10095;</button>
       </div>
       <div class="project-card-body">
-        <h3>Design Customization</h3>
-        <p>Creating custom designs tailored to brand identity</p>
+        <h3> Another Design </h3>
+        <p>Beberapa Hasil Design Lainnya</p>
         <div class="skills">
+          <a href="#">Figma</a>
+          <a href="#">Canva</a>
           <a href="#">Adobe Illustrator</a>
           <a href="#">Adobe Photoshop</a>
         </div>
       </div>
     </div>
 
-  </div>
+    <!-- PROJECT 7 -->
+    <div class="project-card">
+      <div class="slider-container">
+        <div class="slider-track">
+          <button class="certificate-preview" type="button"
+            data-certificate-src="images/canva (3).png"
+            data-certificate-title="video Editing"
+            aria-label="Lihat canva (3)">
+            <img src="images/canva (3).png" alt="video Editing" loading="lazy">
+            <span class="certificate-zoom"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Lihat</span>
+          </button>
+        </div>
+        <button class="prev-btn" type="button" data-slide-direction="-1" aria-label="Gambar sebelumnya">&#10094;</button>
+        <button class="next-btn" type="button" data-slide-direction="1" aria-label="Gambar berikutnya">&#10095;</button>
+      </div>
+      <div class="project-card-body">
+        <h3>Video Editing </h3>
+        <p>Beberapa Screenshot Proses Video Editing.</p>
+        <div class="skills">
+          <a href="#">Capcut</a>
+          <a href="#">Adobe After Effects</a>
+        </div>
+      </div>
+    </div>
+
+  
 </section>
     <!-- CERTIFICATE SECTION: seluruh gambar diambil dari dokumen sertifikat Sarah Nadia -->
     <section class="certificate-section reveal" id="certificate" aria-labelledby="certificate-title">
@@ -2275,8 +2719,33 @@
                     <p>Universitas Almuslim • 13 Maret 2023</p>
                 </div>
             </article>
+
+            
+
+            
+
+            
+
+            
+
+            <article class="certificate-card reveal-certificate">
+                            <button class="certificate-preview" type="button"
+                                data-certificate-src="certificates/sertifikat-12-toefl-sarah-nadia.jpeg"
+                                data-certificate-title="TOEFL – Equivalent"
+                                aria-label="Perbesar sertifikat TOEFL Equivalent">
+                                <img src="certificates/sertifikat-12-toefl-sarah-nadia.jpeg" alt="Sertifikat TOEFL Equivalent Sarah Nadia" loading="lazy">
+                                <span class="certificate-zoom"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Lihat</span>
+                            </button>
+                            <div class="certificate-card-body">
+                                <span class="certificate-badge"><i class="fa-solid fa-award" aria-hidden="true"></i> TOEFL</span>
+                                <h3>TOEFL – Equivalent</h3>
+                                <p>TOEFL Equivalent • Pusat Bahasa Universitas Almuslim • 12 Januari 2026</p>
+                            </div>
+                        </article>
         </div>
     </section>
+
+            
 
     <div class="certificate-modal" id="certificateModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="certificateModalTitle">
         <button class="certificate-modal-close" type="button" aria-label="Tutup tampilan sertifikat">
@@ -2288,32 +2757,39 @@
         </div>
     </div>
 
-<script>
-  // Store the current slide index for each project card
-  const slideIndexes = {};
-
-  function slideImage(button, direction) {
-    const card = button.closest('.project-card');
+<script id="project-slider-native">
+(() => {
+  document.querySelectorAll('#project .project-card').forEach((card) => {
     const track = card.querySelector('.slider-track');
-    const images = track.querySelectorAll('img');
-    
-    // Initialize index if not exists
-    if (!slideIndexes[card]) {
-      slideIndexes[card] = 0;
-    }
+    const prev = card.querySelector('.prev-btn');
+    const next = card.querySelector('.next-btn');
+    if (!track) return;
 
-    slideIndexes[card] += direction;
+    const move = (direction) => {
+      const width = track.clientWidth;
+      if (!width) return;
+      const max = track.scrollWidth - track.clientWidth;
+      let target = track.scrollLeft + direction * width;
 
-    // Loop around if out of bounds
-    if (slideIndexes[card] >= images.length) {
-      slideIndexes[card] = 0;
-    } else if (slideIndexes[card] < 0) {
-      slideIndexes[card] = images.length - 1;
-    }
+      if (target > max - 2) target = 0;
+      if (target < 2) target = max;
 
-    // Move track
-    track.style.transform = `translateX(-${slideIndexes[card] * 100}%)`;
-  }
+      track.scrollTo({ left: target, behavior: 'smooth' });
+    };
+
+    prev?.addEventListener('click', (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      move(-1);
+    });
+
+    next?.addEventListener('click', (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      move(1);
+    });
+  });
+})();
 </script>
 <!-- Services Section -->
         <section id="service" class="section services reveal">
@@ -5006,18 +5482,901 @@
   }
 </style>
 
-<script id="project-safari-scroll-script">
-  function slideImage(button, direction) {
-    const container = button.closest('.slider-container');
-    const track = container.querySelector('.slider-track');
-    const itemWidth = track.clientWidth;
-    
-    track.scrollBy({
-      left: direction * itemWidth,
-      behavior: 'smooth'
-    });
+
+
+
+<!-- FINAL RESPONSIVE LAYOUT FIX
+     Menjaga bentuk/desain asli, hanya merapikan ukuran, jarak, overflow,
+     dan memastikan project/certificate nyaman di desktop, tablet, dan iPhone.
+-->
+<style id="final-responsive-layout-fix">
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
   }
-</script>
+
+  #real-site {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  /* =========================
+     HOME — lebih pas di layar
+     ========================= */
+  #home.home {
+    width: min(100%, 1240px) !important;
+    margin: 0 auto !important;
+    padding-left: clamp(18px, 4vw, 48px) !important;
+    padding-right: clamp(18px, 4vw, 48px) !important;
+    padding-top: clamp(118px, 12vh, 150px) !important;
+    padding-bottom: clamp(52px, 7vh, 78px) !important;
+  }
+
+  #home .home-container {
+    width: 100% !important;
+    max-width: 1160px !important;
+    margin: 0 auto !important;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 330px) !important;
+    gap: clamp(34px, 5vw, 64px) !important;
+  }
+
+  #home .info-home h1 {
+    font-size: clamp(44px, 5.4vw, 72px) !important;
+    line-height: 1.04 !important;
+  }
+
+  #home .info-home h3 {
+    font-size: clamp(21px, 2.35vw, 32px) !important;
+    line-height: 1.18 !important;
+  }
+
+  #home .lanyard-container {
+    width: min(100%, 330px) !important;
+  }
+
+  #home #idCardBody {
+    width: min(300px, calc(100vw - 42px)) !important;
+    padding: 12px !important;
+  }
+
+  #home #idCardBody > .h-\[360px\] {
+    height: 320px !important;
+  }
+
+  /* =========================
+     ABOUT — desktop lebih ringkas
+     tanpa mengubah bentuk visual
+     ========================= */
+  #about.sac-about {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 104px clamp(18px, 4vw, 52px) 68px !important;
+    box-sizing: border-box !important;
+  }
+
+  #about .sac-shell {
+    width: 100% !important;
+    max-width: 1240px !important;
+    margin: 0 auto !important;
+    padding: clamp(26px, 3vw, 34px) !important;
+    border-radius: 32px !important;
+  }
+
+  #about .sac-topbar {
+    gap: 22px !important;
+    margin-bottom: 26px !important;
+  }
+
+  #about .sac-title {
+    font-size: clamp(36px, 4.5vw, 60px) !important;
+    letter-spacing: -2px !important;
+  }
+
+  #about .sac-top-note {
+    max-width: 300px !important;
+    font-size: 13px !important;
+    line-height: 1.55 !important;
+  }
+
+  #about .sac-layout {
+    grid-template-columns: minmax(180px, .68fr) minmax(330px, 1fr) minmax(250px, .82fr) !important;
+    gap: 20px !important;
+    align-items: stretch !important;
+  }
+
+  #about .sac-left {
+    gap: 10px !important;
+  }
+
+  #about .sac-signal {
+    min-height: 98px !important;
+    padding: 15px !important;
+    border-radius: 19px !important;
+  }
+
+  #about .sac-signal-icon {
+    width: 38px !important;
+    height: 38px !important;
+    margin-bottom: 8px !important;
+    font-size: 15px !important;
+  }
+
+  #about .sac-signal-label {
+    font-size: 10px !important;
+  }
+
+  #about .sac-signal-value {
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+  }
+
+  #about .sac-center,
+  #about .sac-right {
+    min-height: 440px !important;
+  }
+
+  #about .sac-orbit-stage {
+    inset: 50px 10px 18px !important;
+  }
+
+  #about .sac-orbit {
+    width: min(350px, 88%) !important;
+  }
+
+  #about .sac-node {
+    width: 80px !important;
+    min-height: 68px !important;
+    border-radius: 20px !important;
+    padding: 8px !important;
+  }
+
+  #about .sac-node i {
+    font-size: 16px !important;
+  }
+
+  #about .sac-node span {
+    font-size: 10px !important;
+  }
+
+  #about .sac-panel {
+    padding: 23px !important;
+  }
+
+  #about .sac-panel-index {
+    margin-bottom: 18px !important;
+  }
+
+  #about .sac-panel-icon {
+    width: 52px !important;
+    height: 52px !important;
+    margin-bottom: 16px !important;
+    font-size: 20px !important;
+  }
+
+  #about .sac-panel-title {
+    font-size: 25px !important;
+    margin-bottom: 10px !important;
+  }
+
+  #about .sac-panel-copy {
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 17px !important;
+  }
+
+  #about .sac-tag {
+    padding: 6px 9px !important;
+    font-size: 10px !important;
+  }
+
+  /* =========================
+     PROJECT — 9 kartu, teks tetap di bawah gambar
+     ========================= */
+  #project.project {
+    width: min(100%, 1240px) !important;
+    margin: 70px auto !important;
+    padding-left: clamp(16px, 3vw, 42px) !important;
+    padding-right: clamp(16px, 3vw, 42px) !important;
+  }
+
+  #project .projects-container {
+    width: 100% !important;
+    max-width: 1160px !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 20px !important;
+  }
+
+  #project .project-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    border-radius: 22px !important;
+  }
+
+  #project .slider-container {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 10 !important;
+    border-radius: 18px 18px 0 0 !important;
+  }
+
+  #project .slider-track {
+    width: 100% !important;
+    height: 100% !important;
+    min-width: 100% !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    overscroll-behavior-x: contain;
+    touch-action: pan-x !important;
+    scrollbar-width: none !important;
+  }
+
+  #project .slider-track::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  #project .slider-track .certificate-preview {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    scroll-snap-align: start !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+  }
+
+  #project .slider-track .certificate-preview img {
+    width: 100% !important;
+    height: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+
+  #project .prev-btn,
+  #project .next-btn {
+    width: 36px !important;
+    height: 36px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 50% !important;
+    display: grid !important;
+    place-items: center !important;
+    z-index: 10 !important;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  #project .project-card-body {
+    width: 100% !important;
+    min-width: 0 !important;
+    padding: 18px 20px 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    box-sizing: border-box !important;
+  }
+
+  #project .project-card h3 {
+    margin: 0 0 7px !important;
+    font-size: 16px !important;
+    line-height: 1.35 !important;
+  }
+
+  #project .project-card p {
+    margin: 0 0 13px !important;
+    font-size: 12px !important;
+    line-height: 1.55 !important;
+  }
+
+  #project .project-card .skills {
+    margin-top: auto !important;
+    gap: 6px !important;
+  }
+
+  #project .project-card .skills a {
+    padding: 5px 9px !important;
+    font-size: 9px !important;
+  }
+
+  /* =========================
+     CERTIFICATE — 12 kartu
+     teks tetap di bawah gambar
+     ========================= */
+  #certificate.certificate-section {
+    width: min(100%, 1240px) !important;
+    margin: 0 auto !important;
+    padding: 74px clamp(16px, 3vw, 42px) !important;
+    box-sizing: border-box !important;
+  }
+
+  #certificate .certificate-grid {
+    width: 100% !important;
+    max-width: 1160px !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 20px !important;
+  }
+
+  #certificate .certificate-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    border-radius: 22px !important;
+  }
+
+  #certificate .certificate-preview {
+    width: 100% !important;
+    aspect-ratio: 16 / 11 !important;
+  }
+
+  #certificate .certificate-card-body {
+    padding: 16px 18px 18px !important;
+  }
+
+  #certificate .certificate-badge {
+    margin-bottom: 9px !important;
+    padding: 5px 9px !important;
+    font-size: 9px !important;
+  }
+
+  #certificate .certificate-card h3 {
+    margin-bottom: 6px !important;
+    font-size: 15px !important;
+    line-height: 1.35 !important;
+  }
+
+  #certificate .certificate-card p {
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+  }
+
+  /* =========================
+     TABLET
+     ========================= */
+  @media (max-width: 1100px) {
+    #home .home-container {
+      grid-template-columns: minmax(0, 1fr) minmax(260px, 300px) !important;
+      gap: 30px !important;
+    }
+
+    #about .sac-layout {
+      grid-template-columns: minmax(180px, .72fr) minmax(300px, 1fr) minmax(230px, .78fr) !important;
+      gap: 15px !important;
+    }
+
+    #about .sac-center,
+    #about .sac-right {
+      min-height: 420px !important;
+    }
+
+    #about .sac-orbit {
+      width: min(320px, 88%) !important;
+    }
+
+    #about .sac-node {
+      width: 74px !important;
+      min-height: 64px !important;
+    }
+
+    #project .projects-container,
+    #certificate .certificate-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+  }
+
+  /* =========================
+     IPHONE / MOBILE
+     ========================= */
+  @media (max-width: 780px) {
+    #home.home {
+      width: 100% !important;
+      padding-top: 104px !important;
+      padding-bottom: 48px !important;
+    }
+
+    #home .home-container {
+      grid-template-columns: 1fr !important;
+      gap: 34px !important;
+    }
+
+    #home .home-section {
+      width: 100% !important;
+    }
+
+    #home .info-home h1 {
+      font-size: clamp(40px, 11vw, 58px) !important;
+    }
+
+    #home .info-home h3 {
+      font-size: clamp(20px, 5.8vw, 28px) !important;
+    }
+
+    #home .lanyard-container {
+      width: min(100%, 310px) !important;
+    }
+
+    #home #idCardBody {
+      width: min(290px, calc(100vw - 40px)) !important;
+    }
+
+    #home #idCardBody > .h-\[360px\] {
+      height: 300px !important;
+    }
+
+    #about.sac-about {
+      padding: 82px 12px 48px !important;
+    }
+
+    #about .sac-shell {
+      padding: 22px 15px !important;
+      border-radius: 24px !important;
+    }
+
+    #about .sac-topbar {
+      margin-bottom: 20px !important;
+    }
+
+    #about .sac-title {
+      font-size: clamp(32px, 10vw, 44px) !important;
+      line-height: 1.04 !important;
+    }
+
+    #about .sac-top-note {
+      max-width: none !important;
+      font-size: 12px !important;
+    }
+
+    #about .sac-layout {
+      grid-template-columns: 1fr !important;
+      gap: 14px !important;
+    }
+
+    #about .sac-left {
+      display: grid !important;
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      gap: 9px !important;
+    }
+
+    #about .sac-signal {
+      min-height: 88px !important;
+      padding: 12px !important;
+    }
+
+    #about .sac-signal-icon {
+      width: 34px !important;
+      height: 34px !important;
+    }
+
+    #about .sac-signal-value {
+      font-size: 11px !important;
+    }
+
+    #about .sac-center {
+      min-height: 0 !important;
+      padding: 14px !important;
+      overflow: visible !important;
+    }
+
+    #about .sac-orbit {
+      padding-top: 148px !important;
+      gap: 8px !important;
+    }
+
+    #about .sac-photo {
+      width: 126px !important;
+      height: 126px !important;
+    }
+
+    #about .sac-node {
+      min-height: 58px !important;
+      padding: 8px 6px !important;
+      border-radius: 14px !important;
+    }
+
+    #about .sac-node span {
+      font-size: 9px !important;
+    }
+
+    #about .sac-right {
+      min-height: 0 !important;
+    }
+
+    #about .sac-panel {
+      padding: 19px 17px !important;
+    }
+
+    #about .sac-panel-title {
+      font-size: 22px !important;
+    }
+
+    #about .sac-panel-copy {
+      font-size: 12px !important;
+      line-height: 1.55 !important;
+    }
+
+    #project.project {
+      margin: 42px auto !important;
+      padding-top: 58px !important;
+      padding-bottom: 58px !important;
+    }
+
+    #project .info-pro {
+      margin-bottom: 26px !important;
+    }
+
+    #project .projects-container,
+    #certificate .certificate-grid {
+      grid-template-columns: 1fr !important;
+      gap: 16px !important;
+    }
+
+    #project .project-card-body {
+      padding: 16px 17px 18px !important;
+    }
+
+    #certificate.certificate-section {
+      padding-top: 58px !important;
+      padding-bottom: 58px !important;
+    }
+
+    #certificate .certificate-card-body {
+      padding: 15px 16px 17px !important;
+    }
+
+    #certificate .certificate-zoom {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
+
+  @media (max-width: 420px) {
+    #about .sac-left {
+      grid-template-columns: 1fr !important;
+    }
+
+    #about .sac-title {
+      font-size: clamp(30px, 9.5vw, 40px) !important;
+    }
+
+    #project .project-card-body {
+      padding-inline: 15px !important;
+    }
+
+    #certificate .certificate-card-body {
+      padding-inline: 15px !important;
+    }
+  }
+
+  /* Jangan biarkan animasi hover menggeser layout pada perangkat sentuh. */
+  @media (hover: none) {
+    #project .project-card:hover,
+    #certificate .certificate-card:hover,
+    #about .sac-signal:hover {
+      transform: none !important;
+    }
+  }
+</style>
+
+
+<style id="index-final-layout-fix">
+/* =========================================================
+   INDEX FINAL FIX
+   Fokus: viewport aman, About compact, Projects rapi,
+   native slider yang aman untuk Safari/iPhone.
+========================================================= */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden !important;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+#real-site {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden !important;
+}
+
+/* ---------------- ABOUT ---------------- */
+#about.sac-about {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding: 96px clamp(12px, 3vw, 32px) 40px !important;
+  overflow: hidden !important;
+}
+
+#about .sac-shell {
+  width: min(100%, 1240px) !important;
+  max-width: 1240px !important;
+  margin: 0 auto !important;
+  padding: clamp(24px, 3vw, 34px) !important;
+  overflow: hidden !important;
+}
+
+#about .sac-layout {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+}
+
+#about .sac-left,
+#about .sac-center,
+#about .sac-right {
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+
+#about .sac-top-note,
+#about .sac-panel-copy {
+  overflow-wrap: anywhere;
+}
+
+#about .sac-tags {
+  display: flex !important;
+  flex-wrap: wrap !important;
+}
+
+/* ---------------- PROJECTS ---------------- */
+#project.project {
+  width: min(100%, 1240px) !important;
+  max-width: 1240px !important;
+  margin: 60px auto !important;
+  padding: 60px clamp(12px, 3vw, 32px) !important;
+  overflow: hidden !important;
+}
+
+#project .info-pro {
+  width: 100% !important;
+  max-width: 760px !important;
+  margin: 0 auto 34px !important;
+  text-align: center !important;
+}
+
+#project .projects-container {
+  width: 100% !important;
+  max-width: 1160px !important;
+  margin: 0 auto !important;
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 20px !important;
+  align-items: stretch !important;
+}
+
+#project .project-card {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  border-radius: 22px !important;
+}
+
+#project .slider-container {
+  position: relative !important;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 10 !important;
+  overflow: hidden !important;
+  flex: 0 0 auto !important;
+  border-radius: 18px 18px 0 0 !important;
+}
+
+#project .slider-track {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  scroll-snap-type: x mandatory !important;
+  scroll-behavior: smooth !important;
+  scrollbar-width: none !important;
+  -webkit-overflow-scrolling: touch !important;
+  touch-action: pan-x !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+#project .slider-track::-webkit-scrollbar { display: none !important; }
+
+#project .slider-track .certificate-preview {
+  flex: 0 0 100% !important;
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  display: block !important;
+  position: relative !important;
+  overflow: hidden !important;
+  background: transparent !important;
+  scroll-snap-align: start !important;
+  cursor: pointer !important;
+  box-sizing: border-box !important;
+}
+
+#project .slider-track .certificate-preview img {
+  display: block !important;
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
+
+#project .prev-btn,
+#project .next-btn {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: 36px !important;
+  height: 36px !important;
+  min-width: 36px !important;
+  min-height: 36px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 50% !important;
+  display: grid !important;
+  place-items: center !important;
+  z-index: 20 !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+}
+
+#project .prev-btn { left: 8px !important; }
+#project .next-btn { right: 8px !important; }
+
+#project .project-card-body {
+  width: 100% !important;
+  min-width: 0 !important;
+  flex: 1 1 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 18px 18px 20px !important;
+  overflow: hidden !important;
+}
+
+#project .project-card-body h3 {
+  margin: 0 0 7px !important;
+  font-size: 16px !important;
+  line-height: 1.35 !important;
+  overflow-wrap: anywhere;
+}
+
+#project .project-card-body p {
+  margin: 0 0 13px !important;
+  font-size: 12px !important;
+  line-height: 1.55 !important;
+  overflow-wrap: anywhere;
+}
+
+#project .project-card .skills {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-top: auto !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 6px !important;
+}
+
+#project .project-card .skills a {
+  max-width: 100% !important;
+  white-space: normal !important;
+  overflow-wrap: anywhere;
+}
+
+/* ---------------- CERTIFICATE ---------------- */
+#certificate.certificate-section {
+  width: min(100%, 1240px) !important;
+  max-width: 1240px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+/* ---------------- TABLET ---------------- */
+@media (max-width: 1050px) {
+  #project .projects-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* ---------------- MOBILE ---------------- */
+@media (max-width: 780px) {
+  #about.sac-about {
+    padding: 82px 10px 28px !important;
+    overflow: visible !important;
+  }
+
+  #about .sac-shell {
+    width: 100% !important;
+    padding: 20px 14px !important;
+  }
+
+  #project.project {
+    width: 100% !important;
+    margin: 42px auto !important;
+    padding: 52px 10px !important;
+  }
+
+  #project .projects-container {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  #project .project-card {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  #project .slider-container {
+    aspect-ratio: 16 / 10 !important;
+  }
+
+  #project .project-card-body {
+    padding: 16px 16px 18px !important;
+  }
+
+  #project .prev-btn,
+  #project .next-btn {
+    width: 34px !important;
+    height: 34px !important;
+    min-width: 34px !important;
+    min-height: 34px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #project.project {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  #project .projects-container {
+    gap: 14px !important;
+  }
+
+  #project .project-card-body h3 {
+    font-size: 14px !important;
+  }
+
+  #project .project-card-body p {
+    font-size: 11px !important;
+  }
+}
+
+@media (hover: none) {
+  #project .project-card:hover,
+  #about .sac-signal:hover {
+    transform: none !important;
+  }
+}
+</style>
 
 </body>
 </html>
